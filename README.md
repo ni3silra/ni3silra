@@ -1,5 +1,5 @@
 # Software Developer
-Hey there, I'm Nitin - a **Java - Tandem Developer** at **TCS**, working for a International bank enhancing the customer service with strategic initiative like PDS(Payment Data Store, dbSIS, GPI and many others). I love to code and my learning principle is to never stop! Want to conclude an entire discussion -- well, that's what a Back-end developer do.
+Hey there, I'm Nitin - a **Java - Tandem Developer** at **TCS**, working for an International bank, enhancing the customer service with strategic initiative like PDS (Payment Data Store, dbSIS, GPI and many others). I love to code ad solve real- world problems with technologies and my learning principle is to never stop! Want to conclude an entire discussion -- well, that's what a Back-end developer do.<br>
 Here are some ideas to get you started:
 
 ### Connect with me on
@@ -9,7 +9,7 @@ Here are some ideas to get you started:
 <br>
 
 ### I work on
-> **Languages**: Java, Python, TACL,, JavaScript, HTML/CSS, XML, JSON, Shell Scripting \
+> **Languages**: Java, Python, TACL, JavaScript, HTML/CSS, XML, JSON, Shell Scripting \
 > **Frameworks**: MVC, SpringBoot, IBUS \
 > **Databases**: SQL, Oracle \
 > **Developer Tools**: Eclipse, InelliJ, Android Studio, Netbeans, Git, Postman \
