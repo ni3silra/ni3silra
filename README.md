@@ -11,7 +11,7 @@ Here are some ideas to get you started:
 ### I work on
 > **Languages**: Java, Python, TACL,, JavaScript, HTML/CSS, XML, JSON, Shell Scripting \
 > **Frameworks**: MVC, SpringBoot, IBUS \
-> **Databases**: S SQL, Oracle \
+> **Databases**: SQL, Oracle \
 > **Developer Tools**: Eclipse, InelliJ, Android Studio, Netbeans, Git, Postman \
 > **Business Tools**: CAIL, ServiceNow, WINSCP, Multibatch, JIRA, Confluence, BitBucket \
 > **Tandem Utilities**: Pathway, FUP, ENFORM, BATCHCOM, SPOOLCOM, ORDERCOM, SQLCI, MXCI \
@@ -34,18 +34,18 @@ Here are some ideas to get you started:
 
 
 ## Project
->**Payment Receipt Generator (PDS)** | *Java, Tandem, Kafka, MQ, SQL*    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Tandem Nonstop Server
+>**Payment Receipt Generator (PDS)** | *Java, Tandem, Kafka, MQ, SQL*    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Tandem Nonstop Server
 * Developed Java server for tandem environment
 * Developed explicit code for reading enscribe files & tandem database
 * Developed configurable publication for Target MQ / Kafka
 * Customized behavior of server for multiple domain request
 
->**Food Delivery Application - FoodVilla**  | *Android, SQLite*   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  Android Application
+>**Food Delivery Application - FoodVilla**  | *Android, SQLite*   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  Android Application
 * Worked as an Android developer
 * Integrated app’s database with existing website
 * Implemented Google Ad sense
 
->**Personal Accountant (Master/Slave)** | *JSP, Servlet, Rest API, XML, Oracle 10g* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Web Application
+>**Personal Accountant (Master/Slave)** | *JSP, Servlet, Rest API, XML, Oracle 10g* &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Web Application
 * Worked as a Full Stack Developer
 * Developed Rest API to fetch data from slave to master
 * Implemented Spring Boot framework
