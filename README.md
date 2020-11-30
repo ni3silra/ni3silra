@@ -9,8 +9,8 @@ Here are some ideas to get you started:
 <br>
 
 ### I work on
-> **Languages**: Java, Python, TACL, JavaScript, HTML/CSS, XML, JSON, Shell Scripting \
-> **Frameworks**: MVC, SpringBoot, IBUS \
+> **Languages**: `Java, Python, TACL, JavaScript, HTML/CSS, XML, JSON, Shell Scripting` \
+> **Frameworks**: `MVC, SpringBoot, IBUS` \
 > **Databases**: SQL, Oracle \
 > **Developer Tools**: Eclipse, InelliJ, Android Studio, Netbeans, Git, Postman \
 > **Business Tools**: CAIL, ServiceNow, WINSCP, Multibatch, JIRA, Confluence, BitBucket \
