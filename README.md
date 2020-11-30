@@ -1,5 +1,5 @@
 # Software Developer
-Hey there, I'm Nitin - a **Java - Tandem Developer** at **TCS**, working for a Investment bank inhancing the customer service with stragetic initiaitve like PDS(Payment Data Store, dbSIS, GPI and many others). I love to code and my learning principle is to never stop! Want to conclude an entire discussion -- well, that's what Programers do.
+Hey there, I'm Nitin - a **Java - Tandem Developer** at **TCS**, working for a International bank enhancing the customer service with strategic initiative like PDS(Payment Data Store, dbSIS, GPI and many others). I love to code and my learning principle is to never stop! Want to conclude an entire discussion -- well, that's what a Back-end developer do.
 Here are some ideas to get you started:
 
 ### Connect with me on
