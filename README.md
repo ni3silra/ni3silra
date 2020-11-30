@@ -11,12 +11,12 @@ Here are some ideas to get you started:
 ### I work on
 > **Languages**: `Java, Python, TACL, JavaScript, HTML/CSS, XML, JSON, Shell Scripting` \
 > **Frameworks**: `MVC, SpringBoot, IBUS` \
-> **Databases**: SQL, Oracle \
-> **Developer Tools**: Eclipse, InelliJ, Android Studio, Netbeans, Git, Postman \
-> **Business Tools**: CAIL, ServiceNow, WINSCP, Multibatch, JIRA, Confluence, BitBucket \
-> **Tandem Utilities**: Pathway, FUP, ENFORM, BATCHCOM, SPOOLCOM, ORDERCOM, SQLCI, MXCI \
-> **SDLC Methodologies**: WaterFall , Aglie \
-> **Communication Channels**: IBM MQ WebSphere, Apache Kafka, SFTP
+> **Databases**: `SQL, Oracle` \
+> **Developer Tools**: `Eclipse, InelliJ, Android Studio, Netbeans, Git, Postman` \
+> **Business Tools**: `CAIL, ServiceNow, WINSCP, Multibatch, JIRA, Confluence, BitBucket` \
+> **Tandem Utilities**: `Pathway, FUP, ENFORM, BATCHCOM, SPOOLCOM, ORDERCOM, SQLCI, MXCI` \
+> **SDLC Methodologies**: `WaterFall , Aglie` \
+> **Communication Channels**: `IBM MQ WebSphere, Apache Kafka, SFTP`
 
 ### On the Job
 > **Java - Tandem Developer**  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; @Tata Consultancy Services Limited, Mumbai 
