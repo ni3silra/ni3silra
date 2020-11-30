@@ -3,9 +3,9 @@ Hey there, I'm Nitin - a **Java - Tandem Developer** at **TCS**, working for an 
 Here are some ideas to get you started:
 
 ### Connect with me on
-[<img align="left" alt="ni3silra | Github" width="22px" src="https://github.com/ni3silra/me/blob/main/icons8-github-48.png" />][Github]
-[<img align="left" alt="ni3silra | LinkedIn" width="22px" src="https://github.com/ni3silra/me/blob/main/icons8-linkedin-48.png" />][Linkedin]
-[<img align="left" alt="ni3silra | Twitter" width="22px" src="https://github.com/ni3silra/me/blob/main/icons8-twitter-48.png" />][Twitter] 
+[<img align="left" alt="ni3silra | Github" width="22px" src="https://github.com/ni3silra/ni3silra/blob/main/icons8-github-48.png" />][Github]
+[<img align="left" alt="ni3silra | LinkedIn" width="22px" src="https://github.com/ni3silra/ni3silra/blob/main/icons8-linkedin-48.png" />][Linkedin]
+[<img align="left" alt="ni3silra | Twitter" width="22px" src="https://github.com/ni3silra/ni3silra/blob/main/icons8-twitter-48.png" />][Twitter] 
 <br>
 
 ### I work on
