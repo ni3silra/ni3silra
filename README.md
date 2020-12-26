@@ -53,7 +53,7 @@ Here are some ideas to get you started:
 * Got Selected in TCS Internal Digital Capability Test and successfully cracked the interview
 * Awarded Best Employee Award for enhancing TCS-Client Relationship
 * Have a T-factor of 2.99 out of 10 TCS Internal learning platform called Fresco play
-* Awarde,d ON THE SPOT award from TCS Management on several occasions for quality of services of provided
+* Awarded ON THE SPOT award from TCS Management on several occasions for quality of services of provided
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [![ni3silra's github stats](https://github-readme-stats.vercel.app/api?username=ni3silra&hide=prs,issues,contribs&show_icons=true&theme=dracula)](https://github.com/ni3silra)
 
