@@ -64,7 +64,7 @@ function textAnimate(){
       block = "";
     }
 }
-setInterval(textAnimate, 5000);
+setInterval(textAnimate, 10000);
 
 
 (function (factory) {
