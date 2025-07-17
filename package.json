@@ -1,17 +1,27 @@
 {
-  "name": "My-Portfolio",
+  "name": "backend-developer-portfolio",
   "version": "1.0.0",
-  "description": "Ni3 Portfolio",
-  "main": "index.js",
+  "type": "module",
+  "description": "Backend Developer Portfolio with comprehensive accessibility testing",
+  "main": "index.html",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server --browser=chrome"
+    "test": "node tests/accessibility/test-validation.js",
+    "test:accessibility": "node tests/accessibility/run-tests.js",
+    "test:wcag": "node tests/accessibility/run-tests.js --suite wcag",
+    "test:keyboard": "node tests/accessibility/run-tests.js --suite keyboard",
+    "test:screenreader": "node tests/accessibility/run-tests.js --suite screenreader",
+    "serve": "python -m http.server 8000 || python3 -m http.server 8000"
   },
-  "author": "Saba",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^7.2.6",
-    "node-sass": "^4.14.0"
-  },
+  "keywords": [
+    "portfolio",
+    "accessibility",
+    "wcag",
+    "a11y",
+    "frontend",
+    "testing"
+  ],
+  "author": "Backend Developer",
+  "license": "MIT",
+  "devDependencies": {},
   "dependencies": {}
 }
