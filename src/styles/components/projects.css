@@ -566,18 +566,21 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: var(--z-modal, 1050);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: all 0.3s ease;
 }
 
 .project-modal.active {
+  display: flex;
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .modal-backdrop {

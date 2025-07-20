@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
             margin: 0;
             padding: 20px;
         }
-        
+
         .skip-link {
             position: absolute;
             top: -40px;
@@ -22,21 +23,22 @@
             text-decoration: none;
             z-index: 1000;
         }
-        
+
         .skip-link:focus {
             top: 6px;
         }
-        
-        button:focus, a:focus {
+
+        button:focus,
+        a:focus {
             outline: 2px solid #0066cc;
             outline-offset: 2px;
         }
-        
+
         .error {
             color: #d32f2f;
             font-size: 0.875rem;
         }
-        
+
         .visually-hidden {
             position: absolute;
             width: 1px;
@@ -50,9 +52,10 @@
         }
     </style>
 </head>
+
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
-    
+
     <header role="banner">
         <h1>Test Portfolio</h1>
         <nav role="navigation" aria-label="Main navigation">
@@ -63,7 +66,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main id="main" role="main">
         <section id="about">
             <h2>About Me</h2>
@@ -71,7 +74,7 @@
             <img src="profile.jpg" alt="Professional headshot of John Doe, backend developer">
             <img src="decoration.jpg" alt="" role="presentation">
         </section>
-        
+
         <section id="projects">
             <h2>Projects</h2>
             <article>
@@ -85,7 +88,7 @@
                 </div>
             </article>
         </section>
-        
+
         <section id="contact">
             <h2>Contact Form</h2>
             <form>
@@ -94,31 +97,31 @@
                     <input type="text" id="name" name="name" required aria-describedby="name-error">
                     <div id="name-error" class="error" role="alert" aria-live="polite"></div>
                 </div>
-                
+
                 <div>
                     <label for="email">Email <span aria-label="required">*</span></label>
                     <input type="email" id="email" name="email" required aria-describedby="email-help">
                     <div id="email-help">We'll never share your email with anyone else.</div>
                 </div>
-                
+
                 <fieldset>
                     <legend>Preferred Contact Method</legend>
                     <input type="radio" id="contact-email" name="contact-method" value="email">
                     <label for="contact-email">Email</label>
-                    
+
                     <input type="radio" id="contact-phone" name="contact-method" value="phone">
                     <label for="contact-phone">Phone</label>
                 </fieldset>
-                
+
                 <div>
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="4"></textarea>
                 </div>
-                
+
                 <button type="submit">Send Message</button>
             </form>
         </section>
-        
+
         <section>
             <h2>Data Table</h2>
             <table>
@@ -148,7 +151,7 @@
             </table>
         </section>
     </main>
-    
+
     <aside role="complementary">
         <h2>Skills</h2>
         <ul>
@@ -158,16 +161,16 @@
             <li>Docker</li>
         </ul>
     </aside>
-    
+
     <footer role="contentinfo">
         <p>&copy; 2024 Test Portfolio. All rights reserved.</p>
         <div aria-live="polite" id="status-messages" class="visually-hidden"></div>
     </footer>
-    
+
     <!-- Test the accessibility modules -->
     <script type="module">
         import { AccessibilityTestRunner } from './accessibility-test-runner.js';
-        
+
         // Add a button to run tests
         const testButton = document.createElement('button');
         testButton.textContent = 'Run Accessibility Tests';
@@ -183,11 +186,11 @@
             cursor: pointer;
             z-index: 1000;
         `;
-        
+
         testButton.addEventListener('click', async () => {
             console.clear();
             console.log('🚀 Running accessibility tests on this page...\n');
-            
+
             const runner = new AccessibilityTestRunner();
             try {
                 const results = await runner.runAllTests();
@@ -198,9 +201,9 @@
                 console.error('❌ Testing failed:', error);
             }
         });
-        
+
         document.body.appendChild(testButton);
-        
+
         // Auto-run tests after page load
         window.addEventListener('load', () => {
             console.log('✅ Test page loaded successfully');
@@ -208,4 +211,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -76,13 +76,23 @@ function hideLoadingScreen() {
   try {
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
+      // Force hide immediately to prevent layout issues
       loadingScreen.style.opacity = '0';
+      loadingScreen.style.visibility = 'hidden';
+      loadingScreen.style.pointerEvents = 'none';
+      loadingScreen.style.zIndex = '-1';
+      
       setTimeout(() => {
         loadingScreen.style.display = 'none';
       }, 300);
     }
   } catch (error) {
     console.warn('Failed to hide loading screen:', error);
+    // Force hide even if there's an error
+    const loadingScreen = document.querySelector('.loading-screen');
+    if (loadingScreen) {
+      loadingScreen.style.display = 'none';
+    }
   }
 }
 

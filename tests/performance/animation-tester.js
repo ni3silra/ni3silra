@@ -16,7 +16,7 @@ export class AnimationTester {
    */
   async testAnimationPerformance() {
     console.group('🎬 Animation Performance Testing');
-    
+
     try {
       // Test different types of animations
       const results = {
@@ -28,7 +28,7 @@ export class AnimationTester {
 
       this.generateAnimationReport(results);
       return results;
-      
+
     } catch (error) {
       console.error('Animation testing failed:', error);
       throw error;
@@ -42,7 +42,7 @@ export class AnimationTester {
    */
   async testCSSTransforms() {
     console.log('🔄 Testing CSS Transform performance...');
-    
+
     // Create test element
     const testElement = this.createTestElement('transform-test');
     testElement.style.cssText = `
@@ -61,7 +61,7 @@ export class AnimationTester {
     const frameData = await this.measureFrameRate(() => {
       // Trigger transform animation
       testElement.style.transform = 'translate(-50%, -50%) scale(1.5) rotate(360deg)';
-      
+
       setTimeout(() => {
         testElement.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
       }, this.testDuration / 2);
@@ -78,10 +78,10 @@ export class AnimationTester {
    */
   async testCSSAnimations() {
     console.log('✨ Testing CSS Animation performance...');
-    
+
     // Create test element with CSS animation
     const testElement = this.createTestElement('animation-test');
-    
+
     // Add CSS animation
     const style = document.createElement('style');
     style.textContent = `
@@ -104,7 +104,7 @@ export class AnimationTester {
         z-index: 9999;
       }
     `;
-    
+
     document.head.appendChild(style);
     testElement.className = 'animation-test';
 
@@ -125,7 +125,7 @@ export class AnimationTester {
    */
   async testScrollAnimations() {
     console.log('📜 Testing scroll animation performance...');
-    
+
     // Create scrollable content
     const scrollContainer = this.createScrollableContent();
     const animatedElements = scrollContainer.querySelectorAll('.scroll-animate');
@@ -147,7 +147,7 @@ export class AnimationTester {
    */
   async testJSAnimations() {
     console.log('⚡ Testing JavaScript animation performance...');
-    
+
     const testElement = this.createTestElement('js-animation-test');
     testElement.style.cssText = `
       width: 80px;
@@ -161,19 +161,19 @@ export class AnimationTester {
 
     let animationId;
     let startTime = performance.now();
-    
+
     const animate = (currentTime) => {
       const elapsed = currentTime - startTime;
       const progress = (elapsed % 2000) / 2000; // 2 second cycle
-      
+
       // Complex animation calculations
       const x = Math.sin(progress * Math.PI * 2) * 100;
       const y = Math.cos(progress * Math.PI * 2) * 100;
       const rotation = progress * 360;
       const scale = 1 + Math.sin(progress * Math.PI * 4) * 0.3;
-      
+
       testElement.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg) scale(${scale})`;
-      
+
       if (elapsed < this.testDuration) {
         animationId = requestAnimationFrame(animate);
       }
@@ -210,7 +210,7 @@ export class AnimationTester {
           timestamp: currentTime,
           frameNumber: frameCount++
         });
-        
+
         lastFrameTime = currentTime;
 
         if (currentTime - startTime < this.testDuration) {
@@ -222,7 +222,7 @@ export class AnimationTester {
 
       // Start animation
       animationCallback();
-      
+
       // Start measuring
       requestAnimationFrame(measureFrame);
     });
@@ -243,22 +243,22 @@ export class AnimationTester {
     const totalTime = this.testDuration;
     const frameCount = frameData.length;
     const averageFPS = (frameCount / totalTime) * 1000;
-    
+
     // Calculate frame time statistics
     const frameTimes = frameData.map(f => f.frameTime);
     const averageFrameTime = frameTimes.reduce((a, b) => a + b, 0) / frameTimes.length;
     const maxFrameTime = Math.max(...frameTimes);
     const minFrameTime = Math.min(...frameTimes);
-    
+
     // Calculate jank (frames over 16.67ms for 60fps)
     const jankFrames = frameTimes.filter(time => time > 16.67).length;
     const jankPercentage = (jankFrames / frameCount) * 100;
-    
+
     // Performance thresholds
     const fpsTarget = this.targetFPS;
     const fpsThreshold = fpsTarget * 0.9; // Allow 10% tolerance
     const jankThreshold = 5; // Max 5% jank frames
-    
+
     const fpsPassed = averageFPS >= fpsThreshold;
     const jankPassed = jankPercentage <= jankThreshold;
     const overallPassed = fpsPassed && jankPassed;
@@ -354,9 +354,9 @@ export class AnimationTester {
       // Animate visible items
       items.forEach((item, index) => {
         const itemTop = item.offsetTop;
-        const itemVisible = itemTop >= container.scrollTop && 
-                           itemTop <= container.scrollTop + container.clientHeight;
-        
+        const itemVisible = itemTop >= container.scrollTop &&
+          itemTop <= container.scrollTop + container.clientHeight;
+
         if (itemVisible) {
           item.style.transform = 'translateX(0)';
           item.style.opacity = '1';
@@ -374,22 +374,22 @@ export class AnimationTester {
    */
   generateAnimationReport(results) {
     console.group('📊 Animation Performance Report');
-    
+
     const allTests = Object.values(results);
     const passedTests = allTests.filter(test => test.status === 'PASSED').length;
     const failedTests = allTests.filter(test => test.status === 'FAILED').length;
-    
+
     console.log(`✅ Passed: ${passedTests}/${allTests.length}`);
     console.log(`❌ Failed: ${failedTests}/${allTests.length}`);
-    
+
     // Overall performance summary
     const avgFPS = allTests
       .filter(test => test.metrics)
-      .reduce((sum, test) => sum + test.metrics.averageFPS, 0) / 
+      .reduce((sum, test) => sum + test.metrics.averageFPS, 0) /
       allTests.filter(test => test.metrics).length;
-    
+
     console.log(`📈 Overall Average FPS: ${avgFPS.toFixed(2)}`);
-    
+
     // Show failed tests details
     const failed = allTests.filter(test => test.status === 'FAILED');
     if (failed.length > 0) {
@@ -403,7 +403,7 @@ export class AnimationTester {
       });
       console.groupEnd();
     }
-    
+
     console.groupEnd();
   }
 
@@ -416,7 +416,7 @@ export class AnimationTester {
     }
 
     console.log(`🎯 Testing animation on element: ${element.tagName}.${element.className}`);
-    
+
     // Trigger any existing animations
     element.style.animation = 'none';
     element.offsetHeight; // Force reflow

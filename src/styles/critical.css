@@ -391,6 +391,24 @@ body {
   pointer-events: none;
 }
 
+/* Auto-hide loading screen after 5 seconds as fallback */
+.loading-screen {
+  animation: auto-hide-loading 5s ease-in-out forwards;
+}
+
+@keyframes auto-hide-loading {
+  0%, 80% { 
+    opacity: 1; 
+    visibility: visible; 
+  }
+  100% { 
+    opacity: 0; 
+    visibility: hidden; 
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
 /* Utility Classes */
 .sr-only {
   position: absolute;
