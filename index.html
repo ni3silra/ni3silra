@@ -508,244 +508,162 @@
 
     <!-- PANEL 4: ACHIEVEMENTS -->
     <section id="achievements" class="tab-panel space-y-8 mb-12">
-      <section class="space-y-4">
-        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-          <div class="flex items-center gap-3">
-            <div
-              class="w-8 h-8 rounded-lg bg-blue-100/80 text-dbBlue flex items-center justify-center font-bold shadow-sm">
-              <i class="fa-solid fa-trophy"></i>
-            </div>
-            <div>
-              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Key Achievements</h2>
-              <p class="text-xs text-slate-500">Key delivery milestones executed across core banking streams</p>
-            </div>
+      <!-- SECTION HEADER -->
+      <div class="flex items-center justify-between border-b border-slate-200/80 pb-4">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-tr from-dbNavy via-blue-900 to-dbBlue text-white flex items-center justify-center font-black shadow-lg ring-4 ring-blue-500/10">
+            <i class="fa-solid fa-trophy text-amber-300 text-xl"></i>
           </div>
-          <span
-            class="text-xs font-mono bg-blue-50 text-dbBlue px-3 py-1 rounded-full font-semibold border border-blue-100">Milestone
-            Portfolio</span>
+          <div>
+            <h2 class="text-xl font-black text-dbNavy tracking-tight">Key Achievements &amp; Strategic Deliveries</h2>
+            <p class="text-xs text-slate-500 font-medium">Distinct circular milestone badges for core engineering achievements</p>
+          </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          
-          <!-- ACHIEVEMENT 1: DHS TO EXACC MIGRATION -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-dbBlue border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                <div class="w-8 h-8 rounded-xl bg-blue-50 text-dbBlue flex items-center justify-center font-bold text-sm border border-blue-100">
-                  <i class="fa-solid fa-database"></i>
-                </div>
-                <span class="text-[9px] font-mono font-bold text-dbBlue bg-blue-50 px-2 py-0.5 rounded-full border border-blue-100 uppercase">Database</span>
-              </div>
-              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">DHS to ExaCC Migration</h3>
+        <span
+          class="text-xs font-mono bg-blue-50/90 text-dbBlue px-4 py-1.5 rounded-full font-black border border-blue-200/80 flex items-center gap-2 shadow-xs">
+          <i class="fa-solid fa-circle-nodes text-amber-500"></i> Circular Badges
+        </span>
+      </div>
+
+      <!-- FIVE DEDICATED CIRCLES (ONE COMPLETE CIRCLE PER ACHIEVEMENT) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 py-4">
+        
+        <!-- CIRCLE 1: DHS TO EXACC MIGRATION -->
+        <div class="group relative flex flex-col items-center">
+          <div class="w-56 h-56 rounded-full bg-gradient-to-br from-blue-50/90 via-white to-blue-100/60 border-4 border-blue-200/80 shadow-lg hover:shadow-2xl hover:border-dbBlue hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-500/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-dbNavy to-blue-600 text-white flex items-center justify-center text-xl font-black shadow-md mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-database"></i>
             </div>
             
-            <div class="space-y-2 text-xs">
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-dbBlue uppercase tracking-wider block">What</span>
-                <p class="text-slate-700 font-semibold text-[11px]">Migrated DHS to Oracle ExaCC</p>
-              </div>
+            <span class="text-[9px] font-mono font-black text-dbBlue bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-200 uppercase mb-1">Database</span>
+            <h3 class="font-black text-dbNavy text-xs leading-tight mb-1.5 px-1">DHS to ExaCC Migration</h3>
+            <p class="text-[10px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated DHS database replacing end-of-life hardware.</p>
 
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
-                <p class="text-slate-600 font-medium text-[11px]">Eliminate legacy hardware risks</p>
-              </div>
-
-              <div class="bg-blue-50 p-2 rounded-xl border border-blue-100">
-                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
-                  <i class="fa-solid fa-chart-line text-dbBlue text-[9px]"></i> Impact
-                </span>
-                <p class="text-dbNavy font-bold text-[11px]">Zero downtime, faster queries</p>
-              </div>
-            </div>
+            <span class="text-[9px] font-black text-white bg-gradient-to-r from-dbNavy to-blue-700 px-3 py-1 rounded-full shadow-2xs">
+              Zero Downtime
+            </span>
           </div>
-
-          <!-- ACHIEVEMENT 2: FABRIC 1.0 TO 2.0 UPGRADE -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-dbCyan border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                <div class="w-8 h-8 rounded-xl bg-cyan-50 text-dbCyan flex items-center justify-center font-bold text-sm border border-cyan-100">
-                  <i class="fa-solid fa-cubes-stacked"></i>
-                </div>
-                <span class="text-[9px] font-mono font-bold text-dbCyan bg-cyan-50 px-2 py-0.5 rounded-full border border-cyan-100 uppercase">Platform</span>
-              </div>
-              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">Fabric 2.0 Upgrade</h3>
-            </div>
-            
-            <div class="space-y-2 text-xs">
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-dbCyan uppercase tracking-wider block">What</span>
-                <p class="text-slate-700 font-semibold text-[11px]">Upgraded containers to Fabric 2.0</p>
-              </div>
-
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
-                <p class="text-slate-600 font-medium text-[11px]">Enhance container resilience</p>
-              </div>
-
-              <div class="bg-cyan-50 p-2 rounded-xl border border-cyan-100">
-                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
-                  <i class="fa-solid fa-bolt text-dbCyan text-[9px]"></i> Impact
-                </span>
-                <p class="text-dbNavy font-bold text-[11px]">High throughput, reliable failover</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACHIEVEMENT 3: NEWRELIC ON HP NONSTOP -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-emerald-500 border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                <div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-sm border border-emerald-100">
-                  <i class="fa-solid fa-chart-pie"></i>
-                </div>
-                <span class="text-[9px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100 uppercase">Telemetry</span>
-              </div>
-              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">NewRelic on HP NonStop</h3>
-            </div>
-            
-            <div class="space-y-2 text-xs">
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-emerald-600 uppercase tracking-wider block">What</span>
-                <p class="text-slate-700 font-semibold text-[11px]">Built APM for HP NonStop</p>
-              </div>
-
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
-                <p class="text-slate-600 font-medium text-[11px]">No legacy market tools available</p>
-              </div>
-
-              <div class="bg-emerald-50 p-2 rounded-xl border border-emerald-100 space-y-0.5">
-                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
-                  <i class="fa-solid fa-compass text-emerald-600 text-[9px]"></i> Impact
-                </span>
-                <ul class="text-[10px] text-dbNavy font-semibold space-y-0.5 list-disc list-inside leading-tight">
-                  <li>Northstar telemetry alignment</li>
-                  <li>Advanced observability</li>
-                  <li>Reduced custom tool costs</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACHIEVEMENT 4: DISPOSITION API MERGER -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-purple-500 border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                <div class="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-sm border border-purple-100">
-                  <i class="fa-solid fa-code-merge"></i>
-                </div>
-                <span class="text-[9px] font-mono font-bold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full border border-purple-100 uppercase">Architecture</span>
-              </div>
-              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">Disposition API Merger</h3>
-            </div>
-            
-            <div class="space-y-2 text-xs">
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-purple-600 uppercase tracking-wider block">What</span>
-                <p class="text-slate-700 font-semibold text-[11px]">Merged Fabric+HP NS to HP NS</p>
-              </div>
-
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
-                <p class="text-slate-600 font-medium text-[11px]">Escort removed in new hardware</p>
-              </div>
-
-              <div class="bg-purple-50 p-2 rounded-xl border border-purple-100 space-y-0.5">
-                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
-                  <i class="fa-solid fa-shield-halved text-purple-600 text-[9px]"></i> Impact
-                </span>
-                <ul class="text-[10px] text-dbNavy font-semibold space-y-0.5 list-disc list-inside leading-tight">
-                  <li>High HP NS service reliability</li>
-                  <li>No high cost Escort needed</li>
-                  <li>18-loc Fabric saved 5 yrs</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ACHIEVEMENT 5: NEXUSPAY INTEGRATION -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-amber-500 border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                <div class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-sm border border-amber-100">
-                  <i class="fa-solid fa-network-wired"></i>
-                </div>
-                <span class="text-[9px] font-mono font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-100 uppercase">Compliance</span>
-              </div>
-              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">NexusPay Integration</h3>
-            </div>
-            
-            <div class="space-y-2 text-xs">
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-amber-600 uppercase tracking-wider block">What</span>
-                <p class="text-slate-400 font-mono text-[10px] italic">Pending details</p>
-              </div>
-
-              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
-                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
-                <p class="text-slate-600 font-medium text-[11px]">ISO20022 Swift Global compliance</p>
-              </div>
-
-              <div class="bg-amber-50 p-2 rounded-xl border border-amber-100">
-                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
-                  <i class="fa-solid fa-globe text-amber-600 text-[9px]"></i> Impact
-                </span>
-                <p class="text-slate-400 font-mono text-[10px] italic">Pending details</p>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </section>
 
-      <!-- ADDITIONAL ACHIEVEMENTS (COLORFUL POINTER BOXES) -->
-      <section class="space-y-4 pt-4 border-t border-slate-200/80">
+        <!-- CIRCLE 2: FABRIC 2.0 UPGRADE -->
+        <div class="group relative flex flex-col items-center">
+          <div class="w-56 h-56 rounded-full bg-gradient-to-br from-cyan-50/90 via-white to-cyan-100/60 border-4 border-cyan-200/80 shadow-lg hover:shadow-2xl hover:border-dbCyan hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-teal-700 to-dbCyan text-slate-950 flex items-center justify-center text-xl font-black shadow-md mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-cubes-stacked"></i>
+            </div>
+            
+            <span class="text-[9px] font-mono font-black text-teal-800 bg-cyan-100/90 px-2.5 py-0.5 rounded-full border border-cyan-200 uppercase mb-1">Platform</span>
+            <h3 class="font-black text-dbNavy text-xs leading-tight mb-1.5 px-1">Fabric 2.0 Upgrade</h3>
+            <p class="text-[10px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Upgraded containers for security &amp; cluster resilience.</p>
+
+            <span class="text-[9px] font-black text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-300 px-3 py-1 rounded-full shadow-2xs">
+              High Failover
+            </span>
+          </div>
+        </div>
+
+        <!-- CIRCLE 3: NEXUSPAY INTEGRATION -->
+        <div class="group relative flex flex-col items-center">
+          <div class="w-56 h-56 rounded-full bg-gradient-to-br from-amber-50/90 via-white to-amber-100/60 border-4 border-amber-200/80 shadow-lg hover:shadow-2xl hover:border-amber-500 hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-700 to-amber-500 text-white flex items-center justify-center text-xl font-black shadow-md mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            
+            <span class="text-[9px] font-mono font-black text-amber-800 bg-amber-100/90 px-2.5 py-0.5 rounded-full border border-amber-200 uppercase mb-1">Compliance</span>
+            <h3 class="font-black text-dbNavy text-xs leading-tight mb-1.5 px-1">NexusPay Integration</h3>
+            <p class="text-[10px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Integrated payment channels for ISO20022 SWIFT mandate.</p>
+
+            <span class="text-[9px] font-black text-white bg-gradient-to-r from-amber-700 to-orange-600 px-3 py-1 rounded-full shadow-2xs">
+              ISO20022 Ready
+            </span>
+          </div>
+        </div>
+
+        <!-- CIRCLE 4: DISPOSITION API MERGER -->
+        <div class="group relative flex flex-col items-center">
+          <div class="w-56 h-56 rounded-full bg-gradient-to-br from-purple-50/90 via-white to-purple-100/60 border-4 border-purple-200/80 shadow-lg hover:shadow-2xl hover:border-purple-500 hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-purple-500/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-800 to-purple-500 text-white flex items-center justify-center text-xl font-black shadow-md mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-code-merge"></i>
+            </div>
+            
+            <span class="text-[9px] font-mono font-black text-purple-800 bg-purple-100/90 px-2.5 py-0.5 rounded-full border border-purple-200 uppercase mb-1">Architecture</span>
+            <h3 class="font-black text-dbNavy text-xs leading-tight mb-1.5 px-1">Disposition API Merger</h3>
+            <p class="text-[10px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Merged logic into HP NS; removed Escort middleware.</p>
+
+            <span class="text-[9px] font-black text-white bg-gradient-to-r from-purple-800 to-indigo-600 px-3 py-1 rounded-full shadow-2xs">
+              18 LOC Removed
+            </span>
+          </div>
+        </div>
+
+        <!-- CIRCLE 5: NEWRELIC HP NONSTOP -->
+        <div class="group relative flex flex-col items-center">
+          <div class="w-56 h-56 rounded-full bg-gradient-to-br from-emerald-50/90 via-white to-emerald-100/60 border-4 border-emerald-200/80 shadow-lg hover:shadow-2xl hover:border-emerald-500 hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-800 to-emerald-500 text-white flex items-center justify-center text-xl font-black shadow-md mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            
+            <span class="text-[9px] font-mono font-black text-emerald-800 bg-emerald-100/90 px-2.5 py-0.5 rounded-full border border-emerald-200 uppercase mb-1">Telemetry</span>
+            <h3 class="font-black text-dbNavy text-xs leading-tight mb-1.5 px-1">NewRelic HP NonStop</h3>
+            <p class="text-[10px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Built APM telemetry for HP NS mainframe systems.</p>
+
+            <span class="text-[9px] font-black text-white bg-gradient-to-r from-emerald-700 to-teal-600 px-3 py-1 rounded-full shadow-2xs">
+              Real-Time APM
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RECOGNITION & HACKATHONS (CIRCULAR BADGES) -->
+      <section class="space-y-4 pt-6 border-t border-slate-200/80">
         <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <div
-              class="w-7 h-7 rounded-lg bg-amber-100/80 text-amber-600 flex items-center justify-center font-bold shadow-xs">
-              <i class="fa-solid fa-award"></i>
-            </div>
-            <div>
-              <h3 class="text-sm font-extrabold text-dbNavy tracking-tight">Additional Achievements &amp; Hackathons</h3>
-              <p class="text-[11px] text-slate-500">Innovation awards &amp; developer productivity tool creation</p>
-            </div>
-          </div>
-          <span
-            class="text-[10px] font-mono bg-amber-50 text-amber-700 px-3 py-0.5 rounded-full font-bold border border-amber-200">Recognition</span>
+          <h3 class="text-base font-black text-dbNavy tracking-tight flex items-center gap-2.5">
+            <i class="fa-solid fa-award text-amber-500 text-lg"></i> Recognition &amp; Global Honors
+          </h3>
+          <span class="text-xs font-mono text-slate-400 font-bold">Innovation Awards</span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           
-          <!-- POINTER 1: HACKATHON 2025 -->
-          <div class="p-4 rounded-2xl bg-amber-50/90 border border-amber-200/80 shadow-2xs hover:shadow-md transition flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg font-bold shrink-0 shadow-xs">
-              <i class="fa-solid fa-trophy"></i>
+          <div class="p-4 rounded-full bg-gradient-to-r from-amber-500/10 via-amber-50/50 to-white border border-amber-200/80 shadow-2xs hover:shadow-md transition-all flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center text-base font-black shrink-0 shadow-sm">
+              <i class="fa-solid fa-trophy text-amber-200"></i>
             </div>
-            <div class="space-y-0.5">
-              <span class="text-[10px] font-mono font-black text-amber-700 uppercase tracking-wider block">Hackathon 2025</span>
-              <p class="text-xs font-black text-dbNavy leading-snug">Part of Global 3rd Winning Team</p>
-            </div>
-          </div>
-
-          <!-- POINTER 2: HACKATHON 2026 -->
-          <div class="p-4 rounded-2xl bg-indigo-50/90 border border-indigo-200/80 shadow-2xs hover:shadow-md transition flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg font-bold shrink-0 shadow-xs">
-              <i class="fa-solid fa-medal"></i>
-            </div>
-            <div class="space-y-0.5">
-              <span class="text-[10px] font-mono font-black text-indigo-700 uppercase tracking-wider block">Hackathon 2026</span>
-              <p class="text-xs font-black text-dbNavy leading-snug">Lead of Frankfurt Runner-Up Team</p>
+            <div class="min-w-0 pr-2">
+              <span class="text-[10px] font-mono font-black text-amber-700 uppercase tracking-wider block">Global Hackathon 2025</span>
+              <p class="text-xs font-extrabold text-dbNavy truncate">3rd Place Winner Globally</p>
             </div>
           </div>
 
-          <!-- POINTER 3: DEVELOPER PRODUCTIVITY -->
-          <div class="p-4 rounded-2xl bg-emerald-50/90 border border-emerald-200/80 shadow-2xs hover:shadow-md transition flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-lg font-bold shrink-0 shadow-xs">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <div class="p-4 rounded-full bg-gradient-to-r from-indigo-500/10 via-indigo-50/50 to-white border border-indigo-200/80 shadow-2xs hover:shadow-md transition-all flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center text-base font-black shrink-0 shadow-sm">
+              <i class="fa-solid fa-medal text-indigo-200"></i>
             </div>
-            <div class="space-y-0.5">
-              <span class="text-[10px] font-mono font-black text-emerald-700 uppercase tracking-wider block">Developer Tools</span>
-              <p class="text-xs font-black text-dbNavy leading-snug">Created Software Accelerating Developer Workflows</p>
+            <div class="min-w-0 pr-2">
+              <span class="text-[10px] font-mono font-black text-indigo-700 uppercase tracking-wider block">Frankfurt Hackathon 2026</span>
+              <p class="text-xs font-extrabold text-dbNavy truncate">Runner-Up Team Lead</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-full bg-gradient-to-r from-emerald-500/10 via-emerald-50/50 to-white border border-emerald-200/80 shadow-2xs hover:shadow-md transition-all flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base font-black shrink-0 shadow-sm">
+              <i class="fa-solid fa-wand-magic-sparkles text-emerald-200"></i>
+            </div>
+            <div class="min-w-0 pr-2">
+              <span class="text-[10px] font-mono font-black text-emerald-700 uppercase tracking-wider block">Developer Productivity</span>
+              <p class="text-xs font-extrabold text-dbNavy truncate">Workflow Tooling Lead</p>
             </div>
           </div>
 
