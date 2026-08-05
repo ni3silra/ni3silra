@@ -49,3 +49,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes pulseArrow {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-arrow {
+  animation: pulseArrow 1.5s ease-in-out infinite;
+}
+

@@ -178,61 +178,97 @@
     <!-- PANEL 2: CAREER EVOLUTION -->
     <section id="career-evolution" class="tab-panel space-y-8 mb-12">
       <!-- 10-YEAR PROGRESSION ROADMAP -->
-      <section class="space-y-4">
-        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+      <section class="space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-200/80 pb-4">
           <div class="flex items-center gap-3">
             <div
-              class="w-8 h-8 rounded-lg bg-indigo-100/80 text-indigo-600 flex items-center justify-center font-bold shadow-sm">
-              <i class="fa-solid fa-timeline"></i>
+              class="w-10 h-10 rounded-full bg-gradient-to-tr from-dbNavy to-indigo-600 text-white flex items-center justify-center font-black shadow-md ring-4 ring-indigo-500/10">
+              <i class="fa-solid fa-timeline text-amber-300"></i>
             </div>
             <div>
-              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">10-Year Progression Roadmap</h2>
-              <p class="text-xs text-slate-500">Evolution from technical support to engineering lead</p>
+              <h2 class="text-base sm:text-lg font-black text-dbNavy tracking-tight">10-Year Progression Roadmap</h2>
+              <p class="text-xs text-slate-500 font-medium">Evolution from technical support to tech transformation lead</p>
             </div>
           </div>
         </div>
-        <div class="hub-card p-6 sm:p-7 rounded-2xl bg-white space-y-3 border border-slate-200 shadow-sm">
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 text-center text-xs">
+
+        <!-- HEXAGONAL TIMELINE STEP FLOW WITH ANIMATED CONNECTING ARROWS -->
+        <div class="py-6 px-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-4 relative items-center">
             
-            <!-- STEP 1: TEST SUPPORT (COLLEGE GRADUATE START) -->
-            <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200/80 font-medium text-slate-800 shadow-2xs flex flex-col items-center justify-center space-y-2.5 hover:bg-sky-100/70 transition">
-              <div class="w-10 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center text-lg shadow-sm">
-                <i class="fa-solid fa-user-graduate"></i>
+            <!-- STEP 1: TEST SUPPORT (SKY BLUE) -->
+            <div class="group relative flex flex-col items-center text-center">
+              <div class="w-36 h-40 bg-gradient-to-br from-sky-100 via-sky-50 to-white shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-3 text-center relative filter drop-shadow-md group-hover:drop-shadow-xl" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
+                <div class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center text-base font-black shadow-sm mb-1.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1">Test Support</h3>
+                <span class="text-[8px] font-mono font-bold text-sky-700 bg-sky-200/80 px-2 py-0.5 rounded-full border border-sky-300 uppercase">Graduate Start</span>
               </div>
-              <span class="font-extrabold text-dbNavy text-xs">Test Support</span>
+              <!-- DESKTOP ANIMATED CONNECTING ARROW -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-sm z-10 animate-pulse-arrow">
+                <i class="fa-solid fa-chevron-right text-indigo-500 font-bold"></i>
+              </div>
             </div>
 
-            <!-- STEP 2: DEVELOPER -->
-            <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200/80 font-medium text-slate-800 shadow-2xs flex flex-col items-center justify-center space-y-2.5 hover:bg-indigo-100/70 transition">
-              <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-sm">
-                <i class="fa-solid fa-laptop-code"></i>
+            <!-- STEP 2: DEVELOPER (INDIGO) -->
+            <div class="group relative flex flex-col items-center text-center">
+              <div class="w-36 h-40 bg-gradient-to-br from-indigo-100 via-indigo-50 to-white shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-3 text-center relative filter drop-shadow-md group-hover:drop-shadow-xl" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
+                <div class="w-10 h-10 rounded-full bg-indigo-600 text-white flex items-center justify-center text-base font-black shadow-sm mb-1.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1">Developer</h3>
+                <span class="text-[8px] font-mono font-bold text-indigo-700 bg-indigo-200/80 px-2 py-0.5 rounded-full border border-indigo-300 uppercase">Core Engineering</span>
               </div>
-              <span class="font-extrabold text-dbNavy text-xs">Developer</span>
+              <!-- DESKTOP ANIMATED CONNECTING ARROW -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-sm z-10 animate-pulse-arrow">
+                <i class="fa-solid fa-chevron-right text-purple-500 font-bold"></i>
+              </div>
             </div>
 
-            <!-- STEP 3: TECH ANALYST -->
-            <div class="p-4 rounded-2xl bg-purple-50 border border-purple-200/80 font-medium text-slate-800 shadow-2xs flex flex-col items-center justify-center space-y-2.5 hover:bg-purple-100/70 transition">
-              <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-lg shadow-sm">
-                <i class="fa-solid fa-user-gear"></i>
+            <!-- STEP 3: TECH ANALYST (PURPLE) -->
+            <div class="group relative flex flex-col items-center text-center">
+              <div class="w-36 h-40 bg-gradient-to-br from-purple-100 via-purple-50 to-white shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-3 text-center relative filter drop-shadow-md group-hover:drop-shadow-xl" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
+                <div class="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center text-base font-black shadow-sm mb-1.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1">Tech Analyst</h3>
+                <span class="text-[8px] font-mono font-bold text-purple-700 bg-purple-200/80 px-2 py-0.5 rounded-full border border-purple-300 uppercase">System Architecture</span>
               </div>
-              <span class="font-extrabold text-dbNavy text-xs">Tech Analyst</span>
+              <!-- DESKTOP ANIMATED CONNECTING ARROW -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-sm z-10 animate-pulse-arrow">
+                <i class="fa-solid fa-chevron-right text-teal-500 font-bold"></i>
+              </div>
             </div>
 
-            <!-- STEP 4: MIGRATION SME -->
-            <div class="p-4 rounded-2xl bg-teal-50 border border-teal-200/80 font-bold text-dbNavy shadow-2xs flex flex-col items-center justify-center space-y-2.5 hover:bg-teal-100/70 transition">
-              <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center text-lg shadow-sm">
-                <i class="fa-solid fa-network-wired"></i>
+            <!-- STEP 4: MIGRATION SME (TEAL) -->
+            <div class="group relative flex flex-col items-center text-center">
+              <div class="w-36 h-40 bg-gradient-to-br from-teal-100 via-teal-50 to-white shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-3 text-center relative filter drop-shadow-md group-hover:drop-shadow-xl" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
+                <div class="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center text-base font-black shadow-sm mb-1.5 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1">Migration SME</h3>
+                <span class="text-[8px] font-mono font-bold text-teal-700 bg-teal-200/80 px-2 py-0.5 rounded-full border border-teal-300 uppercase">Domain Specialist</span>
               </div>
-              <span class="font-black text-dbNavy text-xs">Migration SME</span>
+              <!-- DESKTOP ANIMATED CONNECTING ARROW -->
+              <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-sm z-10 animate-pulse-arrow">
+                <i class="fa-solid fa-chevron-right text-amber-500 font-bold"></i>
+              </div>
             </div>
 
-            <!-- STEP 5: TECH TRANSFORMATION LEAD (EXECUTIVE PROFESSIONAL LEADER) -->
-            <div class="p-4 rounded-2xl bg-blue-50 font-bold text-dbNavy shadow-xs flex flex-col items-center justify-center space-y-2.5 hover:bg-blue-100/80 transition">
-              <div class="w-10 h-10 rounded-xl bg-dbNavy text-amber-300 flex items-center justify-center text-lg shadow-sm">
-                <i class="fa-solid fa-user-tie"></i>
+            <!-- STEP 5: TECH TRANSFORMATION LEAD (BRIGHT VIBRANT GOLD-BLUE GRADIENT) -->
+            <div class="group relative flex flex-col items-center text-center">
+              <div class="w-40 h-44 bg-gradient-to-br from-amber-200 via-blue-100 to-sky-200 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center p-3 text-center relative filter drop-shadow-lg group-hover:drop-shadow-2xl" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-dbNavy to-dbBlue text-amber-300 flex items-center justify-center text-lg font-black shadow-sm mb-1 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">Tech Transformation Lead</h3>
+                <span class="text-[8px] font-mono font-black text-dbNavy bg-amber-300/80 px-2.5 py-0.5 rounded-full border border-amber-400 uppercase">Executive Lead</span>
               </div>
-              <span class="font-black text-dbNavy text-xs leading-tight">Tech Transformation Lead</span>
             </div>
+
+          </div>
+        </div>
 
           </div>
         </div>
@@ -254,10 +290,6 @@
                 FX trading domain</p>
             </div>
           </div>
-          <span
-            class="text-xs font-mono bg-blue-50 text-dbBlue px-3.5 py-1 rounded-full font-bold border border-blue-100 flex items-center gap-1.5">
-            <i class="fa-solid fa-crown text-amber-500"></i> Multi-Domain Leadership
-          </span>
         </div>
 
         <div
@@ -517,13 +549,8 @@
           </div>
           <div>
             <h2 class="text-xl font-black text-dbNavy tracking-tight">Key Achievements &amp; Strategic Deliveries</h2>
-            <p class="text-xs text-slate-500 font-medium">Distinct circular milestone badges for core engineering achievements</p>
           </div>
         </div>
-        <span
-          class="text-xs font-mono bg-blue-50/90 text-dbBlue px-4 py-1.5 rounded-full font-black border border-blue-200/80 flex items-center gap-2 shadow-xs">
-          <i class="fa-solid fa-circle-nodes text-amber-500"></i> Circular Badges
-        </span>
       </div>
 
       <!-- FIVE DEDICATED CIRCLES (ONE COMPLETE CIRCLE PER ACHIEVEMENT) -->
@@ -632,7 +659,6 @@
           <h3 class="text-base font-black text-dbNavy tracking-tight flex items-center gap-2.5">
             <i class="fa-solid fa-award text-amber-500 text-lg"></i> Recognition &amp; Global Honors
           </h3>
-          <span class="text-xs font-mono text-slate-400 font-bold">Innovation Awards</span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
