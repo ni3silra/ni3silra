@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitin Silra | Executive Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Common CSS & JS -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body class="text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER / NAVIGATION (SINGLE HORIZONTAL ROW ALIGNMENT) -->
+  <header class="sticky top-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 gap-4">
+
+        <!-- LEFT: Deutsche Bank Logo | TDI -->
+        <div class="flex items-center space-x-3 shrink-0">
+          <svg class="h-7 w-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" fill="#001838" />
+            <rect x="12" y="12" width="76" height="76" fill="#001838" stroke="white" stroke-width="10" />
+            <path d="M26 74L74 26" stroke="white" stroke-width="12" stroke-linecap="square" />
+          </svg>
+          <div class="flex items-center space-x-2">
+            <span class="font-extrabold text-dbNavy text-base tracking-tight hidden sm:inline">Deutsche Bank</span>
+            <span class="text-slate-300 font-light text-lg hidden sm:inline">|</span>
+            <span
+              class="text-xs font-mono font-bold bg-slate-100 text-dbBlue px-2 py-0.5 rounded border border-slate-200">CBTECH</span>
+          </div>
+        </div>
+
+        <!-- CENTER: MAIN TAB NAVIGATION BAR (SMOOTH SCROLL ANCHORS) -->
+        <nav class="flex items-center space-x-1 overflow-x-auto py-1">
+          <a href="#summary" id="tab-summary"
+            class="tab-btn active px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            <i class="fa-solid fa-user-tie text-xs text-dbBlue"></i>
+            <span>Summary</span>
+          </a>
+
+          <a href="#core-competencies" id="tab-core-competencies"
+            class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            <i class="fa-solid fa-cubes text-xs text-dbBlue"></i>
+            <span>Core Competencies</span>
+          </a>
+
+          <a href="#career-evolution" id="tab-career-evolution"
+            class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            <i class="fa-solid fa-chart-line text-xs text-dbBlue"></i>
+            <span>Career Evolution</span>
+          </a>
+
+          <a href="#achievements" id="tab-achievements"
+            class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            <i class="fa-solid fa-trophy text-xs text-dbBlue"></i>
+            <span>Achievements</span>
+          </a>
+        </nav>
+
+        <!-- RIGHT: Name -->
+        <div class="text-right shrink-0">
+          <div class="font-black text-dbNavy text-xl leading-tight tracking-tight">Nitin Silra</div>
+          <span class="text-xs text-dbBlue font-semibold block hidden sm:inline">Technical Transformation Lead</span>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA (DYNAMICALLY SWITCHED WITHOUT URL CHANGE) -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 pb-32 flex-1 w-full">
+
+    <!-- PANEL 1: SUMMARY -->
+    <section id="summary" class="tab-panel space-y-8 mb-12">
+      <!-- HERO BANNER SECTION -->
+      <div
+        class="hub-card p-8 rounded-3xl bg-gradient-to-br from-dbNavy via-slate-900 to-dbBlue text-white shadow-xl relative overflow-hidden border border-slate-700/50">
+        <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-dbCyan/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div class="relative z-10 space-y-4">
+          <div class="flex items-center space-x-2">
+            <span
+              class="bg-white/10 text-dbCyan text-xs px-3.5 py-1 rounded-full font-mono uppercase tracking-wider border border-white/15 backdrop-blur-md flex items-center gap-1.5 font-bold">
+              <i class="fa-solid fa-award text-dbCyan"></i> Technical Transformation Lead
+            </span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">Nitin Silra</h1>
+          <!-- EXECUTIVE KEYWORD BADGES / PILLS -->
+          <div class="flex flex-wrap gap-2.5 pt-2 max-w-4xl">
+            <span
+              class="bg-white/10 text-white text-xs sm:text-sm px-3.5 py-1.5 rounded-xl font-medium border border-white/15 backdrop-blur-md flex items-center gap-2 hover:border-dbCyan/50 transition">
+              <i class="fa-solid fa-building-columns text-dbCyan"></i> 10+ Years
+            </span>
+            <span
+              class="bg-white/10 text-white text-xs sm:text-sm px-3.5 py-1.5 rounded-xl font-medium border border-white/15 backdrop-blur-md flex items-center gap-2 hover:border-dbCyan/50 transition">
+              <i class="fa-solid fa-arrows-rotate text-dbCyan"></i> #Migration-Expert
+            </span>
+            <span
+              class="bg-white/10 text-white text-xs sm:text-sm px-3.5 py-1.5 rounded-xl font-medium border border-white/15 backdrop-blur-md flex items-center gap-2 hover:border-dbCyan/50 transition">
+              <i class="fa-solid fa-gears text-dbCyan"></i> #Continuous-Release-Engineering
+            </span>
+            <span
+              class="bg-white/10 text-white text-xs sm:text-sm px-3.5 py-1.5 rounded-xl font-medium border border-white/15 backdrop-blur-md flex items-center gap-2 hover:border-dbCyan/50 transition">
+              <i class="fa-solid fa-shield-halved text-dbCyan"></i> #Production-Stability-Resilience
+            </span>
+            <span
+              class="bg-white/10 text-white text-xs sm:text-sm px-3.5 py-1.5 rounded-xl font-medium border border-white/15 backdrop-blur-md flex items-center gap-2 hover:border-dbCyan/50 transition">
+              <i class="fa-solid fa-rocket text-dbCyan"></i> #Technical-Modernization
+            </span>
+            <span
+              class="bg-white/10 text-white text-xs sm:text-sm px-3.5 py-1.5 rounded-xl font-medium border border-white/15 backdrop-blur-md flex items-center gap-2 hover:border-dbCyan/50 transition">
+              <i class="fa-solid fa-layer-group text-dbCyan"></i> #Multi-Platform-Expert
+            </span>
+            <span
+              class="bg-white/10 text-white text-xs sm:text-sm px-3.5 py-1.5 rounded-xl font-medium border border-white/15 backdrop-blur-md flex items-center gap-2 hover:border-dbCyan/50 transition">
+              <i class="fa-solid fa-users-gear text-dbCyan"></i> #Talent-Mentorship
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: EXECUTIVE TEAM LEADERSHIP & DOMAIN MAP -->
+      <section class="space-y-5">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 rounded-xl bg-gradient-to-tr from-dbNavy to-dbBlue text-white flex items-center justify-center font-bold shadow-md">
+              <i class="fa-solid fa-sitemap"></i>
+            </div>
+            <div>
+              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Executive Team Leadership &amp; Domain Map
+              </h2>
+              <p class="text-xs text-slate-500">Core teams led across DB-Internet platform ecosystem &amp; independent
+                FX trading domain</p>
+            </div>
+          </div>
+          <span
+            class="text-xs font-mono bg-blue-50 text-dbBlue px-3.5 py-1 rounded-full font-bold border border-blue-100 flex items-center gap-1.5">
+            <i class="fa-solid fa-crown text-amber-500"></i> Multi-Domain Leadership
+          </span>
+        </div>
+
+        <div
+          class="hub-card p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-dbNavy to-slate-950 text-white relative overflow-hidden border border-slate-800 shadow-2xl space-y-8">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
+            <div
+              class="lg:col-span-2 bg-slate-900/80 border-2 border-dbCyan/50 rounded-3xl p-6 shadow-xl relative space-y-6">
+              <div
+                class="absolute -top-3.5 left-6 bg-dbCyan text-slate-950 text-[11px] font-black uppercase px-4 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1.5">
+                <i class="fa-solid fa-layer-group"></i> DB-Internet Platform Ecosystem
+              </div>
+              <div
+                class="bg-gradient-to-r from-dbNavy via-blue-950 to-dbNavy border-2 border-dbCyan/80 rounded-2xl p-4 text-center shadow-lg ring-2 ring-cyan-500/20">
+                <span
+                  class="text-[10px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30 px-2.5 py-0.5 rounded-full inline-flex items-center gap-1 mb-1">
+                  <i class="fa-solid fa-crown text-[9px]"></i> PRIMARY LED PLATFORM
+                </span>
+                <h3 class="text-2xl font-black text-white tracking-tight flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-globe text-dbCyan"></i> DB-Internet
+                </h3>
+                <p class="text-[11px] text-slate-300 max-w-lg mx-auto">Central digital banking platform directing core
+                  release engineering &amp; integration architecture.</p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="bg-indigo-950/70 border border-indigo-400/50 rounded-xl p-3.5 shadow-md">
+                  <div class="flex items-center justify-between mb-1">
+                    <span
+                      class="text-[10px] font-mono font-extrabold text-indigo-300 flex items-center gap-1 uppercase"><i
+                        class="fa-solid fa-network-wired"></i> Gateway Layer</span>
+                    <span class="text-[9px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-full">LED
+                      TEAM</span>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-white">Kannon Proxy</h4>
+                  <p class="text-[10px] text-indigo-100/80 mt-0.5">Secure gateway proxy &amp; routing integration.</p>
+                </div>
+                <div class="bg-sky-950/70 border border-dbCyan/50 rounded-xl p-3.5 shadow-md">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-[10px] font-mono font-extrabold text-dbCyan flex items-center gap-1 uppercase"><i
+                        class="fa-solid fa-code"></i> Booking Stream</span>
+                    <span class="text-[9px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-full">LED
+                      TEAM</span>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-white">Booking API</h4>
+                  <p class="text-[10px] text-slate-300 mt-0.5">Core transactional API engine management.</p>
+                </div>
+                <div class="bg-slate-950/60 border border-emerald-500/40 rounded-xl p-3.5 shadow-md">
+                  <div class="flex items-center justify-between mb-1">
+                    <span
+                      class="text-[10px] font-mono font-extrabold text-emerald-400 flex items-center gap-1 uppercase"><i
+                        class="fa-solid fa-book-bookmark"></i> Core Integration</span>
+                    <span class="text-[9px] font-bold bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">LED
+                      MIGRATION</span>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-white">Booking SEP</h4>
+                  <p class="text-[10px] text-slate-300 mt-0.5">Part of team; led database &amp; platform migration.</p>
+                </div>
+                <div class="bg-slate-950/60 border border-amber-500/40 rounded-xl p-3.5 shadow-md">
+                  <div class="flex items-center justify-between mb-1">
+                    <span
+                      class="text-[10px] font-mono font-extrabold text-amber-400 flex items-center gap-1 uppercase"><i
+                        class="fa-solid fa-shield-halved"></i> Risk &amp; Limits</span>
+                    <span class="text-[9px] font-bold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">LED
+                      MIGRATION</span>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-white">Limits SEP &amp; IP</h4>
+                  <p class="text-[10px] text-slate-300 mt-0.5">Part of team; drove limit processor migration.</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="lg:col-span-1 bg-gradient-to-b from-amber-950/40 via-slate-900 to-amber-950/20 border-2 border-amber-500/60 rounded-3xl p-6 shadow-xl relative flex flex-col justify-between space-y-4">
+              <div
+                class="absolute -top-3.5 left-6 bg-amber-400 text-slate-950 text-[11px] font-black uppercase px-4 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1.5">
+                <i class="fa-solid fa-coins"></i> Standalone FX Domain
+              </div>
+              <div class="space-y-3 pt-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-mono font-bold text-amber-300 flex items-center gap-1.5 uppercase"><i
+                      class="fa-solid fa-chart-line"></i> Trading Platform</span>
+                  <span
+                    class="text-[10px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/40 px-2.5 py-0.5 rounded-full flex items-center gap-1"><i
+                      class="fa-solid fa-crown text-[9px]"></i> LED TEAM</span>
+                </div>
+                <h3 class="text-xl font-black text-white tracking-tight flex items-center gap-2"><i
+                    class="fa-solid fa-vault text-amber-400"></i> ESA (Currency &amp; Metals)</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">Independent high-frequency trading platform
+                  specifically handling Foreign Exchange (FX), currency transactions, and precious metals trading across
+                  global markets.</p>
+              </div>
+              <div
+                class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 text-[11px] text-amber-200/90 space-y-1">
+                <span class="font-bold text-amber-300 block uppercase text-[10px] tracking-wider font-mono">Domain
+                  Distinction</span>
+                Operates independently from the core DB-Internet digital banking ecosystem, focusing on specialized FX
+                &amp; commodities trading architectures.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- PANEL 2: CORE COMPETENCIES -->
+    <section id="core-competencies" class="tab-panel space-y-6 mb-12">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-dbBlue/10 text-dbBlue flex items-center justify-center font-bold shadow-sm">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <div>
+            <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Core Technical Pillars &amp; Competencies
+            </h2>
+            <p class="text-xs text-slate-500">Comprehensive breakdown of technical capabilities and domain impact</p>
+          </div>
+        </div>
+        <span
+          class="text-xs font-mono bg-blue-50 text-dbBlue px-3 py-1 rounded-full font-semibold border border-blue-100">4
+          Core Pillars</span>
+      </div>
+
+      <div class="space-y-4">
+        <div
+          class="hub-card p-6 rounded-2xl border-l-4 border-l-dbBlue flex flex-col md:flex-row md:items-center justify-between gap-4 hover:shadow-md transition-shadow">
+          <div class="space-y-1.5 max-w-3xl">
+            <div class="flex items-center space-x-2">
+              <span
+                class="text-xs font-mono font-bold text-dbBlue bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-100">PILLAR
+                01</span>
+              <h3 class="text-lg font-bold text-dbNavy">Core Integration &amp; Modernization</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Connecting legacy HP NonStop Mainframe
+              architectures with scalable event-driven services and high-efficiency SDLC workflows across dbInternet
+              &amp; Booking API teams.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 shrink-0">
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">Mainframe
+              API</span>
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">SDLC
+              Automation</span>
+          </div>
+        </div>
+
+        <div
+          class="hub-card p-6 rounded-2xl border-l-4 border-l-dbCyan flex flex-col md:flex-row md:items-center justify-between gap-4 hover:shadow-md transition-shadow">
+          <div class="space-y-1.5 max-w-3xl">
+            <div class="flex items-center space-x-2">
+              <span
+                class="text-xs font-mono font-bold text-dbCyan bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-100">PILLAR
+                02</span>
+              <h3 class="text-lg font-bold text-dbNavy">Strategic Infrastructure Migrations</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Executing de-risked database migrations (DHS to
+              ExaCC) and core container updates (Fabric 1.0 to 2.0) with continuous availability for active banking
+              systems.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 shrink-0">
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">DHS
+              &rarr; ExaCC</span>
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">Fabric
+              1.0 &rarr; 2.0</span>
+          </div>
+        </div>
+
+        <div
+          class="hub-card p-6 rounded-2xl border-l-4 border-l-emerald-500 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:shadow-md transition-shadow">
+          <div class="space-y-1.5 max-w-3xl">
+            <div class="flex items-center space-x-2">
+              <span
+                class="text-xs font-mono font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">PILLAR
+                03</span>
+              <h3 class="text-lg font-bold text-dbNavy">Shift-Left Governance &amp; Compliance</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Embedding automated security, regulatory, and
+              audit checks directly into build pipelines to eliminate manual audit bottlenecks while staying compliant.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 shrink-0">
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">Auto-Audit</span>
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">CI/CD
+              Security</span>
+          </div>
+        </div>
+
+        <div
+          class="hub-card p-6 rounded-2xl border-l-4 border-l-indigo-500 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:shadow-md transition-shadow">
+          <div class="space-y-1.5 max-w-3xl">
+            <div class="flex items-center space-x-2">
+              <span
+                class="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-100">PILLAR
+                04</span>
+              <h3 class="text-lg font-bold text-dbNavy">Release Leadership &amp; Mentorship</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Directing end-to-end releases across managed
+              teams with high availability while mentoring engineering talent and growing technical leads.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 shrink-0">
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">High
+              Availability</span>
+            <span
+              class="text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 font-medium">Talent
+              Mentorship</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 3: CAREER EVOLUTION -->
+    <section id="career-evolution" class="tab-panel space-y-8 mb-12">
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-lg bg-indigo-100/80 text-indigo-600 flex items-center justify-center font-bold shadow-sm">
+              <i class="fa-solid fa-timeline"></i>
+            </div>
+            <div>
+              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">10-Year Progression Roadmap</h2>
+              <p class="text-xs text-slate-500">Evolution from technical support to engineering lead</p>
+            </div>
+          </div>
+          <span
+            class="text-xs font-mono bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full font-semibold border border-indigo-100">10+
+            Years</span>
+        </div>
+        <div class="hub-card p-6 rounded-2xl bg-white space-y-3 border border-slate-200 shadow-sm">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-center text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 font-medium text-slate-700 shadow-2xs">01.
+              Test Support</div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 font-medium text-slate-700 shadow-2xs">02.
+              Developer</div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 font-medium text-slate-700 shadow-2xs">03.
+              Tech Analyst</div>
+            <div class="p-3 rounded-xl bg-blue-50/80 font-bold text-dbBlue border border-blue-200 shadow-2xs">04.
+              dbInternet SME</div>
+            <div class="p-3 rounded-xl bg-cyan-50/80 font-bold text-dbCyan border border-cyan-200 shadow-2xs">05.
+              Migration SME</div>
+            <div class="p-3 rounded-xl bg-dbNavy font-bold text-white border border-dbNavy shadow-md">06. Engineering
+              Lead</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-lg bg-dbCyan/10 text-dbCyan flex items-center justify-center font-bold shadow-sm">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div>
+              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Detailed Career Phases</h2>
+              <p class="text-xs text-slate-500">Core milestones and strategic contributions</p>
+            </div>
+          </div>
+          <span
+            class="text-xs font-mono bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-semibold border border-slate-200">3
+            Key Phases</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div
+            class="hub-card p-6 rounded-2xl space-y-3 relative border-t-4 border-t-slate-400 hover:shadow-md transition-shadow">
+            <span
+              class="text-xs font-mono font-extrabold text-slate-500 uppercase tracking-wider bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 inline-block">Phase
+              01</span>
+            <h4 class="font-bold text-dbNavy text-base">Technical Foundation</h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Hands-on technical mastery on core HP NonStop
+              Mainframe systems, focusing on code quality, testing reliability, and high system uptime.</p>
+          </div>
+          <div
+            class="hub-card p-6 rounded-2xl space-y-3 relative border-t-4 border-t-dbBlue hover:shadow-md transition-shadow">
+            <span
+              class="text-xs font-mono font-extrabold text-dbBlue uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 inline-block">Phase
+              02</span>
+            <h4 class="font-bold text-dbNavy text-base">Domain Leadership</h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Leading integration architectures, managing
+              database upgrades (DHS to ExaCC), and serving as Subject Matter Expert across core streams.</p>
+          </div>
+          <div
+            class="hub-card p-6 rounded-2xl space-y-3 relative border-t-4 border-t-dbCyan hover:shadow-md transition-shadow">
+            <span
+              class="text-xs font-mono font-extrabold text-dbCyan uppercase tracking-wider bg-cyan-50 px-2.5 py-1 rounded-md border border-cyan-100 inline-block">Phase
+              03</span>
+            <h4 class="font-bold text-dbNavy text-base">Strategic Vision</h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Scaling multi-team delivery across domain
+              teams, automating audit governance, saving SDLC developer hours, and cultivating talent.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- PANEL 4: ACHIEVEMENTS -->
+    <section id="achievements" class="tab-panel space-y-8 mb-12">
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-lg bg-blue-100/80 text-dbBlue flex items-center justify-center font-bold shadow-sm">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div>
+              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Major Technical Achievements</h2>
+              <p class="text-xs text-slate-500">Key delivery milestones executed across core banking streams</p>
+            </div>
+          </div>
+          <span
+            class="text-xs font-mono bg-blue-50 text-dbBlue px-3 py-1 rounded-full font-semibold border border-blue-100">Milestone
+            Portfolio</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="hub-card p-6 rounded-2xl space-y-3 border-l-4 border-l-dbBlue hover:shadow-md transition-shadow">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-blue-50 text-dbBlue flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-dbNavy text-base">DHS to ExaCC Migration</h3>
+                <span
+                  class="text-xs font-mono text-dbBlue bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Database
+                  Modernization</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Engineered and executed the smooth migration of
+              legacy DHS databases to Oracle ExaCC with high business continuity for active core banking flows.</p>
+          </div>
+          <div class="hub-card p-6 rounded-2xl space-y-3 border-l-4 border-l-dbCyan hover:shadow-md transition-shadow">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-cyan-50 text-dbCyan flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-dbNavy text-base">Fabric 1.0 to 2.0 Upgrade</h3>
+                <span
+                  class="text-xs font-mono text-dbCyan bg-cyan-50 px-2 py-0.5 rounded border border-cyan-100">Platform
+                  Modernization</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Upgraded core container services to Fabric 2.0
+              platform infrastructure, ensuring enhanced resilience and scalable transaction throughput.</p>
+          </div>
+          <div
+            class="hub-card p-6 rounded-2xl space-y-3 border-l-4 border-l-emerald-500 hover:shadow-md transition-shadow">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-dbNavy text-base">SDLC Efficiency &amp; Hour Savings</h3>
+                <span
+                  class="text-xs font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">Process
+                  Automation</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Automated testing and build delivery pipelines
+              across domain streams, yielding significant human-hour savings and faster cycle times.</p>
+          </div>
+          <div
+            class="hub-card p-6 rounded-2xl space-y-3 border-l-4 border-l-indigo-500 hover:shadow-md transition-shadow">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-shield-cat"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-dbNavy text-base">Shift-Left Audit Automation</h3>
+                <span
+                  class="text-xs font-mono text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">Continuous
+                  Governance</span>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Established continuous automated compliance and
+              security auditing within deployment streams to pass audits without manual operational overhead.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 bg-white/80 py-4">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between text-xs text-slate-500">
+      <span class="font-bold text-dbNavy">Nitin Silra</span>
+      <span>Deutsche Bank CBTECH Executive Portfolio</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
