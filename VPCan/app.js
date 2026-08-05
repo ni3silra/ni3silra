@@ -50,6 +50,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Mobile Hamburger Toggle logic
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-tab-btn');
+
+  if (mobileMenuBtn && mobileMenu && hamburgerIcon) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        hamburgerIcon.classList.remove('fa-xmark');
+        hamburgerIcon.classList.add('fa-bars');
+      } else {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-xmark');
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('fa-xmark');
+        hamburgerIcon.classList.add('fa-bars');
+      });
+    });
+  }
+
   window.addEventListener('scroll', updateActiveNav);
   updateActiveNav();
 

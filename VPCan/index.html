@@ -24,62 +24,93 @@
 
 <body class="text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- HEADER / NAVIGATION (SINGLE HORIZONTAL ROW ALIGNMENT) -->
-  <header class="sticky top-0 z-50 glass-header">
+  <!-- HEADER / NAVIGATION (RESPONSIVE WITH MOBILE HAMBURGER MENU) -->
+  <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between h-16 gap-4">
+      <div class="flex items-center justify-between h-16 gap-3">
 
-        <!-- LEFT: Deutsche Bank Logo | TDI -->
-        <div class="flex items-center space-x-3 shrink-0">
-          <svg class="h-7 w-auto" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#001838" />
-            <rect x="12" y="12" width="76" height="76" fill="#001838" stroke="white" stroke-width="10" />
-            <path d="M26 74L74 26" stroke="white" stroke-width="12" stroke-linecap="square" />
-          </svg>
+        <!-- LEFT SECTION: NAME & ROLE + DEUTSCHE BANK & CBTECH BRANDING -->
+        <div class="flex items-center space-x-3 sm:space-x-4 shrink-0">
+          <!-- NAME & ROLE -->
+          <div class="text-left">
+            <div class="font-black text-dbNavy text-base sm:text-xl leading-tight tracking-tight flex items-center gap-1.5">
+              Nitin Silra
+            </div>
+            <span class="text-[10px] sm:text-[11px] text-dbBlue font-bold block leading-tight">Technical Transformation Lead</span>
+          </div>
+
+          <span class="text-slate-300 font-light text-lg sm:text-xl">|</span>
+
+          <!-- DEUTSCHE BANK LOGO & CBTECH BADGE -->
           <div class="flex items-center space-x-2">
-            <span class="font-extrabold text-dbNavy text-base tracking-tight hidden sm:inline">Deutsche Bank</span>
-            <span class="text-slate-300 font-light text-lg hidden sm:inline">|</span>
-            <span
-              class="text-xs font-mono font-bold bg-slate-100 text-dbBlue px-2 py-0.5 rounded border border-slate-200">CBTECH</span>
+            <svg class="h-6 sm:h-7 w-auto shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="#001838" />
+              <rect x="12" y="12" width="76" height="76" fill="#001838" stroke="white" stroke-width="10" />
+              <path d="M26 74L74 26" stroke="white" stroke-width="12" stroke-linecap="square" />
+            </svg>
+            <div class="flex items-center space-x-1.5 sm:space-x-2">
+              <span class="font-extrabold text-dbNavy text-xs sm:text-sm tracking-tight hidden lg:inline">Deutsche Bank</span>
+              <span
+                class="text-[9px] sm:text-[10px] font-mono font-bold bg-blue-50 text-dbBlue px-2 py-0.5 rounded-md border border-blue-100/80 shadow-2xs">CBTECH</span>
+            </div>
           </div>
         </div>
 
-        <!-- CENTER: MAIN TAB NAVIGATION BAR (SMOOTH SCROLL ANCHORS) -->
-        <nav class="flex items-center space-x-1 overflow-x-auto py-1">
+        <!-- RIGHT SECTION: DESKTOP NAVIGATION TABS (HIDDEN ON MOBILE) -->
+        <nav class="hidden md:flex items-center space-x-1.5 py-1 shrink-0">
           <a href="#summary" id="tab-summary"
-            class="tab-btn active px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            class="tab-btn active px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap flex items-center space-x-1.5 transition">
             <i class="fa-solid fa-user-tie text-xs text-dbBlue"></i>
             <span>Summary</span>
           </a>
 
           <a href="#career-evolution" id="tab-career-evolution"
-            class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            class="tab-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap flex items-center space-x-1.5 transition">
             <i class="fa-solid fa-chart-line text-xs text-dbBlue"></i>
             <span>Career Evolution</span>
           </a>
 
           <a href="#domain-map" id="tab-domain-map"
-            class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            class="tab-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap flex items-center space-x-1.5 transition">
             <i class="fa-solid fa-users text-xs text-dbBlue"></i>
             <span>Teams</span>
           </a>
 
-
-
           <a href="#achievements" id="tab-achievements"
-            class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap flex items-center space-x-1.5">
+            class="tab-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap flex items-center space-x-1.5 transition">
             <i class="fa-solid fa-trophy text-xs text-dbBlue"></i>
             <span>Achievements</span>
           </a>
         </nav>
 
-        <!-- RIGHT: Name -->
-        <div class="text-right shrink-0">
-          <div class="font-black text-dbNavy text-xl leading-tight tracking-tight">Nitin Silra</div>
-          <span class="text-xs text-dbBlue font-semibold block hidden sm:inline">Technical Transformation Lead</span>
-        </div>
+        <!-- MOBILE HAMBURGER BUTTON (VISIBLE ONLY ON MOBILE < md) -->
+        <button id="mobile-menu-btn" type="button"
+          class="md:hidden text-dbNavy hover:text-dbBlue bg-slate-100 hover:bg-slate-200 w-10 h-10 rounded-xl flex items-center justify-center transition border border-slate-200 shadow-2xs"
+          aria-label="Toggle navigation menu">
+          <i id="hamburger-icon" class="fa-solid fa-bars text-base"></i>
+        </button>
 
       </div>
+    </div>
+
+    <!-- MOBILE DROPDOWN NAVIGATION MENU -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-md px-4 py-3 shadow-lg space-y-1">
+      <a href="#summary" class="mobile-tab-btn flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-extrabold text-dbNavy hover:bg-blue-50 hover:text-dbBlue transition">
+        <i class="fa-solid fa-user-tie text-base text-dbBlue w-5 text-center"></i>
+        <span>Summary</span>
+      </a>
+      <a href="#career-evolution" class="mobile-tab-btn flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-extrabold text-dbNavy hover:bg-blue-50 hover:text-dbBlue transition">
+        <i class="fa-solid fa-chart-line text-base text-dbBlue w-5 text-center"></i>
+        <span>Career Evolution</span>
+      </a>
+      <a href="#domain-map" class="mobile-tab-btn flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-extrabold text-dbNavy hover:bg-blue-50 hover:text-dbBlue transition">
+        <i class="fa-solid fa-users text-base text-dbBlue w-5 text-center"></i>
+        <span>Teams</span>
+      </a>
+      <a href="#achievements" class="mobile-tab-btn flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-extrabold text-dbNavy hover:bg-blue-50 hover:text-dbBlue transition">
+        <i class="fa-solid fa-trophy text-base text-dbBlue w-5 text-center"></i>
+        <span>Achievements</span>
+      </a>
     </div>
   </header>
 
@@ -274,7 +305,16 @@
                     <i class="fa-solid fa-file-invoice text-[10px]"></i> #Statements
                   </span>
                   <span class="bg-dbCyan/15 text-dbCyan text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-dbCyan/30 flex items-center gap-1">
-                    <i class="fa-solid fa-percent text-[10px]"></i> #Interest-Rates
+                    <i class="fa-solid fa-hand-holding-dollar text-[10px]"></i> #Loans
+                  </span>
+                  <span class="bg-dbCyan/15 text-dbCyan text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-dbCyan/30 flex items-center gap-1">
+                    <i class="fa-solid fa-chart-line-up text-[10px]"></i> #Money-Market
+                  </span>
+                  <span class="bg-dbCyan/15 text-dbCyan text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-dbCyan/30 flex items-center gap-1">
+                    <i class="fa-solid fa-laptop-medical text-[10px]"></i> #Electronic-Banking
+                  </span>
+                  <span class="bg-dbCyan/15 text-dbCyan text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-dbCyan/30 flex items-center gap-1">
+                    <i class="fa-solid fa-building-columns text-[10px]"></i> #Trade-Finance
                   </span>
                   <span class="bg-indigo-500/15 text-indigo-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-indigo-400/30 flex items-center gap-1.5">
                     <i class="fa-solid fa-server text-[10px]"></i> #Platform:HP-NonStop-Mainframe
@@ -467,7 +507,7 @@
               <i class="fa-solid fa-trophy"></i>
             </div>
             <div>
-              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Major Technical Achievements</h2>
+              <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Key Achievements</h2>
               <p class="text-xs text-slate-500">Key delivery milestones executed across core banking streams</p>
             </div>
           </div>
@@ -475,121 +515,228 @@
             class="text-xs font-mono bg-blue-50 text-dbBlue px-3 py-1 rounded-full font-semibold border border-blue-100">Milestone
             Portfolio</span>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           
           <!-- ACHIEVEMENT 1: DHS TO EXACC MIGRATION -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3.5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="flex items-center gap-3 border-b border-slate-100 pb-2.5">
-              <div class="w-9 h-9 rounded-xl bg-blue-50 text-dbBlue flex items-center justify-center font-bold text-base border border-blue-100 shrink-0">
-                <i class="fa-solid fa-database"></i>
+          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-dbBlue border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <div class="w-8 h-8 rounded-xl bg-blue-50 text-dbBlue flex items-center justify-center font-bold text-sm border border-blue-100">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+                <span class="text-[9px] font-mono font-bold text-dbBlue bg-blue-50 px-2 py-0.5 rounded-full border border-blue-100 uppercase">Database</span>
               </div>
               <h3 class="font-extrabold text-dbNavy text-xs leading-tight">DHS to ExaCC Migration</h3>
             </div>
             
             <div class="space-y-2 text-xs">
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-dbBlue uppercase block">What</span>
-                <p class="text-slate-700 font-medium">Migrated DHS to Oracle ExaCC</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-dbBlue uppercase tracking-wider block">What</span>
+                <p class="text-slate-700 font-semibold text-[11px]">Migrated DHS to Oracle ExaCC</p>
               </div>
 
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-slate-500 uppercase block">Why</span>
-                <p class="text-slate-600 font-medium">Eliminate legacy hardware risks</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
+                <p class="text-slate-600 font-medium text-[11px]">Eliminate legacy hardware risks</p>
               </div>
 
-              <div class="bg-blue-50/80 p-2.5 rounded-lg border border-blue-100">
-                <span class="text-[10px] font-mono font-black text-dbNavy uppercase block flex items-center gap-1">
-                  <i class="fa-solid fa-chart-line text-dbBlue"></i> Impact
+              <div class="bg-blue-50 p-2 rounded-xl border border-blue-100">
+                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
+                  <i class="fa-solid fa-chart-line text-dbBlue text-[9px]"></i> Impact
                 </span>
-                <p class="text-dbNavy font-bold">Zero downtime, faster queries</p>
+                <p class="text-dbNavy font-bold text-[11px]">Zero downtime, faster queries</p>
               </div>
             </div>
           </div>
 
           <!-- ACHIEVEMENT 2: FABRIC 1.0 TO 2.0 UPGRADE -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3.5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="flex items-center gap-3 border-b border-slate-100 pb-2.5">
-              <div class="w-9 h-9 rounded-xl bg-cyan-50 text-dbCyan flex items-center justify-center font-bold text-base border border-cyan-100 shrink-0">
-                <i class="fa-solid fa-cubes-stacked"></i>
+          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-dbCyan border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <div class="w-8 h-8 rounded-xl bg-cyan-50 text-dbCyan flex items-center justify-center font-bold text-sm border border-cyan-100">
+                  <i class="fa-solid fa-cubes-stacked"></i>
+                </div>
+                <span class="text-[9px] font-mono font-bold text-dbCyan bg-cyan-50 px-2 py-0.5 rounded-full border border-cyan-100 uppercase">Platform</span>
               </div>
               <h3 class="font-extrabold text-dbNavy text-xs leading-tight">Fabric 2.0 Upgrade</h3>
             </div>
             
             <div class="space-y-2 text-xs">
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-dbCyan uppercase block">What</span>
-                <p class="text-slate-700 font-medium">Upgraded containers to Fabric 2.0</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-dbCyan uppercase tracking-wider block">What</span>
+                <p class="text-slate-700 font-semibold text-[11px]">Upgraded containers to Fabric 2.0</p>
               </div>
 
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-slate-500 uppercase block">Why</span>
-                <p class="text-slate-600 font-medium">Enhance platform container resilience</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
+                <p class="text-slate-600 font-medium text-[11px]">Enhance container resilience</p>
               </div>
 
-              <div class="bg-cyan-50/80 p-2.5 rounded-lg border border-cyan-100">
-                <span class="text-[10px] font-mono font-black text-dbNavy uppercase block flex items-center gap-1">
-                  <i class="fa-solid fa-bolt text-dbCyan"></i> Impact
+              <div class="bg-cyan-50 p-2 rounded-xl border border-cyan-100">
+                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
+                  <i class="fa-solid fa-bolt text-dbCyan text-[9px]"></i> Impact
                 </span>
-                <p class="text-dbNavy font-bold">High throughput, reliable failover</p>
+                <p class="text-dbNavy font-bold text-[11px]">High throughput, reliable failover</p>
               </div>
             </div>
           </div>
 
-          <!-- ACHIEVEMENT 3: SDLC AUTOMATION & HOUR SAVINGS -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3.5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="flex items-center gap-3 border-b border-slate-100 pb-2.5">
-              <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-base border border-emerald-100 shrink-0">
-                <i class="fa-solid fa-clock-rotate-left"></i>
+          <!-- ACHIEVEMENT 3: NEWRELIC ON HP NONSTOP -->
+          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-emerald-500 border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-sm border border-emerald-100">
+                  <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <span class="text-[9px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100 uppercase">Telemetry</span>
               </div>
-              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">SDLC Automation</h3>
+              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">NewRelic on HP NonStop</h3>
             </div>
             
             <div class="space-y-2 text-xs">
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-emerald-600 uppercase block">What</span>
-                <p class="text-slate-700 font-medium">Automated CI/CD &amp; regression</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-emerald-600 uppercase tracking-wider block">What</span>
+                <p class="text-slate-700 font-semibold text-[11px]">Built APM for HP NonStop</p>
               </div>
 
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-slate-500 uppercase block">Why</span>
-                <p class="text-slate-600 font-medium">Eliminate manual testing effort</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
+                <p class="text-slate-600 font-medium text-[11px]">No legacy market tools available</p>
               </div>
 
-              <div class="bg-emerald-50/80 p-2.5 rounded-lg border border-emerald-100">
-                <span class="text-[10px] font-mono font-black text-dbNavy uppercase block flex items-center gap-1">
-                  <i class="fa-solid fa-piggy-bank text-emerald-600"></i> Impact
+              <div class="bg-emerald-50 p-2 rounded-xl border border-emerald-100 space-y-0.5">
+                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
+                  <i class="fa-solid fa-compass text-emerald-600 text-[9px]"></i> Impact
                 </span>
-                <p class="text-dbNavy font-bold">Saved massive annual hours</p>
+                <ul class="text-[10px] text-dbNavy font-semibold space-y-0.5 list-disc list-inside leading-tight">
+                  <li>Northstar telemetry alignment</li>
+                  <li>Advanced observability</li>
+                  <li>Reduced custom tool costs</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- ACHIEVEMENT 4: SHIFT-LEFT AUDIT GOVERNANCE -->
-          <div class="hub-card p-5 rounded-2xl bg-white space-y-3.5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-            <div class="flex items-center gap-3 border-b border-slate-100 pb-2.5">
-              <div class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-base border border-indigo-100 shrink-0">
-                <i class="fa-solid fa-shield-cat"></i>
+          <!-- ACHIEVEMENT 4: DISPOSITION API MERGER -->
+          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-purple-500 border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <div class="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-sm border border-purple-100">
+                  <i class="fa-solid fa-code-merge"></i>
+                </div>
+                <span class="text-[9px] font-mono font-bold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full border border-purple-100 uppercase">Architecture</span>
               </div>
-              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">Shift-Left Governance</h3>
+              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">Disposition API Merger</h3>
             </div>
             
             <div class="space-y-2 text-xs">
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-indigo-600 uppercase block">What</span>
-                <p class="text-slate-700 font-medium">Automated audit compliance checks</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-purple-600 uppercase tracking-wider block">What</span>
+                <p class="text-slate-700 font-semibold text-[11px]">Merged Fabric+HP NS to HP NS</p>
               </div>
 
-              <div class="bg-slate-50 p-2 rounded-lg border border-slate-200/60">
-                <span class="text-[10px] font-mono font-black text-slate-500 uppercase block">Why</span>
-                <p class="text-slate-600 font-medium">Prevent pre-release audit blocks</p>
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
+                <p class="text-slate-600 font-medium text-[11px]">Escort removed in new hardware</p>
               </div>
 
-              <div class="bg-indigo-50/80 p-2.5 rounded-lg border border-indigo-100">
-                <span class="text-[10px] font-mono font-black text-dbNavy uppercase block flex items-center gap-1">
-                  <i class="fa-solid fa-shield-halved text-indigo-600"></i> Impact
+              <div class="bg-purple-50 p-2 rounded-xl border border-purple-100 space-y-0.5">
+                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
+                  <i class="fa-solid fa-shield-halved text-purple-600 text-[9px]"></i> Impact
                 </span>
-                <p class="text-dbNavy font-bold">Passed audits with zero overhead</p>
+                <ul class="text-[10px] text-dbNavy font-semibold space-y-0.5 list-disc list-inside leading-tight">
+                  <li>High HP NS service reliability</li>
+                  <li>No high cost Escort needed</li>
+                  <li>18-loc Fabric saved 5 yrs</li>
+                </ul>
               </div>
+            </div>
+          </div>
+
+          <!-- ACHIEVEMENT 5: NEXUSPAY INTEGRATION -->
+          <div class="hub-card p-5 rounded-2xl bg-white space-y-3 border-t-4 border-t-amber-500 border-x border-b border-slate-200/90 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                <div class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-sm border border-amber-100">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <span class="text-[9px] font-mono font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-100 uppercase">Compliance</span>
+              </div>
+              <h3 class="font-extrabold text-dbNavy text-xs leading-tight">NexusPay Integration</h3>
+            </div>
+            
+            <div class="space-y-2 text-xs">
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-amber-600 uppercase tracking-wider block">What</span>
+                <p class="text-slate-400 font-mono text-[10px] italic">Pending details</p>
+              </div>
+
+              <div class="bg-slate-50/80 p-2 rounded-xl border border-slate-200/60">
+                <span class="text-[9px] font-mono font-black text-slate-400 uppercase tracking-wider block">Why</span>
+                <p class="text-slate-600 font-medium text-[11px]">ISO20022 Swift Global compliance</p>
+              </div>
+
+              <div class="bg-amber-50 p-2 rounded-xl border border-amber-100">
+                <span class="text-[9px] font-mono font-black text-dbNavy uppercase tracking-wider block flex items-center gap-1">
+                  <i class="fa-solid fa-globe text-amber-600 text-[9px]"></i> Impact
+                </span>
+                <p class="text-slate-400 font-mono text-[10px] italic">Pending details</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ADDITIONAL ACHIEVEMENTS (COLORFUL POINTER BOXES) -->
+      <section class="space-y-4 pt-4 border-t border-slate-200/80">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-7 h-7 rounded-lg bg-amber-100/80 text-amber-600 flex items-center justify-center font-bold shadow-xs">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-extrabold text-dbNavy tracking-tight">Additional Achievements &amp; Hackathons</h3>
+              <p class="text-[11px] text-slate-500">Innovation awards &amp; developer productivity tool creation</p>
+            </div>
+          </div>
+          <span
+            class="text-[10px] font-mono bg-amber-50 text-amber-700 px-3 py-0.5 rounded-full font-bold border border-amber-200">Recognition</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <!-- POINTER 1: HACKATHON 2025 -->
+          <div class="p-4 rounded-2xl bg-amber-50/90 border border-amber-200/80 shadow-2xs hover:shadow-md transition flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg font-bold shrink-0 shadow-xs">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="space-y-0.5">
+              <span class="text-[10px] font-mono font-black text-amber-700 uppercase tracking-wider block">Hackathon 2025</span>
+              <p class="text-xs font-black text-dbNavy leading-snug">Part of Global 3rd Winning Team</p>
+            </div>
+          </div>
+
+          <!-- POINTER 2: HACKATHON 2026 -->
+          <div class="p-4 rounded-2xl bg-indigo-50/90 border border-indigo-200/80 shadow-2xs hover:shadow-md transition flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg font-bold shrink-0 shadow-xs">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <div class="space-y-0.5">
+              <span class="text-[10px] font-mono font-black text-indigo-700 uppercase tracking-wider block">Hackathon 2026</span>
+              <p class="text-xs font-black text-dbNavy leading-snug">Lead of Frankfurt Runner-Up Team</p>
+            </div>
+          </div>
+
+          <!-- POINTER 3: DEVELOPER PRODUCTIVITY -->
+          <div class="p-4 rounded-2xl bg-emerald-50/90 border border-emerald-200/80 shadow-2xs hover:shadow-md transition flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-lg font-bold shrink-0 shadow-xs">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="space-y-0.5">
+              <span class="text-[10px] font-mono font-black text-emerald-700 uppercase tracking-wider block">Developer Tools</span>
+              <p class="text-xs font-black text-dbNavy leading-snug">Created Software Accelerating Developer Workflows</p>
             </div>
           </div>
 
