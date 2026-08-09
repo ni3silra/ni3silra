@@ -1,17 +1,40 @@
-"Hello everyone, thank you for giving me the opportunity to share my story with you today.
+# Pitch
 
-My name is Nitin Silra. Over the past 10 years with my multiple tech roles, my journey has been about continuous growth—starting from hands-on system support and evolving into leading technical transformations.
+Hello everyone. Thanks for giving me this opportunity to showcase the imapct which I delivered to Deutche Bank.
 
-My Journey began in support. Working on the front lines taught me a powerful lesson that guides me every day: whatever software we ship must be bulletproof to keep production stable. To make things safer and faster, I started automating manual workflows. This passion for solving problems led me into software development—a dream role I had worked toward since my college days.
+I feel excited and extremly proud of my journey in DB I started with incident resolution and now driving technology transformations focused on simplifying, modernizing, and optimizing costs.
 
-As a developer, I saw how my code directly created business value or lowerd the cost of Deutche Bank. I delivered key projects like Swiss harmonization and PDS integration with DB-Internet, and I built a low-cost proxy system that saved our team significant money on HP NonStop plugin costs.
+My Name is Nitin Silra and My idea has always been simple:if something looks complex, take one step at a time to make it simpler, better, and create measurable business value.
 
-Over time, I worked across many different products, including DB-Internet, Booking API, ESA, SEP, Limits & IP, and Kannon-proxy. Each ran on different platforms like HP NonStop, Fabric, and Server Grid. Mastering these different setups gave me a complete, end-to-end understanding of how our systems connect.
+---
 
-That technical foundation naturally brought me into leadership. I began leading major modernizations, such as Java runtime upgrades, moving on-premise platforms to Fabric GCP, lowering database costs, and replacing manual work with modern automation.
+My journey started with Test Support where I automated multiple manual workflows which eventually landed me into software development 
 
-Today, as Technical Transformation Lead for DB-Internet, I am guiding our critical migration off legacy HP NonStop hardware. I am bringing the platform up to modern Deutsche Bank standards—automating deployments with CI/CD,, boosting release capabilities with OneSDLC,  and setting up modern observability with NewRelic.
+At DB-Internet, I modernized a legacy deployment process from Revision Management System to automated CI/CD pipelines using Bitbucket and Jenkins, which reduced the manual efforts and improved release stability.
 
-Looking ahead as DB-Internet moves toward decommissioning, my goal is to use my multi-platform experience to help shift services to cloud solutions like HPE GreenLake to drastically lower running costs.
+Additionally, I led the migration of 
+- core limits, 
+- bookings, 
+- and Instant payment flows. 
 
-Ultimately, I see my next chapter as a Transformation Lead for multiple teams—helping Deutsche Bank modernize legacy platforms, cut operational costs, and drive business growth through technical excellence.
+Today, as Technical Transformation Lead for DB-Internet, 
+- I am guiding our critical migration of legacy HP NonStop hardware 
+- and bringing the platform up to modern Deutsche Bank standards—automating deployments with CI/CD, 
+- boosting release capabilities with OneSDLC, 
+- and setting up modern observability with NewRelic.
+
+---
+
+Outside of db-Internet Lagacy world I led multiple Migration in Booking API and Booking SEP , such as 
+- Java runtime upgrades
+- On-premise platforms to Fabric GCP
+- Databse Migrations 
+- Decomissioned the Intermidiate DBI Booking API-
+
+---
+
+This journey really shifted my perspective. I went from focusing on delivering technical solutions, to focusing on delivering true business value through technology.
+
+In the past, my first questions were always: 'What are we building, and how?'
+
+But today, I ask myself a completely different question: 'What is the most effective way to deliver this solution while maximizing business value and reducing costs?'
