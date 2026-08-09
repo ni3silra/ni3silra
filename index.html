@@ -140,27 +140,19 @@
             </span>
             <span
               class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-arrows-rotate text-dbCyan text-xs"></i> #Migration-Lead
+              <i class="fa-solid fa-arrows-rotate text-dbCyan text-xs"></i> Migration Lead
             </span>
             <span
               class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-shield-halved text-dbCyan text-xs"></i> #Production-Resilience
+              <i class="fa-solid fa-layer-group text-dbCyan text-xs"></i> Multi-Platform Expert
             </span>
             <span
               class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-cloud-arrow-up text-dbCyan text-xs"></i> #Cloud-Modernization
+              <i class="fa-solid fa-user-shield text-dbCyan text-xs"></i> Shift-Left Governance
             </span>
             <span
               class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-layer-group text-dbCyan text-xs"></i> #Multi-Platform-Expert
-            </span>
-            <span
-              class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-chart-line text-dbCyan text-xs"></i> #Enterprise-Telemetry
-            </span>
-            <span
-              class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-user-shield text-dbCyan text-xs"></i> #Shift-Left-Governance
+              <i class="fa-solid fa-shield-halved text-dbCyan text-xs"></i> Production Resilience
             </span>
           </div>
 
@@ -177,9 +169,9 @@
               <div class="py-2 px-2">
                 <!-- DESKTOP HORIZONTAL VIEW (HIDDEN ON MOBILE) -->
                 <div class="hidden sm:flex relative items-start justify-between max-w-4xl mx-auto py-2">
-                  <!-- HORIZONTAL CONNECTOR LINE -->
+                  <!-- HORIZONTAL CONNECTOR LINE (CONSTRAINED BETWEEN FIRST AND LAST ICON) -->
                   <div
-                    class="absolute inset-x-8 top-5 h-0.5 bg-gradient-to-r from-sky-400 via-purple-400 to-amber-400 opacity-40">
+                    class="absolute left-12 right-16 top-6 h-0.5 bg-gradient-to-r from-sky-400 via-purple-400 to-amber-400 opacity-50 pointer-events-none">
                   </div>
 
                   <!-- STEP 1: TEST SUPPORT -->
@@ -318,17 +310,17 @@
       <div
         class="hub-card p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-dbNavy to-slate-950 text-white relative overflow-hidden border border-slate-800 shadow-2xl space-y-8">
 
-        <!-- TOP SYSTEM TOPOLOGY: ASYMMETRICAL REAL-WORLD ARCHITECTURE -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 relative z-10 items-stretch">
+        <!-- TOP SYSTEM TOPOLOGY: ASYMMETRICAL REAL-WORLD ARCHITECTURE (HOVER FADE OTHER CARDS) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 relative z-10 items-stretch group/topology">
 
           <!-- LEFT COLUMN (LG: 8 COLS): STANDALONE DB-INTERNET + INDEPENDENT SUB-COMPONENT CARDS -->
           <div class="lg:col-span-8 flex flex-col justify-between space-y-6">
 
             <!-- STANDALONE DB-INTERNET (PRIMARY LED PLATFORM HERO BOX) -->
             <div
-              class="bg-slate-900/60 hover:bg-slate-900/95 border border-slate-700/60 hover:border-dbCyan/90 rounded-3xl p-6 sm:p-7 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 relative space-y-5 transition-all duration-300 group/dbi hover:-translate-y-1">
+              class="bg-slate-900/95 border border-dbCyan/90 rounded-3xl p-6 sm:p-7 shadow-2xl shadow-cyan-500/20 relative space-y-5 transition-all duration-300 group/dbi group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1">
               <div
-                class="absolute -top-3.5 left-6 bg-slate-800 group-hover/dbi:bg-dbCyan text-slate-300 group-hover/dbi:text-slate-950 text-[11px] font-black uppercase px-4 py-0.5 rounded-full shadow-md tracking-wider font-mono flex items-center gap-1.5 transition-colors duration-300">
+                class="absolute -top-3.5 left-6 bg-dbCyan text-slate-950 text-[11px] font-black uppercase px-4 py-0.5 rounded-full shadow-md tracking-wider font-mono flex items-center gap-1.5 transition-colors duration-300">
                 <i class="fa-solid fa-user-shield"></i> Technical Transformation Lead
               </div>
 
@@ -336,41 +328,38 @@
               <div class="pt-2 space-y-4">
                 <div class="flex items-center justify-between">
                   <span
-                    class="text-xs font-mono font-bold text-slate-400 group-hover/dbi:text-dbCyan uppercase tracking-wide flex items-center gap-1.5 transition-colors">
-                    <i class="fa-solid fa-crown text-amber-400/70 group-hover/dbi:text-amber-400 transition-colors"></i>
+                    class="text-xs font-mono font-bold text-dbCyan uppercase tracking-wide flex items-center gap-1.5 transition-colors">
+                    <i class="fa-solid fa-crown text-amber-400 transition-colors"></i>
                     Primary Led Platform
                   </span>
-                  <span
-                    class="text-[10px] font-mono bg-slate-800 text-slate-400 group-hover/dbi:bg-blue-500/20 group-hover/dbi:text-blue-300 border border-slate-700 group-hover/dbi:border-blue-400/30 px-2.5 py-0.5 rounded-full font-bold transition-all">CORE
-                    ECOSYSTEM</span>
                 </div>
                 <h3
-                  class="text-3xl sm:text-4xl font-black text-white/90 group-hover/dbi:text-white tracking-tight flex items-center gap-3 transition-colors">
+                  class="text-3xl sm:text-4xl font-black text-white tracking-tight flex items-center gap-3 transition-colors">
                   DB-Internet
                 </h3>
 
                 <!-- DB-INTERNET ROLE BADGE & HASHTAGS -->
                 <div class="flex flex-wrap gap-1.5 pt-1">
                   <span
-                    class="bg-slate-800/80 group-hover/dbi:bg-amber-400/20 text-slate-300 group-hover/dbi:text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-slate-700 group-hover/dbi:border-amber-400/40 flex items-center gap-1 transition-all">
-                    <i class="fa-solid fa-earth-americas text-[10px]"></i> #17-Countries
+                    class="bg-amber-400/20 text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/40 flex items-center gap-1 transition-all">
+                    <i class="fa-solid fa-earth-americas text-[10px]"></i> 17 Countries
                   </span>
                   <span
-                    class="bg-slate-800/80 group-hover/dbi:bg-amber-400/20 text-slate-300 group-hover/dbi:text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-slate-700 group-hover/dbi:border-amber-400/40 flex items-center gap-1 transition-all">
-                    <i class="fa-solid fa-boxes-packing text-[10px]"></i> #38-Product-Lines
+                    class="bg-amber-400/20 text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/40 flex items-center gap-1 transition-all">
+                    <i class="fa-solid fa-boxes-packing text-[10px]"></i> 38 Product Lines
                   </span>
                   <span
-                    class="bg-slate-800/80 group-hover/dbi:bg-amber-400/20 text-slate-300 group-hover/dbi:text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-slate-700 group-hover/dbi:border-amber-400/40 flex items-center gap-1 transition-all">
-                    <i class="fa-solid fa-plug text-[10px]"></i> #1K+-Interfaces
+                    class="bg-amber-400/20 text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/40 flex items-center gap-1 transition-all">
+                    <i class="fa-solid fa-plug text-[10px]"></i> 1K+ Interfaces
                   </span>
                   <span
-                    class="bg-slate-800/80 group-hover/dbi:bg-indigo-500/20 text-slate-300 group-hover/dbi:text-indigo-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-slate-700 group-hover/dbi:border-indigo-400/30 flex items-center gap-1.5 transition-all">
-                    <i class="fa-solid fa-server text-[10px]"></i> #HP-NonStop-Mainframe
+                    class="bg-indigo-500/20 text-indigo-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-indigo-400/30 flex items-center gap-1.5 transition-all">
+                    <i class="fa-solid fa-server text-[10px]"></i> HP NonStop Mainframe
                   </span>
 
-                  <!-- PROMINENT HIGHLIGHTED ROLE BADGE (MOVED AFTER ALL HASHTAGS) -->
+                  <!-- PROMINENT HIGHLIGHTED ROLE BADGE -->
                   <span
-                    class="bg-gradient-to-r from-amber-500/80 to-amber-600/80 group-hover/dbi:from-amber-400 group-hover/dbi:to-amber-500 text-slate-950 text-[11px] font-mono font-black px-3.5 py-1 rounded-xl shadow-md border border-amber-400/50 group-hover/dbi:border-amber-300 flex items-center gap-1.5 uppercase tracking-wider transition-all duration-300 group-hover/dbi:scale-105">
+                    class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-[11px] font-mono font-black px-3.5 py-1 rounded-xl shadow-md border border-amber-300 flex items-center gap-1.5 uppercase tracking-wider transition-all duration-300">
                     <i class="fa-solid fa-user-shield text-slate-950 text-[11px]"></i> Role: Technical Transformation
                     Lead
                   </span>
@@ -382,27 +371,26 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <!-- INDEPENDENT KANNON PROXY CARD -->
               <div
-                class="bg-slate-900/60 hover:bg-indigo-950/90 border border-slate-700/60 hover:border-indigo-400/80 rounded-3xl p-5 sm:p-6 shadow-md hover:shadow-indigo-500/20 relative flex flex-col justify-between min-h-[120px] space-y-4 transition-all duration-300 group/kannon hover:-translate-y-0.5">
+                class="bg-indigo-950/90 border border-indigo-400/80 rounded-3xl p-5 sm:p-6 shadow-md shadow-indigo-500/20 relative flex flex-col justify-between min-h-[120px] space-y-4 transition-all duration-300 group/kannon group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-0.5">
                 <div
-                  class="absolute -top-3.5 left-5 bg-slate-800 group-hover/kannon:bg-indigo-500 text-slate-300 group-hover/kannon:text-white text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
+                  class="absolute -top-3.5 left-5 bg-indigo-500 text-white text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
                   <i class="fa-solid fa-user-gear"></i> Technical Lead
                 </div>
 
                 <div class="flex items-center justify-between pt-1">
                   <div class="flex items-center gap-3">
                     <div
-                      class="w-9 h-9 rounded-xl bg-slate-800 group-hover/kannon:bg-indigo-500/30 text-slate-400 group-hover/kannon:text-indigo-300 flex items-center justify-center text-sm font-bold shrink-0 border border-slate-700 group-hover/kannon:border-indigo-400/50 transition-colors">
+                      class="w-9 h-9 rounded-xl bg-indigo-500/30 text-indigo-300 flex items-center justify-center text-sm font-bold shrink-0 border border-indigo-400/50 transition-colors">
                       <i class="fa-solid fa-network-wired"></i>
                     </div>
-                    <h4
-                      class="text-sm sm:text-base font-black text-slate-300 group-hover/kannon:text-white tracking-tight transition-colors">
+                    <h4 class="text-sm sm:text-base font-black text-white tracking-tight transition-colors">
                       Kannon Proxy</h4>
                   </div>
                 </div>
                 <!-- KANNON PROXY ROLE ONLY -->
                 <div>
                   <span
-                    class="bg-slate-800 group-hover/kannon:bg-gradient-to-r group-hover/kannon:from-indigo-500 group-hover/kannon:to-purple-500 text-slate-300 group-hover/kannon:text-white text-[10px] font-mono font-bold px-3 py-1 rounded-lg shadow-sm border border-slate-700 group-hover/kannon:border-indigo-300/50 inline-flex items-center gap-1.5 transition-all">
+                    class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-[10px] font-mono font-bold px-3 py-1 rounded-lg shadow-sm border border-indigo-300/50 inline-flex items-center gap-1.5 transition-all">
                     <i class="fa-solid fa-user-gear text-[9px]"></i> Role: Technical Lead
                   </span>
                 </div>
@@ -410,27 +398,26 @@
 
               <!-- INDEPENDENT BOOKING API CARD -->
               <div
-                class="bg-slate-900/60 hover:bg-orange-950/60 border border-slate-700/60 hover:border-orange-500/80 rounded-3xl p-5 sm:p-6 shadow-md hover:shadow-orange-500/20 relative flex flex-col justify-between min-h-[120px] space-y-4 overflow-visible transition-all duration-300 group/bookingapi hover:-translate-y-0.5">
+                class="bg-orange-950/60 border border-orange-500/80 rounded-3xl p-5 sm:p-6 shadow-md shadow-orange-500/20 relative flex flex-col justify-between min-h-[120px] space-y-4 overflow-visible transition-all duration-300 group/bookingapi group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-0.5">
                 <div
-                  class="absolute -top-3.5 left-5 bg-slate-800 group-hover/bookingapi:bg-orange-500 text-slate-300 group-hover/bookingapi:text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
+                  class="absolute -top-3.5 left-5 bg-orange-500 text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
                   <i class="fa-solid fa-user-gear"></i> Migration SME
                 </div>
 
                 <div class="flex items-center justify-between pt-1">
                   <div class="flex items-center gap-3">
                     <div
-                      class="w-9 h-9 rounded-xl bg-slate-800 group-hover/bookingapi:bg-orange-500/30 text-slate-400 group-hover/bookingapi:text-orange-400 flex items-center justify-center text-sm font-bold shrink-0 border border-slate-700 group-hover/bookingapi:border-orange-400/50 transition-colors">
+                      class="w-9 h-9 rounded-xl bg-orange-500/30 text-orange-400 flex items-center justify-center text-sm font-bold shrink-0 border border-orange-400/50 transition-colors">
                       <i class="fa-solid fa-code"></i>
                     </div>
-                    <h4
-                      class="text-sm sm:text-base font-black text-slate-300 group-hover/bookingapi:text-white tracking-tight transition-colors">
+                    <h4 class="text-sm sm:text-base font-black text-white tracking-tight transition-colors">
                       Booking API</h4>
                   </div>
                 </div>
                 <!-- BOOKING API ROLE ONLY -->
                 <div>
                   <span
-                    class="bg-slate-800 group-hover/bookingapi:bg-gradient-to-r group-hover/bookingapi:from-orange-500 group-hover/bookingapi:to-amber-500 text-slate-300 group-hover/bookingapi:text-slate-950 text-[10px] font-mono font-bold px-3 py-1 rounded-lg shadow-sm border border-slate-700 group-hover/bookingapi:border-orange-300/50 inline-flex items-center gap-1.5 transition-all">
+                    class="bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 text-[10px] font-mono font-bold px-3 py-1 rounded-lg shadow-sm border border-orange-300/50 inline-flex items-center gap-1.5 transition-all">
                     <i class="fa-solid fa-user-gear text-[9px]"></i> Role: Migration SME
                   </span>
                 </div>
@@ -444,27 +431,24 @@
 
             <!-- 1. COMPLETELY SEPARATE DOMAIN (ESA) -->
             <div
-              class="bg-slate-900/60 hover:bg-gradient-to-br hover:from-amber-950/80 hover:via-slate-950 hover:to-amber-950/60 border border-slate-700/60 hover:border-amber-500/90 rounded-3xl p-6 sm:p-7 shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 relative space-y-5 min-h-[140px] flex flex-col justify-between transition-all duration-300 group/esa hover:-translate-y-1">
+              class="bg-gradient-to-br from-amber-950/80 via-slate-950 to-amber-950/60 border border-amber-500/90 rounded-3xl p-6 sm:p-7 shadow-lg shadow-amber-500/20 relative space-y-5 min-h-[140px] flex flex-col justify-between transition-all duration-300 group/esa group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1">
               <div
-                class="absolute -top-3.5 left-5 bg-slate-800 group-hover/esa:bg-amber-400 text-slate-300 group-hover/esa:text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-md tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
+                class="absolute -top-3.5 left-5 bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-md tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
                 <i class="fa-solid fa-user-tie"></i> Technical Lead
               </div>
 
               <div class="pt-2 space-y-4">
                 <div class="flex items-center justify-between">
-                  <h4
-                    class="text-lg font-black text-white/90 group-hover/esa:text-white tracking-tight flex items-center gap-2.5 transition-colors">
-                    <i
-                      class="fa-solid fa-vault text-amber-400/70 group-hover/esa:text-amber-400 text-lg transition-colors"></i>
+                  <h4 class="text-lg font-black text-white tracking-tight flex items-center gap-2.5 transition-colors">
+                    <i class="fa-solid fa-vault text-amber-400 text-lg transition-colors"></i>
                     ESA (Currency &amp; Metals)
                   </h4>
                 </div>
                 <!-- ESA ROLE ONLY -->
                 <div>
                   <span
-                    class="bg-slate-800 group-hover/esa:bg-gradient-to-r group-hover/esa:from-amber-400 group-hover/esa:to-amber-500 text-slate-300 group-hover/esa:text-slate-950 text-[11px] font-mono font-black px-3.5 py-1.5 rounded-xl shadow-md border border-slate-700 group-hover/esa:border-amber-300 inline-flex items-center gap-1.5 uppercase tracking-wider transition-all duration-300 group-hover/esa:scale-105">
-                    <i
-                      class="fa-solid fa-user-tie text-slate-400 group-hover/esa:text-slate-950 text-[10px] transition-colors"></i>
+                    class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-[11px] font-mono font-black px-3.5 py-1.5 rounded-xl shadow-md border border-amber-300 inline-flex items-center gap-1.5 uppercase tracking-wider transition-all duration-300">
+                    <i class="fa-solid fa-user-tie text-slate-950 text-[10px] transition-colors"></i>
                     Role: Technical Lead
                   </span>
                 </div>
@@ -473,31 +457,25 @@
 
             <!-- 2. INTEGRATED GLOBAL SYSTEMS (BOOKING SEP CARD) -->
             <div
-              class="bg-slate-900/60 hover:bg-slate-950/95 border border-slate-700/60 hover:border-emerald-500/90 rounded-3xl p-6 sm:p-7 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/20 relative flex flex-col justify-between space-y-5 transition-all duration-300 group/igs hover:-translate-y-1">
+              class="bg-slate-950/95 border border-emerald-500/90 rounded-3xl p-6 sm:p-7 shadow-lg shadow-emerald-500/20 relative space-y-5 min-h-[140px] flex flex-col justify-between transition-all duration-300 group/igs group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1">
               <div
-                class="absolute -top-3.5 left-5 bg-slate-800 group-hover/igs:bg-emerald-500 text-slate-300 group-hover/igs:text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
+                class="absolute -top-3.5 left-5 bg-emerald-500 text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
                 <i class="fa-solid fa-user-gear"></i> Migration SME
               </div>
 
-              <div class="pt-2">
-                <!-- BOOKING SEP CARD -->
-                <div
-                  class="bg-slate-950/60 group-hover/igs:bg-slate-900/90 border border-slate-800 group-hover/igs:border-emerald-500/70 rounded-2xl p-4 sm:p-5 space-y-3 transition-all">
-                  <div class="flex items-center justify-between">
-                    <h5
-                      class="text-sm font-extrabold text-slate-300 group-hover/igs:text-white flex items-center gap-2 transition-colors">
-                      <i
-                        class="fa-solid fa-book-bookmark text-slate-400 group-hover/igs:text-emerald-400 text-xs transition-colors"></i>
-                      Booking SEP
-                    </h5>
-                  </div>
-                  <!-- BOOKING SEP ROLE ONLY -->
-                  <div>
-                    <span
-                      class="bg-slate-800 group-hover/igs:bg-emerald-500 text-slate-400 group-hover/igs:text-slate-950 text-[10px] font-mono font-black px-3 py-1 rounded-lg shadow-xs uppercase inline-flex items-center gap-1 transition-all">
-                      <i class="fa-solid fa-user-gear text-[9px]"></i> Role: Migration SME
-                    </span>
-                  </div>
+              <div class="pt-2 space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-lg font-black text-white tracking-tight flex items-center gap-2.5 transition-colors">
+                    <i class="fa-solid fa-book-bookmark text-emerald-400 text-lg transition-colors"></i>
+                    Booking SEP
+                  </h4>
+                </div>
+                <!-- BOOKING SEP ROLE ONLY -->
+                <div>
+                  <span
+                    class="bg-emerald-500 text-slate-950 text-[11px] font-mono font-black px-3.5 py-1.5 rounded-xl shadow-md inline-flex items-center gap-1.5 uppercase tracking-wider transition-all duration-300">
+                    <i class="fa-solid fa-user-gear text-[10px]"></i> Role: Migration SME
+                  </span>
                 </div>
               </div>
             </div>
@@ -551,7 +529,8 @@
                 <span
                   class="text-[9px] font-mono font-black text-purple-800 bg-purple-100/90 px-2.5 py-0.5 rounded-full border border-purple-200 uppercase mb-1">Modernization</span>
                 <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">ESA Migration</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated Currency &amp; Metals domain to modern architecture.</p>
+                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated Currency
+                  &amp; Metals domain to modern architecture.</p>
 
                 <span
                   class="text-[9px] font-black text-white bg-gradient-to-r from-purple-700 to-indigo-600 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
@@ -565,18 +544,20 @@
                 <div
                   class="absolute -bottom-8 -left-8 w-24 h-24 bg-purple-400/20 rounded-full blur-xl pointer-events-none">
                 </div>
-                <span class="text-[9px] font-mono font-black text-purple-300 uppercase tracking-wider mb-0.5">Business Impact</span>
+                <span class="text-[9px] font-mono font-black text-purple-300 uppercase tracking-wider mb-0.5">Business
+                  Impact</span>
                 <h4 class="font-black text-white text-xs mb-1">ESA Migration</h4>
 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
                   <span class="text-[9px] font-mono text-purple-300 block uppercase font-bold">Strategic Outcome</span>
-                  <span class="text-[10px] font-black text-emerald-300 block">Retained external business</span>
+                  <span class="text-[10px] font-black text-emerald-300 block">Retained External Business</span>
                 </div>
 
-                <!-- EYE-PLEASING HIGHLIGHTED HASHTAG BADGE -->
+                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
                 <div class="pt-0.5">
-                  <span class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-purple-300/60 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-heart text-[8px]"></i> #PromoteSenseOfBelonging
+                  <span
+                    class="bg-purple-950/80 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-purple-400/80 inline-flex items-center gap-1 uppercase tracking-wider">
+                    <i class="fa-solid fa-handshake text-[8px] text-pink-400"></i> Client Centricity
                   </span>
                 </div>
               </div>
@@ -606,7 +587,8 @@
                 <span
                   class="text-[9px] font-mono font-black text-dbBlue bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-200 uppercase mb-1">Database</span>
                 <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">DHS to ExaCC Migration</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated DHS database replacing end-of-life hardware.</p>
+                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated DHS
+                  database replacing end-of-life hardware.</p>
 
                 <span
                   class="text-[9px] font-black text-white bg-gradient-to-r from-dbNavy to-blue-700 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
@@ -614,13 +596,14 @@
                 </span>
               </div>
 
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED HASHTAG) -->
+              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
               <div
                 class="flip-card-back bg-gradient-to-br from-dbNavy via-blue-900 to-slate-950 border-4 border-blue-400 text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
                 <div
                   class="absolute -bottom-8 -left-8 w-24 h-24 bg-blue-400/20 rounded-full blur-xl pointer-events-none">
                 </div>
-                <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business Impact</span>
+                <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
+                  Impact</span>
                 <h4 class="font-black text-white text-xs mb-1">DHS to ExaCC</h4>
 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
@@ -628,10 +611,11 @@
                   <span class="text-[10px] font-black text-emerald-300 block">€100k savings / yearly</span>
                 </div>
 
-                <!-- EYE-PLEASING HIGHLIGHTED HASHTAG BADGE -->
+                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
                 <div class="pt-0.5">
-                  <span class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-amber-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-lightbulb text-[8px]"></i> #ThinkCommercially
+                  <span
+                    class="bg-blue-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-amber-300 inline-flex items-center gap-1 uppercase tracking-wider">
+                    <i class="fa-solid fa-lightbulb text-[8px] text-amber-400"></i> We Think Commercially
                   </span>
                 </div>
               </div>
@@ -640,7 +624,7 @@
           </div>
         </div>
 
-        <!-- CIRCLE 3: FABRIC 2.0 UPGRADE -->
+        <!-- CIRCLE 3: FABRIC ON GCP UPGRADE -->
         <div class="relative flex flex-col items-center w-56 h-56 shrink-0 flex-none">
           <div class="w-56 h-56 perspective-1000 cursor-pointer"
             onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
@@ -660,8 +644,9 @@
 
                 <span
                   class="text-[9px] font-mono font-black text-teal-800 bg-cyan-100/90 px-2.5 py-0.5 rounded-full border border-cyan-200 uppercase mb-1">Platform</span>
-                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">Fabric 2.0 Upgrade</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Upgraded containers for security &amp; cluster resilience.</p>
+                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">Fabric on GCP Upgrade</h3>
+                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Upgraded
+                  containers for security &amp; cluster resilience.</p>
 
                 <span
                   class="text-[9px] font-black text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-300 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
@@ -669,24 +654,27 @@
                 </span>
               </div>
 
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED HASHTAG) -->
+              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
               <div
                 class="flip-card-back bg-gradient-to-br from-slate-900 via-teal-950 to-slate-950 border-4 border-dbCyan text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
                 <div
                   class="absolute -bottom-8 -left-8 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl pointer-events-none">
                 </div>
-                <span class="text-[9px] font-mono font-black text-dbCyan uppercase tracking-wider mb-0.5">Business Impact</span>
-                <h4 class="font-black text-white text-xs mb-1">Fabric 2.0 Upgrade</h4>
+                <span class="text-[9px] font-mono font-black text-dbCyan uppercase tracking-wider mb-0.5">Business
+                  Impact</span>
+                <h4 class="font-black text-white text-xs mb-1">Fabric on GCP Upgrade</h4>
 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2 w-full space-y-0.5">
                   <span class="text-[9px] font-mono text-cyan-300 block uppercase font-bold">Infrastructure Saved</span>
-                  <span class="text-[10px] font-black text-emerald-300 block leading-tight">Saved 2 Fabric instances</span>
+                  <span class="text-[10px] font-black text-emerald-300 block leading-tight">Saved 2 Fabric
+                    instances</span>
                 </div>
 
-                <!-- EYE-PLEASING HIGHLIGHTED HASHTAG BADGE -->
+                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
                 <div class="pt-0.5">
-                  <span class="bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-cyan-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-people-group text-[8px]"></i> #WorkCollaboratively
+                  <span
+                    class="bg-slate-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-cyan-300 inline-flex items-center gap-1 uppercase tracking-wider">
+                    <i class="fa-solid fa-people-group text-[8px] text-cyan-300"></i> We Work Collaboratively
                   </span>
                 </div>
               </div>
@@ -716,7 +704,8 @@
                 <span
                   class="text-[9px] font-mono font-black text-amber-800 bg-amber-100/90 px-2.5 py-0.5 rounded-full border border-amber-200 uppercase mb-1">Compliance</span>
                 <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">NexusPay Integration</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Integrated payment channels for ISO20022 SWIFT mandate.</p>
+                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Integrated payment
+                  channels for ISO20022 SWIFT mandate.</p>
 
                 <span
                   class="text-[9px] font-black text-white bg-gradient-to-r from-amber-700 to-orange-600 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
@@ -724,13 +713,14 @@
                 </span>
               </div>
 
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED HASHTAG) -->
+              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
               <div
                 class="flip-card-back bg-gradient-to-br from-slate-900 via-amber-950 to-slate-950 border-4 border-amber-400 text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
                 <div
                   class="absolute -bottom-8 -left-8 w-24 h-24 bg-amber-400/20 rounded-full blur-xl pointer-events-none">
                 </div>
-                <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business Impact</span>
+                <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
+                  Impact</span>
                 <h4 class="font-black text-white text-xs mb-1">NexusPay Integration</h4>
 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
@@ -738,10 +728,11 @@
                   <span class="text-[10px] font-black text-amber-200 block">ISO20022 Ready</span>
                 </div>
 
-                <!-- EYE-PLEASING HIGHLIGHTED HASHTAG BADGE -->
+                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
                 <div class="pt-0.5">
-                  <span class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-amber-300/60 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-shield-halved text-[8px]"></i> #ActResponsibly
+                  <span
+                    class="bg-amber-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-amber-300/80 inline-flex items-center gap-1 uppercase tracking-wider">
+                    <i class="fa-solid fa-shield-halved text-[8px] text-amber-400"></i> We Act Responsibly
                   </span>
                 </div>
               </div>
@@ -771,7 +762,8 @@
                 <span
                   class="text-[9px] font-mono font-black text-emerald-800 bg-emerald-100/90 px-2.5 py-0.5 rounded-full border border-emerald-200 uppercase mb-1">Telemetry</span>
                 <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">NewRelic HP NonStop</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Built APM telemetry for HP NS mainframe systems.</p>
+                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Built APM
+                  telemetry for HP NS mainframe systems.</p>
 
                 <span
                   class="text-[9px] font-black text-white bg-gradient-to-r from-emerald-700 to-teal-600 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
@@ -779,13 +771,14 @@
                 </span>
               </div>
 
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED HASHTAG) -->
+              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
               <div
                 class="flip-card-back bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-950 border-4 border-emerald-400 text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
                 <div
                   class="absolute -bottom-8 -left-8 w-24 h-24 bg-emerald-400/20 rounded-full blur-xl pointer-events-none">
                 </div>
-                <span class="text-[9px] font-mono font-black text-emerald-300 uppercase tracking-wider mb-0.5">Business Impact</span>
+                <span class="text-[9px] font-mono font-black text-emerald-300 uppercase tracking-wider mb-0.5">Business
+                  Impact</span>
                 <h4 class="font-black text-white text-xs mb-1">NewRelic HP NonStop</h4>
 
                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
@@ -793,10 +786,11 @@
                   <span class="text-[10px] font-black text-emerald-200 block">Advanced Observability</span>
                 </div>
 
-                <!-- EYE-PLEASING HIGHLIGHTED HASHTAG BADGE -->
+                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
                 <div class="pt-0.5">
-                  <span class="bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-emerald-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-rocket text-[8px]"></i> #TakeInitiative
+                  <span
+                    class="bg-emerald-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-emerald-300 inline-flex items-center gap-1 uppercase tracking-wider">
+                    <i class="fa-solid fa-rocket text-[8px] text-emerald-400"></i> We Take Initiative
                   </span>
                 </div>
               </div>
@@ -807,122 +801,126 @@
 
       </div>
 
-      <!-- RECOGNITION & HACKATHONS (PREMIUM HIGHLIGHT CARDS) -->
+      <!-- BEYOND DAY-TO-DAY DELIVERABLES -->
       <section class="space-y-5 pt-6 border-t border-slate-200/80">
         <div class="flex items-center justify-between">
           <h3 class="text-base font-black text-dbNavy tracking-tight flex items-center gap-2.5">
             <div
               class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-400/30 flex items-center justify-center shadow-2xs">
-              <i class="fa-solid fa-award text-amber-500 text-base"></i>
+              <i class="fa-solid fa-star text-amber-500 text-base"></i>
             </div>
-            <span>Recognition &amp; Global Honors</span>
+            <span>Beyond Day-to-Day Deliverables</span>
           </h3>
         </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-          <!-- BOX 1 -->
+          <!-- BOX 1: 3RD PLACE GLOBAL HACKATHON WINNER -->
           <div
-            class="group relative p-4 rounded-2xl bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-slate-900/5 border border-amber-300/60 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-4 overflow-hidden backdrop-blur-sm">
+            class="group relative p-5 rounded-2xl bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-slate-900/10 border-2 border-amber-400/80 shadow-lg hover:shadow-2xl hover:border-amber-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden backdrop-blur-md space-y-3">
             <div
-              class="absolute -right-6 -top-6 w-20 h-20 bg-amber-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none">
+              class="absolute -right-8 -top-8 w-28 h-28 bg-amber-400/25 rounded-full blur-2xl group-hover:scale-150 transition-transform pointer-events-none">
             </div>
-            <div
-              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-trophy text-amber-100"></i>
-            </div>
-            <div class="min-w-0 pr-2 relative z-10">
+
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <div
+                  class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-yellow-400 text-slate-950 flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform border border-amber-300/80 ring-2 ring-amber-400/20">
+                  <i class="fa-solid fa-trophy text-slate-950"></i>
+                </div>
+                <span
+                  class="text-[9px] font-mono font-bold text-amber-700 bg-amber-100/90 px-2 py-0.5 rounded-md border border-amber-200 uppercase">3rd
+                  Place Globally</span>
+              </div>
+
+              <div class="space-y-1">
+                <span
+                  class="text-[9px] font-mono font-black text-amber-900 bg-gradient-to-r from-amber-300 to-yellow-400 px-2 py-0.5 rounded-full border border-amber-300 uppercase tracking-wider shadow-xs inline-flex items-center gap-1">
+                  <i class="fa-solid fa-earth-americas text-[8px]"></i> Global Hackathon 2025
+                </span>
+                <h4
+                  class="text-sm font-black text-dbNavy leading-snug group-hover:text-amber-700 transition-colors pt-1">
+                  Global 3rd Place Winner
+                </h4>
+              </div>
+            </div>            <div class="pt-1 border-t border-amber-300/30">
               <span
-                class="text-[10px] font-mono font-black text-amber-700 bg-amber-100/90 px-2 py-0.5 rounded-md border border-amber-200 uppercase tracking-wider inline-block mb-1 shadow-2xs">Global
-                Hackathon 2025</span>
-              <p class="text-xs font-black text-dbNavy leading-tight group-hover:text-amber-600 transition-colors">3rd
-                Place Winner Globally</p>
+                class="text-[9px] font-mono font-black text-amber-950 bg-amber-300/70 group-hover:bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-lg border border-amber-400/60 inline-flex items-center gap-1 uppercase tracking-wider transition-colors">
+                <i class="fa-solid fa-coins text-[9px] text-amber-900"></i> Microfinance Innovation
+              </span>
             </div>
           </div>
 
-          <!-- BOX 2: UPDATED GLOBAL HACKATHON 2026 RUNNERUP TEAM IN FRANKFURT -->
+          <!-- BOX 2: GLOBAL HACKATHON 2026 (GROOT AI OPTIMIZER) -->
           <div
-            class="group relative p-4 rounded-2xl bg-gradient-to-br from-indigo-500/15 via-purple-500/5 to-slate-900/5 border border-indigo-300/60 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-4 overflow-hidden backdrop-blur-sm">
+            class="group relative p-5 rounded-2xl bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-slate-900/10 border-2 border-indigo-400/80 shadow-lg hover:shadow-2xl hover:border-indigo-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden backdrop-blur-md space-y-3">
             <div
-              class="absolute -right-6 -top-6 w-20 h-20 bg-indigo-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none">
+              class="absolute -right-8 -top-8 w-28 h-28 bg-indigo-400/25 rounded-full blur-2xl group-hover:scale-150 transition-transform pointer-events-none">
             </div>
-            <div
-              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-500 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-medal text-indigo-100"></i>
+
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <div
+                  class="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform border border-indigo-300/80 ring-2 ring-indigo-400/20">
+                  <i class="fa-solid fa-medal text-white"></i>
+                </div>
+                <span
+                  class="text-[9px] font-mono font-bold text-indigo-700 bg-indigo-100/90 px-2 py-0.5 rounded-md border border-indigo-200 uppercase">Team
+                  Lead &bull; Frankfurt Runner-Up</span>
+              </div>
+
+              <div class="space-y-1">
+                <span
+                  class="text-[9px] font-mono font-black text-indigo-900 bg-gradient-to-r from-indigo-200 to-purple-300 px-2 py-0.5 rounded-full border border-indigo-300 uppercase tracking-wider shadow-xs inline-flex items-center gap-1">
+                  <i class="fa-solid fa-brain text-[8px]"></i> Global Hackathon 2026
+                </span>
+                <h4
+                  class="text-sm font-black text-dbNavy leading-snug group-hover:text-indigo-700 transition-colors pt-1">
+                  GROOT AI Token Optimizer
+                </h4>
+              </div>
             </div>
-            <div class="min-w-0 pr-2 relative z-10">
+
+            <div class="pt-1 border-t border-indigo-300/30">
               <span
-                class="text-[10px] font-mono font-black text-indigo-700 bg-indigo-100/90 px-2 py-0.5 rounded-md border border-indigo-200 uppercase tracking-wider inline-block mb-1 shadow-2xs">Global
-                Hackathon 2026</span>
-              <p class="text-xs font-black text-dbNavy leading-tight group-hover:text-indigo-600 transition-colors">
-                Runner-Up team in Frankfurt</p>
+                class="text-[9px] font-mono font-black text-indigo-950 bg-indigo-200/80 group-hover:bg-indigo-300 text-slate-950 px-2.5 py-0.5 rounded-lg border border-indigo-400/60 inline-flex items-center gap-1 uppercase tracking-wider transition-colors">
+                <i class="fa-solid fa-robot text-[9px] text-indigo-900"></i> Token Optimization
+              </span>
             </div>
           </div>
 
-        </div>
-      </section>
-
-      <!-- DEVELOPER PRODUCTIVITY TOOLS SECTION -->
-      <section class="space-y-5 pt-6 border-t border-slate-200/80">
-        <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-dbNavy tracking-tight flex items-center gap-2.5">
-            <div
-              class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-400/30 flex items-center justify-center shadow-2xs">
-              <i class="fa-solid fa-code text-cyan-600 text-base"></i>
-            </div>
-            <span>Developer Productivity Tools</span>
-          </h3>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-          <!-- TOOL 1: SAFAR -->
+          <!-- BOX 3: SAFAR TOOL -->
           <div
-            class="group relative p-5 rounded-2xl bg-gradient-to-br from-cyan-500/15 via-blue-500/5 to-slate-900/5 border border-cyan-300/60 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-start gap-4 overflow-hidden backdrop-blur-sm">
+            class="group relative p-5 rounded-2xl bg-gradient-to-br from-cyan-500/15 via-blue-500/5 to-slate-900/5 border border-cyan-300/60 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden backdrop-blur-sm space-y-3">
             <div
               class="absolute -right-6 -top-6 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none">
             </div>
-            <div
-              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-terminal text-cyan-100"></i>
-            </div>
-            <div class="min-w-0 pr-2 relative z-10 space-y-1">
-              <div class="flex items-center justify-between">
-                <span
-                  class="text-[10px] font-mono font-black text-cyan-800 bg-cyan-100/90 px-2.5 py-0.5 rounded-md border border-cyan-200 uppercase tracking-wider inline-block shadow-2xs">Safar</span>
-                <span
-                  class="text-[9px] font-mono font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200">SSH
-                  &amp; Remote</span>
-              </div>
-              <h4 class="text-xs font-black text-dbNavy group-hover:text-cyan-700 transition-colors">Cross-Platform SSH
-                Client</h4>
-              <p class="text-[11px] text-slate-600 font-medium leading-relaxed">Streamlined, secure, multi-session
-                cross-platform SSH terminal client designed for rapid infrastructure management.</p>
-            </div>
-          </div>
 
-          <!-- TOOL 2: SUKOON -->
-          <div
-            class="group relative p-5 rounded-2xl bg-gradient-to-br from-teal-500/15 via-emerald-500/5 to-slate-900/5 border border-teal-300/60 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-start gap-4 overflow-hidden backdrop-blur-sm">
-            <div
-              class="absolute -right-6 -top-6 w-24 h-24 bg-teal-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none">
-            </div>
-            <div
-              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-500 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-[#000] fa-list-check text-teal-100"></i>
-            </div>
-            <div class="min-w-0 pr-2 relative z-10 space-y-1">
-              <div class="flex items-center justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <div
+                  class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-terminal text-cyan-100"></i>
+                </div>
                 <span
-                  class="text-[10px] font-mono font-black text-teal-800 bg-teal-100/90 px-2.5 py-0.5 rounded-md border border-teal-200 uppercase tracking-wider inline-block shadow-2xs">Sukoon</span>
-                <span
-                  class="text-[9px] font-mono font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200">Workflow
-                  &amp; Focus</span>
+                  class="text-[9px] font-mono font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200">PuTTY
+                  + WinSCP for MAC</span>
               </div>
-              <h4 class="text-xs font-black text-dbNavy group-hover:text-teal-700 transition-colors">Mindful Task
-                Management</h4>
-              <p class="text-[11px] text-slate-600 font-medium leading-relaxed">Intelligent task management platform
-                focusing on cognitive clarity, deep work scheduling, and stress-free engineering workflows.</p>
+
+              <div class="space-y-1">
+                <span
+                  class="text-[9px] font-mono font-black text-cyan-800 bg-cyan-100/90 px-2 py-0.5 rounded-full border border-cyan-200 uppercase tracking-wider inline-block shadow-2xs">Easy
+                  SSH + SFTP Tool</span>
+                <h4 class="text-sm font-black text-dbNavy group-hover:text-cyan-700 transition-colors pt-1">
+                  Safar - Cross-Platform SSH Client
+                </h4>
+              </div>
+            </div>
+
+            <div class="pt-1 border-t border-cyan-300/30">
+              <span
+                class="text-[9px] font-mono font-black text-cyan-950 bg-cyan-200/70 group-hover:bg-cyan-300 text-slate-950 px-2.5 py-0.5 rounded-lg border border-cyan-400/60 inline-flex items-center gap-1 uppercase tracking-wider transition-colors">
+                <i class="fa-solid fa-screwdriver-wrench text-[9px] text-cyan-900"></i> Developer Productivity
+              </span>
             </div>
           </div>
 
