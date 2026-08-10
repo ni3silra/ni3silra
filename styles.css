@@ -147,11 +147,19 @@ html {
   background-color: #64748b;
 }
 
-.slide-dot.active-dot {
-  width: 28px;
-  background-color: #00a3e0;
-  border-radius: 9999px;
-  box-shadow: 0 0 12px rgba(0, 163, 224, 0.6);
+/* Mobile Optimization for Presentation Mode */
+@media (max-width: 640px) {
+  .perspective-1000 {
+    width: 9.5rem !important; /* 152px */
+    height: 9.5rem !important; /* 152px */
+  }
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    width: 9.5rem !important;
+    height: 9.5rem !important;
+  }
 }
 
 
