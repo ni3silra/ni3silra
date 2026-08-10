@@ -235,54 +235,78 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlideDots();
   }
 
-  function openPresentation() {
-    if (!presentationModal) return;
-    presentationModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-    showSlide(0);
-
-    // Request native browser fullscreen mode (F11 experience)
-    if (presentationModal.requestFullscreen) {
-      presentationModal.requestFullscreen().catch(err => console.log('Fullscreen note:', err));
-    } else if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen().catch(err => console.log('Fullscreen note:', err));
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen();
+  function enterNativeFullscreen() {
+    try {
+      const elem = presentationModal || document.documentElement;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen().catch(() => {});
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    } catch (err) {
+      console.log('Fullscreen request note:', err);
     }
   }
 
-  function closePresentation() {
+  function exitNativeFullscreen() {
+    try {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+    } catch (err) {
+      console.log('Exit fullscreen note:', err);
+    }
+  }
+
+  function openPresentation(e) {
+    if (e && e.preventDefault) e.preventDefault();
     if (!presentationModal) return;
+
+    presentationModal.classList.remove('hidden');
+    presentationModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    showSlide(0);
+
+    // Enter native browser fullscreen mode (safely handled across Windows & macOS)
+    enterNativeFullscreen();
+  }
+
+  function closePresentation(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (!presentationModal) return;
+
     presentationModal.classList.add('hidden');
+    presentationModal.style.display = 'none';
     document.body.style.overflow = '';
 
-    // Exit native browser fullscreen mode
-    if (document.fullscreenElement || document.webkitFullscreenElement) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      }
-    }
+    exitNativeFullscreen();
   }
 
   function toggleFullscreen() {
     if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-      if (presentationModal.requestFullscreen) {
-        presentationModal.requestFullscreen().catch(() => {});
-      }
+      enterNativeFullscreen();
     } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
-      }
+      exitNativeFullscreen();
     }
   }
 
-  // Handle exiting fullscreen via ESC / F11 browser native keys
-  document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement && presentationModal && !presentationModal.classList.contains('hidden')) {
-      closePresentation();
-    }
+  // Cross-platform fullscreen change event listeners
+  ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(evt => {
+    document.addEventListener(evt, () => {
+      const isFullscreen = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+      // Only close if user exited native fullscreen while presentation modal is open
+      if (!isFullscreen && presentationModal && !presentationModal.classList.contains('hidden')) {
+        closePresentation();
+      }
+    });
   });
 
   if (startPresentationBtn) {
@@ -290,9 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (mobileStartPresentationBtn) {
-    mobileStartPresentationBtn.addEventListener('click', () => {
+    mobileStartPresentationBtn.addEventListener('click', (e) => {
       if (mobileMenu) mobileMenu.classList.add('hidden');
-      openPresentation();
+      openPresentation(e);
     });
   }
 

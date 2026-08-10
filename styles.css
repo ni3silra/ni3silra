@@ -110,6 +110,15 @@ html {
 }
 
 /* Presentation Slide Mode Styles */
+#presentation-modal {
+  width: 100vw;
+  height: 100vh;
+}
+
+#presentation-modal:not(.hidden) {
+  display: flex !important;
+}
+
 .presentation-slide {
   display: none !important;
   opacity: 0;
