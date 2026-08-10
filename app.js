@@ -178,4 +178,157 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
+
+  // POWERPOINT SLIDE PRESENTATION MODE LOGIC
+  const presentationModal = document.getElementById('presentation-modal');
+  const startPresentationBtn = document.getElementById('start-presentation-btn');
+  const mobileStartPresentationBtn = document.getElementById('mobile-start-presentation-btn');
+  const closePresentationBtn = document.getElementById('close-presentation-btn');
+  const toggleFullscreenBtn = document.getElementById('toggle-fullscreen-btn');
+  const prevSlideBtn = document.getElementById('prev-slide-btn');
+  const nextSlideBtn = document.getElementById('next-slide-btn');
+  const slideCounter = document.getElementById('slide-counter');
+  const slideDotsContainer = document.getElementById('slide-dots-container');
+  const slides = document.querySelectorAll('.presentation-slide');
+
+  let currentSlideIndex = 0;
+
+  function initSlideDots() {
+    if (!slideDotsContainer) return;
+    slideDotsContainer.innerHTML = '';
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('div');
+      dot.className = `slide-dot ${idx === currentSlideIndex ? 'active-dot' : ''}`;
+      dot.setAttribute('title', `Go to Slide ${idx + 1}`);
+      dot.addEventListener('click', () => showSlide(idx));
+      slideDotsContainer.appendChild(dot);
+    });
+  }
+
+  function showSlide(index) {
+    if (!slides.length) return;
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+
+    currentSlideIndex = index;
+
+    slides.forEach((slide, idx) => {
+      if (idx === currentSlideIndex) {
+        slide.classList.add('active-slide');
+      } else {
+        slide.classList.remove('active-slide');
+      }
+    });
+
+    if (slideCounter) {
+      slideCounter.textContent = `${currentSlideIndex + 1} / ${slides.length}`;
+    }
+
+    if (prevSlideBtn) {
+      prevSlideBtn.disabled = currentSlideIndex === 0;
+    }
+
+    if (nextSlideBtn) {
+      nextSlideBtn.disabled = currentSlideIndex === slides.length - 1;
+    }
+
+    initSlideDots();
+  }
+
+  function openPresentation() {
+    if (!presentationModal) return;
+    presentationModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    showSlide(0);
+
+    // Request native browser fullscreen mode (F11 experience)
+    if (presentationModal.requestFullscreen) {
+      presentationModal.requestFullscreen().catch(err => console.log('Fullscreen note:', err));
+    } else if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen().catch(err => console.log('Fullscreen note:', err));
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen();
+    }
+  }
+
+  function closePresentation() {
+    if (!presentationModal) return;
+    presentationModal.classList.add('hidden');
+    document.body.style.overflow = '';
+
+    // Exit native browser fullscreen mode
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  }
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      if (presentationModal.requestFullscreen) {
+        presentationModal.requestFullscreen().catch(() => {});
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+  }
+
+  // Handle exiting fullscreen via ESC / F11 browser native keys
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement && presentationModal && !presentationModal.classList.contains('hidden')) {
+      closePresentation();
+    }
+  });
+
+  if (startPresentationBtn) {
+    startPresentationBtn.addEventListener('click', openPresentation);
+  }
+
+  if (mobileStartPresentationBtn) {
+    mobileStartPresentationBtn.addEventListener('click', () => {
+      if (mobileMenu) mobileMenu.classList.add('hidden');
+      openPresentation();
+    });
+  }
+
+  if (closePresentationBtn) {
+    closePresentationBtn.addEventListener('click', closePresentation);
+  }
+
+  if (toggleFullscreenBtn) {
+    toggleFullscreenBtn.addEventListener('click', toggleFullscreen);
+  }
+
+  if (prevSlideBtn) {
+    prevSlideBtn.addEventListener('click', () => showSlide(currentSlideIndex - 1));
+  }
+
+  if (nextSlideBtn) {
+    nextSlideBtn.addEventListener('click', () => showSlide(currentSlideIndex + 1));
+  }
+
+  // Keyboard navigation for presentation mode
+  document.addEventListener('keydown', (e) => {
+    if (!presentationModal || presentationModal.classList.contains('hidden')) return;
+
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ' || e.key === 'PageDown') {
+      e.preventDefault();
+      showSlide(currentSlideIndex + 1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      showSlide(currentSlideIndex - 1);
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      closePresentation();
+    } else if (e.key === 'f' || e.key === 'F') {
+      e.preventDefault();
+      toggleFullscreen();
+    }
+  });
 });
+

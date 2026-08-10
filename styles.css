@@ -109,6 +109,43 @@ html {
   transform: rotateY(180deg);
 }
 
+/* Presentation Slide Mode Styles */
+.presentation-slide {
+  display: none !important;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.presentation-slide.active-slide {
+  display: flex !important;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: #334155;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slide-dot:hover {
+  background-color: #64748b;
+}
+
+.slide-dot.active-dot {
+  width: 28px;
+  background-color: #00a3e0;
+  border-radius: 9999px;
+  box-shadow: 0 0 12px rgba(0, 163, 224, 0.6);
+}
+
+
 
 
 
