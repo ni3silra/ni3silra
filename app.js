@@ -356,3 +356,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Global function to reveal next mindset step sequentially on click
+window.revealStep = function(stepNumber) {
+  if (stepNumber >= 2 && stepNumber <= 4) {
+    const nextStep = document.getElementById(`mindset-step-${stepNumber}`);
+    if (nextStep) {
+      nextStep.classList.remove('hidden');
+      setTimeout(() => {
+        nextStep.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+        nextStep.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+      }, 50);
+    }
+  } else if (stepNumber === 5) {
+    window.revealThanks();
+  }
+};
+
+// Global function to scroll to Thanks section when clicking final step
+window.revealThanks = function() {
+  const thanksSection = document.getElementById('thank-you');
+  if (thanksSection) {
+    thanksSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
+
+
+

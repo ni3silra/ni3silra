@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -10,790 +10,303 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dbNavy: '#001838',
+            dbBlue: '#004B93',
+            dbCyan: '#00B2FF',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
 
   <!-- Common CSS & JS -->
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <style>
+    body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .gradient-text-db {
+      background: linear-gradient(135deg, #001838 0%, #004B93 60%, #00B2FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-apple-card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 20px 50px rgba(0, 24, 56, 0.06);
+    }
+  </style>
 </head>
 
-<body class="text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="text-slate-900 font-sans antialiased min-h-screen bg-slate-50">
 
-  <!-- HEADER / NAVIGATION (RESPONSIVE WITH MOBILE HAMBURGER MENU) -->
-  <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between h-16 gap-3">
+  <!-- MAIN CONTENT AREA (NO TOP NAVIGATION BAR - APPLE LANDING STYLE) -->
+  <main class="w-full">
 
-        <!-- LEFT SECTION: NAME & ROLE + DEUTSCHE BANK & CBTECH BRANDING -->
-        <div class="flex items-center space-x-3 sm:space-x-4 shrink-0">
-          <!-- NAME & ROLE -->
-          <div class="text-left">
+
+    <!-- ==========================================
+         SECTION 1: SUMMARY (APPLE LANDING STYLE HERO)
+    =========================================== -->
+    <!-- ==========================================
+         SECTION 1: SUMMARY (100VH FULL SCREEN APPLE HERO)
+    =========================================== -->
+    <section id="summary"
+      class="h-screen min-h-screen flex flex-col justify-between items-center px-6 py-12 bg-gradient-to-b from-white via-slate-50 to-blue-50/40 relative border-b border-slate-200">
+
+      <!-- Top Spacer / Tag Container -->
+      <div class="pt-2">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-dbBlue text-xs font-mono font-bold uppercase tracking-widest">
+          <i class="fa-solid fa-award text-dbBlue"></i>
+          <span>Executive Profile</span>
+        </div>
+      </div>
+
+      <!-- Center Content -->
+      <div class="max-w-5xl mx-auto text-center space-y-6 sm:space-y-8 my-auto">
+        <!-- Name & Primary Title -->
+        <div class="space-y-2">
+          <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-dbNavy">
+            Nitin Silra
+          </h1>
+          <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-dbBlue tracking-wide">
+            Technical Transformation Lead
+          </p>
+        </div>
+
+        <!-- Hero Headline -->
+        <h2
+          class="text-2xl sm:text-4xl lg:text-5xl font-black leading-tight text-slate-900 max-w-4xl mx-auto tracking-tight">
+          Transforming Legacy Platforms into <span class="gradient-text-db">Modern, Simplified & Cost-Effective
+            Solutions</span>
+        </h2>
+
+        <!-- Consistent Product Launch Feature Cards (5 Equal Boxes) -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-5xl mx-auto pt-2">
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
             <div
-              class="font-black text-dbNavy text-base sm:text-xl leading-tight tracking-tight flex items-center gap-1.5">
-              Nitin Silra
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-business-time text-sm"></i>
             </div>
-            <span class="text-[10px] sm:text-[11px] text-dbBlue font-bold block leading-tight">Technical Transformation
-              Lead</span>
+            <div class="text-xs font-black text-dbNavy">9.5+ Years Experience</div>
           </div>
 
-          <span class="text-slate-300 font-light text-lg sm:text-xl">|</span>
-
-          <!-- DEUTSCHE BANK LOGO & CBTECH BADGE -->
-          <div class="flex items-center space-x-2">
-            <svg class="h-6 sm:h-7 w-auto shrink-0" viewBox="0 0 100 100" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="100" height="100" fill="#001838" />
-              <rect x="12" y="12" width="76" height="76" fill="#001838" stroke="white" stroke-width="10" />
-              <path d="M26 74L74 26" stroke="white" stroke-width="12" stroke-linecap="square" />
-            </svg>
-            <div class="flex items-center space-x-1.5 sm:space-x-2">
-              <span class="font-extrabold text-dbNavy text-xs sm:text-sm tracking-tight hidden lg:inline">Deutsche
-                Bank</span>
-              <span
-                class="text-[9px] sm:text-[10px] font-mono font-bold bg-blue-50 text-dbBlue px-2 py-0.5 rounded-md border border-blue-100/80 shadow-2xs">CBTECH</span>
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-arrows-rotate text-sm"></i>
             </div>
+            <div class="text-xs font-black text-dbNavy">Legacy <i
+                class="fa-solid fa-arrow-right text-[10px] text-dbBlue mx-1"></i> Modern</div>
           </div>
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-gears text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Manual <i
+                class="fa-solid fa-arrow-right text-[10px] text-dbBlue mx-1"></i> Automation</div>
+          </div>
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">OnPremise <i
+                class="fa-solid fa-arrow-right text-[10px] text-dbBlue mx-1"></i> Cloud</div>
+          </div>
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2 col-span-2 md:col-span-1">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-server text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Modernization of HP NS</div>
+          </div>
+
         </div>
-
-        <!-- RIGHT SECTION: DESKTOP NAVIGATION TABS (HIDDEN ON MOBILE) -->
-        <nav class="hidden md:flex items-center space-x-1.5 py-1 shrink-0">
-          <a href="#summary" id="tab-summary"
-            class="tab-btn active px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap flex items-center space-x-1.5 transition">
-            <i class="fa-solid fa-user-tie text-xs text-dbBlue"></i>
-            <span>Summary</span>
-          </a>
-
-          <a href="#domain-map" id="tab-domain-map"
-            class="tab-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap flex items-center space-x-1.5 transition">
-            <i class="fa-solid fa-users text-xs text-dbBlue"></i>
-            <span>Teams</span>
-          </a>
-
-          <a href="#achievements" id="tab-achievements"
-            class="tab-btn px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap flex items-center space-x-1.5 transition">
-            <i class="fa-solid fa-trophy text-xs text-dbBlue"></i>
-            <span>Achievements</span>
-          </a>
-
-          <!-- PRESENTATION MODE BUTTON -->
-          <button id="start-presentation-btn" type="button"
-            class="ml-2 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-dbNavy hover:bg-dbBlue border border-dbNavy shadow-2xs transition-all flex items-center space-x-2 cursor-pointer active:scale-95">
-            <i class="fa-solid fa-desktop text-dbCyan text-xs"></i>
-            <span>Slide Mode</span>
-          </button>
-        </nav>
-
-        <!-- MOBILE HAMBURGER BUTTON (VISIBLE ONLY ON MOBILE < md) -->
-        <button id="mobile-menu-btn" type="button"
-          class="md:hidden text-dbNavy hover:text-dbBlue bg-slate-100 hover:bg-slate-200 w-10 h-10 rounded-xl flex items-center justify-center transition border border-slate-200 shadow-2xs"
-          aria-label="Toggle navigation menu">
-          <i id="hamburger-icon" class="fa-solid fa-bars text-base"></i>
-        </button>
 
       </div>
-    </div>
 
-    <!-- MOBILE DROPDOWN NAVIGATION MENU -->
-    <div id="mobile-menu"
-      class="hidden md:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-md px-4 py-3 shadow-lg space-y-1">
-      <a href="#summary"
-        class="mobile-tab-btn flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-extrabold text-dbNavy hover:bg-blue-50 hover:text-dbBlue transition">
-        <i class="fa-solid fa-user-tie text-base text-dbBlue w-5 text-center"></i>
-        <span>Summary</span>
-      </a>
-      <a href="#domain-map"
-        class="mobile-tab-btn flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-extrabold text-dbNavy hover:bg-blue-50 hover:text-dbBlue transition">
-        <i class="fa-solid fa-users text-base text-dbBlue w-5 text-center"></i>
-        <span>Teams</span>
-      </a>
-      <a href="#achievements"
-        class="mobile-tab-btn flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-extrabold text-dbNavy hover:bg-blue-50 hover:text-dbBlue transition">
-        <i class="fa-solid fa-trophy text-base text-dbBlue w-5 text-center"></i>
-        <span>Achievements</span>
-      </a>
-
-      <!-- MOBILE PRESENTATION BUTTON -->
-      <button id="mobile-start-presentation-btn" type="button"
-        class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-bold text-white bg-dbNavy hover:bg-dbBlue transition shadow-2xs">
-        <i class="fa-solid fa-desktop text-dbCyan text-base w-5 text-center"></i>
-        <span>Slide Mode</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT AREA (DYNAMICALLY SWITCHED WITHOUT URL CHANGE) -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 pb-32 flex-1 w-full">
-
-    <!-- PANEL 1: SUMMARY -->
-    <section id="summary" class="tab-panel space-y-8 mb-12">
-      <!-- HERO BANNER SECTION -->
-      <div
-        class="hub-card p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-dbNavy via-slate-900 to-dbBlue text-white shadow-xl relative overflow-hidden border border-slate-700/50 space-y-6">
-        <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-dbCyan/10 rounded-full blur-3xl pointer-events-none">
-        </div>
-
-        <div class="relative z-10 space-y-4">
-          <div class="flex items-center space-x-2">
-            <span
-              class="bg-white/10 text-dbCyan text-xs px-3.5 py-1 rounded-full font-mono uppercase tracking-wider border border-white/15 backdrop-blur-md flex items-center gap-1.5 font-bold">
-              <i class="fa-solid fa-award text-dbCyan"></i> Technical Transformation Lead
-            </span>
-          </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">Nitin Silra</h1>
-
-          <!-- EXECUTIVE KEYWORD BADGES / PILLS -->
-          <div class="flex flex-wrap gap-2 pt-1 max-w-5xl">
-            <span
-              class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-building-columns text-dbCyan text-xs"></i> 9.5+ Years Experience
-            </span>
-            <span
-              class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-arrows-rotate text-dbCyan text-xs"></i> Migration Lead
-            </span>
-            <span
-              class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-layer-group text-dbCyan text-xs"></i> Multi-Platform Expert
-            </span>
-            <span
-              class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-user-shield text-dbCyan text-xs"></i> Shift-Left Governance
-            </span>
-            <span
-              class="bg-white/10 text-white text-xs px-3 py-1 rounded-lg font-medium border border-white/15 backdrop-blur-md flex items-center gap-1.5 hover:border-dbCyan/50 transition">
-              <i class="fa-solid fa-shield-halved text-dbCyan text-xs"></i> Production Resilience
-            </span>
-          </div>
-
-          <!-- PROGRESSION ROADMAP (PLACED DIRECTLY BELOW HASHTAGS) -->
-          <div class="pt-4 border-t border-white/10 mt-4">
-            <div class="bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-2xl space-y-3">
-              <div class="flex items-center justify-between border-b border-white/10 pb-2">
-                <span class="text-xs font-black uppercase tracking-wider text-dbCyan flex items-center gap-1.5">
-                  <i class="fa-solid fa-timeline text-amber-300"></i> Progression Roadmap
-                </span>
-              </div>
-
-              <!-- PROGRESSION ROADMAP: VERTICAL ON MOBILE (< sm), HORIZONTAL ON DESKTOP (>= sm) -->
-              <div class="py-2 px-2">
-                <!-- DESKTOP HORIZONTAL VIEW (HIDDEN ON MOBILE) -->
-                <div class="hidden sm:flex relative items-start justify-between max-w-4xl mx-auto py-2">
-                  <!-- HORIZONTAL CONNECTOR LINE (CONSTRAINED BETWEEN FIRST AND LAST ICON) -->
-                  <div
-                    class="absolute left-12 right-16 top-6 h-0.5 bg-gradient-to-r from-sky-400 via-purple-400 to-amber-400 opacity-50 pointer-events-none">
-                  </div>
-
-                  <!-- STEP 1: TEST SUPPORT -->
-                  <div
-                    class="relative flex flex-col items-center group cursor-pointer z-10 w-24 text-center space-y-2 shrink-0">
-                    <div
-                      class="w-9 h-9 rounded-xl bg-sky-500 text-white flex items-center justify-center text-sm font-black shadow-md group-hover:scale-110 group-hover:ring-4 group-hover:ring-sky-400/40 transition-all">
-                      <i class="fa-solid fa-user-graduate"></i>
-                    </div>
-                    <span
-                      class="text-xs font-bold text-sky-200 leading-tight group-hover:text-white transition-colors">Test
-                      Support</span>
-                  </div>
-
-                  <!-- STEP 2: DEVELOPER -->
-                  <div
-                    class="relative flex flex-col items-center group cursor-pointer z-10 w-24 text-center space-y-2 shrink-0">
-                    <div
-                      class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-sm font-black shadow-md group-hover:scale-110 group-hover:ring-4 group-hover:ring-indigo-400/40 transition-all">
-                      <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <span
-                      class="text-xs font-bold text-indigo-200 leading-tight group-hover:text-white transition-colors">Developer</span>
-                  </div>
-
-                  <!-- STEP 3: TECH ANALYST -->
-                  <div
-                    class="relative flex flex-col items-center group cursor-pointer z-10 w-24 text-center space-y-2 shrink-0">
-                    <div
-                      class="w-9 h-9 rounded-xl bg-purple-600 text-white flex items-center justify-center text-sm font-black shadow-md group-hover:scale-110 group-hover:ring-4 group-hover:ring-purple-400/40 transition-all">
-                      <i class="fa-solid fa-user-gear"></i>
-                    </div>
-                    <span
-                      class="text-xs font-bold text-purple-200 leading-tight group-hover:text-white transition-colors">Tech
-                      Analyst</span>
-                  </div>
-
-                  <!-- STEP 4: MIGRATION SME -->
-                  <div
-                    class="relative flex flex-col items-center group cursor-pointer z-10 w-28 text-center space-y-2 shrink-0">
-                    <div
-                      class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center text-sm font-black shadow-md group-hover:scale-110 group-hover:ring-4 group-hover:ring-teal-400/40 transition-all">
-                      <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <span
-                      class="text-xs font-bold text-teal-200 leading-tight group-hover:text-white transition-colors">Migration
-                      SME</span>
-                  </div>
-
-                  <!-- STEP 5: TECHNICAL TRANSFORMATION LEAD -->
-                  <div
-                    class="relative flex flex-col items-center group cursor-pointer z-10 w-36 text-center space-y-2 shrink-0">
-                    <div
-                      class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-400 to-amber-200 text-dbNavy flex items-center justify-center text-base font-black shadow-md group-hover:scale-110 group-hover:ring-4 group-hover:ring-amber-300/40 transition-all">
-                      <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <span
-                      class="text-xs font-black text-amber-300 leading-tight group-hover:text-white transition-colors">Technical
-                      Transformation Lead</span>
-                  </div>
-                </div>
-
-                <!-- MOBILE VERTICAL VIEW (VISIBLE ONLY ON MOBILE < sm) -->
-                <div class="sm:hidden relative space-y-3.5 pl-3 border-l-2 border-dashed border-cyan-400/40 ml-2">
-
-                  <!-- STEP 1: TEST SUPPORT -->
-                  <div class="relative flex items-center gap-3">
-                    <div
-                      class="w-8 h-8 rounded-lg bg-sky-500 text-white flex items-center justify-center text-xs font-black shrink-0 shadow-xs">
-                      <i class="fa-solid fa-user-graduate"></i>
-                    </div>
-                    <span class="text-xs font-bold text-sky-200">Test Support</span>
-                  </div>
-
-                  <!-- STEP 2: DEVELOPER -->
-                  <div class="relative flex items-center gap-3">
-                    <div
-                      class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-xs font-black shrink-0 shadow-xs">
-                      <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <span class="text-xs font-bold text-indigo-200">Developer</span>
-                  </div>
-
-                  <!-- STEP 3: TECH ANALYST -->
-                  <div class="relative flex items-center gap-3">
-                    <div
-                      class="w-8 h-8 rounded-lg bg-purple-600 text-white flex items-center justify-center text-xs font-black shrink-0 shadow-xs">
-                      <i class="fa-solid fa-user-gear"></i>
-                    </div>
-                    <span class="text-xs font-bold text-purple-200">Tech Analyst</span>
-                  </div>
-
-                  <!-- STEP 4: MIGRATION SME -->
-                  <div class="relative flex items-center gap-3">
-                    <div
-                      class="w-8 h-8 rounded-lg bg-teal-500 text-white flex items-center justify-center text-xs font-black shrink-0 shadow-xs">
-                      <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <span class="text-xs font-bold text-teal-200">Migration SME</span>
-                  </div>
-
-                  <!-- STEP 5: TECHNICAL TRANSFORMATION LEAD -->
-                  <div class="relative flex items-center gap-3">
-                    <div
-                      class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-400 to-amber-200 text-dbNavy flex items-center justify-center text-sm font-black shrink-0 shadow-sm">
-                      <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <span class="text-xs font-black text-amber-300">Technical Transformation Lead</span>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Bottom Scroll Indicator Indicator -->
+      <div class="pb-2 text-center">
+        <a href="#domain-map"
+          class="text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
       </div>
+
     </section>
 
-    <!-- PANEL 3: DOMAIN MAP (EXECUTIVE TEAM LEADERSHIP & ARCHITECTURE) -->
-    <section id="domain-map" class="tab-panel space-y-5 mb-12">
-      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-        <div class="flex items-center gap-3">
-          <div
-            class="w-9 h-9 rounded-xl bg-gradient-to-tr from-dbNavy to-dbBlue text-white flex items-center justify-center font-bold shadow-md">
-            <i class="fa-solid fa-sitemap"></i>
-          </div>
-          <div>
-            <h2 class="text-base font-extrabold text-dbNavy tracking-tight">Team Ownership</h2>
-          </div>
+    <!-- ==========================================
+         SECTION 2: TEAM OWNERSHIP (INTERACTIVE MASTER-DETAIL APPLE VIEW)
+    =========================================== -->
+    <section id="domain-map"
+      class="h-screen min-h-screen flex flex-col justify-between items-center px-6 py-10 bg-white relative border-b border-slate-200">
+
+      <!-- Section Header -->
+      <div class="text-center space-y-2 max-w-4xl mx-auto pt-2">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-50 border border-blue-200 text-dbBlue text-xs font-mono font-bold uppercase tracking-widest shadow-xs">
+          <i class="fa-solid fa-layer-group text-dbBlue"></i>
+          <span>Domain Overview</span>
         </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-dbNavy tracking-tight">Strategic Deliveries Across Teams &
+          Beyond</h2>
       </div>
 
-      <div
-        class="hub-card p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-dbNavy to-slate-950 text-white relative overflow-hidden border border-slate-800 shadow-2xl space-y-8">
+      <!-- Interactive Master-Detail Layout -->
+      <div class="max-w-[1400px] mx-auto w-full my-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
-        <!-- TOP SYSTEM TOPOLOGY: ASYMMETRICAL REAL-WORLD ARCHITECTURE (HOVER FADE OTHER CARDS) -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 relative z-10 items-stretch group/topology">
+          <!-- LEFT SIDEBAR (FIXED SIZE STABLE BUTTONS) -->
+          <div class="lg:col-span-4 space-y-3 flex flex-col justify-center">
 
-          <!-- LEFT COLUMN (LG: 8 COLS): STANDALONE DB-INTERNET + INDEPENDENT SUB-COMPONENT CARDS -->
-          <div class="lg:col-span-8 flex flex-col justify-between space-y-6">
-
-            <!-- STANDALONE DB-INTERNET (PRIMARY LED PLATFORM HERO BOX) -->
-            <div
-              class="bg-slate-900/95 border border-dbCyan/90 rounded-3xl p-6 sm:p-7 shadow-2xl shadow-cyan-500/20 relative space-y-5 transition-all duration-300 group/dbi group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1">
-              <div
-                class="absolute -top-3.5 left-6 bg-dbCyan text-slate-950 text-[11px] font-black uppercase px-4 py-0.5 rounded-full shadow-md tracking-wider font-mono flex items-center gap-1.5 transition-colors duration-300">
-                <i class="fa-solid fa-user-shield"></i> Technical Transformation Lead
-              </div>
-
-              <!-- DB-INTERNET HERO HEADING & HASHTAG BADGES -->
-              <div class="pt-2 space-y-4">
-                <h3
-                  class="text-3xl sm:text-4xl font-black text-white tracking-tight flex items-center gap-3 transition-colors">
-                  <i class="fa-solid fa-globe text-dbCyan"></i> DB-Internet
-                </h3>
-
-                <!-- DB-INTERNET ROLE BADGE & HASHTAGS -->
-                <div class="flex flex-wrap gap-1.5 pt-1">
-                  <span
-                    class="bg-amber-400/20 text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/40 flex items-center gap-1 transition-all">
-                    <i class="fa-solid fa-earth-americas text-[10px]"></i> 17 Countries
-                  </span>
-                  <span
-                    class="bg-amber-400/20 text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/40 flex items-center gap-1 transition-all">
-                    <i class="fa-solid fa-boxes-packing text-[10px]"></i> 38 Product Lines
-                  </span>
-                  <span
-                    class="bg-amber-400/20 text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/40 flex items-center gap-1 transition-all">
-                    <i class="fa-solid fa-plug text-[10px]"></i> 1K+ Interfaces
-                  </span>
-                  <span
-                    class="bg-indigo-500/20 text-indigo-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-indigo-400/30 flex items-center gap-1.5 transition-all">
-                    <i class="fa-solid fa-server text-[10px]"></i> HP NonStop Mainframe
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- INDEPENDENT STANDALONE SUB-COMPONENT CARDS (OUTSIDE DB-INTERNET BOX) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <!-- INDEPENDENT KANNON PROXY CARD -->
-              <div
-                class="bg-indigo-950/90 border border-indigo-400/80 rounded-3xl p-5 sm:p-6 shadow-md shadow-indigo-500/20 relative flex flex-col justify-between min-h-[120px] space-y-4 transition-all duration-300 group/kannon group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-0.5">
+            <!-- DB-INTERNET BUTTON -->
+            <button onclick="selectTeamTab('dbi')" id="team-tab-dbi"
+              class="team-tab-btn w-full p-4 rounded-2xl bg-slate-900 text-white border-2 border-dbBlue shadow-md flex items-center justify-between text-left transition-all">
+              <div class="flex items-center gap-3.5">
                 <div
-                  class="absolute -top-3.5 left-5 bg-indigo-500 text-white text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
-                  <i class="fa-solid fa-user-gear"></i> Technical Lead
+                  class="w-10 h-10 rounded-xl bg-dbNavy border border-dbBlue text-dbCyan flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-globe"></i>
                 </div>
-
-                <div class="flex items-center justify-between pt-1">
-                  <div class="flex items-center gap-3">
-                    <div
-                      class="w-9 h-9 rounded-xl bg-indigo-500/30 text-indigo-300 flex items-center justify-center text-sm font-bold shrink-0 border border-indigo-400/50 transition-colors">
-                      <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <h4 class="text-sm sm:text-base font-black text-white tracking-tight transition-colors">
-                      Kannon Proxy</h4>
-                  </div>
-                </div>
-                <!-- KANNON PROXY FEATURE BADGES -->
-                <div class="flex flex-wrap gap-1.5">
-                  <span
-                    class="bg-indigo-500/20 text-indigo-200 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-indigo-400/30 inline-flex items-center gap-1">
-                    <i class="fa-solid fa-cubes text-[9px] text-indigo-300"></i> Sidecar
-                  </span>
-                  <span
-                    class="bg-indigo-500/20 text-indigo-200 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-indigo-400/30 inline-flex items-center gap-1">
-                    <i class="fa-solid fa-percent text-[9px] text-indigo-300"></i> Interest Rates
-                  </span>
+                <div>
+                  <div class="text-xs font-mono text-dbCyan font-bold uppercase">Primary Platform</div>
+                  <div class="text-base font-black">DB-Internet</div>
                 </div>
               </div>
+              <i class="fa-solid fa-chevron-right text-xs text-dbCyan"></i>
+            </button>
 
-              <!-- INDEPENDENT BOOKING API CARD -->
-              <div
-                class="bg-orange-950/60 border border-orange-500/80 rounded-3xl p-5 sm:p-6 shadow-md shadow-orange-500/20 relative flex flex-col justify-between min-h-[120px] space-y-4 overflow-visible transition-all duration-300 group/bookingapi group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-0.5">
+            <!-- KANNON PROXY BUTTON -->
+            <button onclick="selectTeamTab('kannon')" id="team-tab-kannon"
+              class="team-tab-btn w-full p-4 rounded-2xl bg-white text-dbNavy border-2 border-slate-200 shadow-xs hover:border-dbBlue flex items-center justify-between text-left transition-all">
+              <div class="flex items-center gap-3.5">
                 <div
-                  class="absolute -top-3.5 left-5 bg-orange-500 text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
-                  <i class="fa-solid fa-user-gear"></i> Migration SME
+                  class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-network-wired"></i>
                 </div>
-
-                <div class="flex items-center justify-between pt-1">
-                  <div class="flex items-center gap-3">
-                    <div
-                      class="w-9 h-9 rounded-xl bg-orange-500/30 text-orange-400 flex items-center justify-center text-sm font-bold shrink-0 border border-orange-400/50 transition-colors">
-                      <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h4 class="text-sm sm:text-base font-black text-white tracking-tight transition-colors">
-                      Booking API</h4>
-                  </div>
-                </div>
-                <!-- BOOKING API FEATURE BADGES -->
-                <div class="flex flex-wrap gap-1.5">
-                  <span
-                    class="bg-orange-500/20 text-amber-200 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-orange-400/30 inline-flex items-center gap-1">
-                    <i class="fa-solid fa-arrow-right-arrow-left text-[9px] text-orange-400"></i> Transformer Strategic to DDA
-                  </span>
+                <div>
+                  <div class="text-xs font-mono text-slate-500 font-bold uppercase">Sidecar Service</div>
+                  <div class="text-base font-black">Kannon Proxy</div>
                 </div>
               </div>
-            </div>
+              <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </button>
 
-          </div>
-
-          <!-- RIGHT COLUMN (LG: 4 COLS): VERTICALLY STACKED DOMAINS -->
-          <div class="lg:col-span-4 space-y-6 flex flex-col justify-between">
-
-            <!-- 1. COMPLETELY SEPARATE DOMAIN (ESA) -->
-            <div
-              class="bg-gradient-to-br from-amber-950/80 via-slate-950 to-amber-950/60 border border-amber-500/90 rounded-3xl p-6 sm:p-7 shadow-lg shadow-amber-500/20 relative space-y-5 min-h-[140px] flex flex-col justify-between transition-all duration-300 group/esa group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1">
-              <div
-                class="absolute -top-3.5 left-5 bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-md tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
-                <i class="fa-solid fa-user-tie"></i> Technical Lead
-              </div>
-
-              <div class="pt-2 space-y-4">
-                <div class="flex items-center justify-between">
-                  <h4 class="text-lg font-black text-white tracking-tight flex items-center gap-2.5 transition-colors">
-                    <i class="fa-solid fa-vault text-amber-400 text-lg transition-colors"></i>
-                    ESA
-                  </h4>
-                </div>
-                <!-- ESA FEATURE BADGES -->
-                <div class="flex flex-wrap gap-1.5">
-                  <span
-                    class="bg-amber-400/20 text-amber-200 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/30 inline-flex items-center gap-1">
-                    <i class="fa-solid fa-coins text-[9px] text-amber-400"></i> Forex &amp; Precious Metals
-                  </span>
-                  <span
-                    class="bg-amber-400/20 text-amber-200 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-400/30 inline-flex items-center gap-1">
-                    <i class="fa-solid fa-cloud text-[9px] text-amber-400"></i> Integrated Cinovo
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2. INTEGRATED GLOBAL SYSTEMS (BOOKING SEP CARD) -->
-            <div
-              class="bg-slate-950/95 border border-emerald-500/90 rounded-3xl p-6 sm:p-7 shadow-lg shadow-emerald-500/20 relative space-y-5 min-h-[140px] flex flex-col justify-between transition-all duration-300 group/igs group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1">
-              <div
-                class="absolute -top-3.5 left-5 bg-emerald-500 text-slate-950 text-[10px] font-black uppercase px-3.5 py-0.5 rounded-full shadow-sm tracking-wider font-mono flex items-center gap-1 transition-colors duration-300">
-                <i class="fa-solid fa-user-gear"></i> Migration SME
-              </div>
-
-              <div class="pt-2 space-y-4">
-                <div class="flex items-center justify-between">
-                  <h4 class="text-lg font-black text-white tracking-tight flex items-center gap-2.5 transition-colors">
-                    <i class="fa-solid fa-book-bookmark text-emerald-400 text-lg transition-colors"></i>
-                    Booking SEP
-                  </h4>
-                </div>
-                <!-- BOOKING SEP FEATURE BADGES -->
-                <div class="flex flex-wrap gap-1.5">
-                  <span
-                    class="bg-emerald-500/20 text-emerald-200 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-emerald-400/30 inline-flex items-center gap-1">
-                    <i class="fa-solid fa-route text-[9px] text-emerald-400"></i> Multi-DDA Booking Redirector
-                  </span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <!-- PANEL 4: ACHIEVEMENTS -->
-    <section id="achievements" class="tab-panel space-y-8 mb-12">
-      <!-- SECTION HEADER -->
-      <div class="flex items-center justify-between border-b border-slate-200/80 pb-4">
-        <div class="flex items-center gap-3">
-          <div
-            class="w-12 h-12 rounded-full bg-gradient-to-tr from-dbNavy via-blue-900 to-dbBlue text-white flex items-center justify-center font-black shadow-lg ring-4 ring-blue-500/10">
-            <i class="fa-solid fa-trophy text-amber-300 text-xl"></i>
-          </div>
-          <div>
-            <h2 class="text-xl font-black text-dbNavy tracking-tight">Key Achievements &amp; Strategic Deliveries</h2>
-          </div>
-        </div>
-      </div>
-
-      <!-- FIVE DEDICATED CIRCLES WITH SMOOTH 3D FLIP TO IMPACT METRICS (3 PER ROW ON DESKTOP) -->
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-6 items-center justify-items-center max-w-6xl mx-auto">
-
-        <!-- CIRCLE 1: AUTOMATED BINARY DISTRIBUTION -->
-        <div class="relative flex flex-col items-center w-56 h-56 shrink-0 flex-none">
-          <div class="w-56 h-56 perspective-1000 cursor-pointer"
-            onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-            <div class="flip-card-inner">
-
-              <!-- FRONT FACE -->
-              <div
-                class="flip-card-front bg-gradient-to-br from-blue-50/90 via-white to-blue-100/60 border-4 border-blue-200/80 shadow-lg hover:shadow-2xl hover:border-dbBlue flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
+            <!-- ESA DOMAIN BUTTON (3RD) -->
+            <button onclick="selectTeamTab('esa')" id="team-tab-esa"
+              class="team-tab-btn w-full p-4 rounded-2xl bg-white text-dbNavy border-2 border-slate-200 shadow-xs hover:border-dbBlue flex items-center justify-between text-left transition-all">
+              <div class="flex items-center gap-3.5">
                 <div
-                  class="absolute -top-10 -right-10 w-24 h-24 bg-blue-500/10 rounded-full blur-xl pointer-events-none">
-                </div>
-
-                <div
-                  class="w-11 h-11 rounded-full bg-gradient-to-tr from-dbNavy to-blue-600 text-white flex items-center justify-center text-lg font-black shadow-md mb-1.5">
-                  <i class="fa-solid fa-gears"></i>
-                </div>
-
-                <span
-                  class="text-[9px] font-mono font-black text-dbBlue bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-200 uppercase mb-1">Automation</span>
-                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">Automated Binary Distribution</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Manual packaging to automated scripts.</p>
-
-                <span
-                  class="text-[9px] font-black text-white bg-gradient-to-r from-dbNavy to-blue-700 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
-                  <i class="fa-solid fa-bolt text-amber-300 text-[9px]"></i> View Impact
-                </span>
-              </div>
-
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
-              <div
-                class="flip-card-back bg-gradient-to-br from-dbNavy via-blue-900 to-slate-950 border-4 border-blue-400 text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
-                <div
-                  class="absolute -bottom-8 -left-8 w-24 h-24 bg-blue-400/20 rounded-full blur-xl pointer-events-none">
-                </div>
-                <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
-                  Impact</span>
-                <h4 class="font-black text-white text-xs mb-1">Automated Binary Distribution</h4>
-
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
-                  <span class="text-[9px] font-mono text-cyan-300 block uppercase font-bold">Efficiency</span>
-                  <span class="text-[10px] font-black text-emerald-300 block">Reduced ManDays &amp; Reliable Release</span>
-                </div>
-
-                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
-                <div class="pt-0.5">
-                  <span
-                    class="bg-blue-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-amber-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-arrow-trend-up text-[8px] text-amber-400"></i> Get Better at Getting Better
-                  </span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- CIRCLE 2: ESA MIGRATION (VIBRANT PURPLE THEME) -->
-        <div class="relative flex flex-col items-center w-56 h-56 shrink-0 flex-none">
-          <div class="w-56 h-56 perspective-1000 cursor-pointer"
-            onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-            <div class="flip-card-inner">
-
-              <!-- FRONT FACE -->
-              <div
-                class="flip-card-front bg-gradient-to-br from-purple-50/90 via-white to-purple-100/60 border-4 border-purple-300/80 shadow-lg hover:shadow-2xl hover:border-purple-500 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
-                <div
-                  class="absolute -top-10 -right-10 w-24 h-24 bg-purple-500/10 rounded-full blur-xl pointer-events-none">
-                </div>
-
-                <div
-                  class="w-11 h-11 rounded-full bg-gradient-to-tr from-purple-800 to-indigo-600 text-white flex items-center justify-center text-lg font-black shadow-md mb-1.5">
+                  class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center text-lg font-bold shrink-0">
                   <i class="fa-solid fa-vault"></i>
                 </div>
-
-                <span
-                  class="text-[9px] font-mono font-black text-purple-800 bg-purple-100/90 px-2.5 py-0.5 rounded-full border border-purple-200 uppercase mb-1">Modernization</span>
-                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">ESA Migration</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated Currency
-                  &amp; Metals domain to modern architecture.</p>
-
-                <span
-                  class="text-[9px] font-black text-white bg-gradient-to-r from-purple-700 to-indigo-600 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
-                  <i class="fa-solid fa-bolt text-purple-200 text-[9px]"></i> View Impact
-                </span>
+                <div>
+                  <div class="text-xs font-mono text-slate-500 font-bold uppercase">Forex & Metals</div>
+                  <div class="text-base font-black">ESA Domain</div>
+                </div>
               </div>
+              <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </button>
 
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED HASHTAG) -->
-              <div
-                class="flip-card-back bg-gradient-to-br from-slate-900 via-purple-950 to-slate-950 border-4 border-purple-400 text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
+            <!-- BOOKING API & SEP BUTTON (COMBINED) -->
+            <button onclick="selectTeamTab('booking')" id="team-tab-booking"
+              class="team-tab-btn w-full p-4 rounded-2xl bg-white text-dbNavy border-2 border-slate-200 shadow-xs hover:border-dbBlue flex items-center justify-between text-left transition-all">
+              <div class="flex items-center gap-3.5">
                 <div
-                  class="absolute -bottom-8 -left-8 w-24 h-24 bg-purple-400/20 rounded-full blur-xl pointer-events-none">
+                  class="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200 text-orange-700 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-book-bookmark"></i>
                 </div>
-                <span class="text-[9px] font-mono font-black text-purple-300 uppercase tracking-wider mb-0.5">Business
-                  Impact</span>
-                <h4 class="font-black text-white text-xs mb-1">ESA Migration</h4>
-
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
-                  <span class="text-[9px] font-mono text-purple-300 block uppercase font-bold">Strategic Outcome</span>
-                  <span class="text-[10px] font-black text-emerald-300 block">Retained External Business</span>
-                </div>
-
-                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
-                <div class="pt-0.5">
-                  <span
-                    class="bg-purple-950/80 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-purple-400/80 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-handshake text-[8px] text-pink-400"></i> Take the Client Perspective
-                  </span>
+                <div>
+                  <div class="text-xs font-mono text-slate-500 font-bold uppercase">Strategic Redirector & Transformer
+                  </div>
+                  <div class="text-base font-black">Booking API & SEP</div>
                 </div>
               </div>
+              <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </button>
 
-            </div>
+            <!-- BEYOND THE REGULAR WORK BUTTON (5TH) -->
+            <button onclick="selectTeamTab('beyond')" id="team-tab-beyond"
+              class="team-tab-btn w-full p-4 rounded-2xl bg-white text-dbNavy border-2 border-slate-200 shadow-xs hover:border-dbBlue flex items-center justify-between text-left transition-all">
+              <div class="flex items-center gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-purple-50 border border-purple-200 text-purple-700 flex items-center justify-center text-lg font-bold shrink-0">
+                  <i class="fa-solid fa-rocket"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-mono text-slate-500 font-bold uppercase">Innovation & Hackathons</div>
+                  <div class="text-base font-black">Beyond the Regular Work</div>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+            </button>
+
           </div>
-        </div>
 
-        <!-- CIRCLE 3: FABRIC ON GCP UPGRADE -->
-        <div class="relative flex flex-col items-center w-56 h-56 shrink-0 flex-none">
-          <div class="w-56 h-56 perspective-1000 cursor-pointer"
-            onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-            <div class="flip-card-inner">
-
-              <!-- FRONT FACE -->
-              <div
-                class="flip-card-front bg-gradient-to-br from-cyan-50/90 via-white to-cyan-100/60 border-4 border-cyan-200/80 shadow-lg hover:shadow-2xl hover:border-dbCyan flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
-                <div
-                  class="absolute -top-10 -right-10 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl pointer-events-none">
-                </div>
-
-                <div
-                  class="w-11 h-11 rounded-full bg-gradient-to-tr from-teal-700 to-dbCyan text-slate-950 flex items-center justify-center text-lg font-black shadow-md mb-1.5">
-                  <i class="fa-solid fa-cubes-stacked"></i>
-                </div>
-
-                <span
-                  class="text-[9px] font-mono font-black text-teal-800 bg-cyan-100/90 px-2.5 py-0.5 rounded-full border border-cyan-200 uppercase mb-1">Compliance</span>
-                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">Fabric on GCP Upgrade</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Upgraded
-                  containers for security &amp; cluster resilience.</p>
-
-                <span
-                  class="text-[9px] font-black text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-300 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
-                  <i class="fa-solid fa-bolt text-teal-900 text-[9px]"></i> View Impact
-                </span>
-              </div>
-
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
-              <div
-                class="flip-card-back bg-gradient-to-br from-slate-900 via-teal-950 to-slate-950 border-4 border-dbCyan text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
-                <div
-                  class="absolute -bottom-8 -left-8 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl pointer-events-none">
-                </div>
-                <span class="text-[9px] font-mono font-black text-dbCyan uppercase tracking-wider mb-0.5">Business
-                  Impact</span>
-                <h4 class="font-black text-white text-xs mb-1">Fabric on GCP Upgrade</h4>
-
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2 w-full space-y-0.5">
-                  <span class="text-[9px] font-mono text-cyan-300 block uppercase font-bold">Infrastructure Saved</span>
-                  <span class="text-[10px] font-black text-emerald-300 block leading-tight">Saved 2 Fabric
-                    instances</span>
-                </div>
-
-                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
-                <div class="pt-0.5">
-                  <span
-                    class="bg-slate-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-cyan-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-people-group text-[8px] text-cyan-300"></i> Collaborate to Make Others Successful
+          <!-- RIGHT DISPLAY PANE (EXPANDED TO 8 COLUMNS & MATCHING COMPACT HEIGHT) -->
+          <div class="lg:col-span-8 flex flex-col justify-center">
+            <div id="team-detail-pane"
+              class="glass-apple-card p-8 rounded-3xl border-2 border-slate-200 bg-white shadow-xl space-y-6 min-h-[420px] flex flex-col justify-between transition-all duration-300 transform opacity-100 translate-x-0">
+              <!-- Default DB-Internet Content -->
+              <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                  <span class="px-3.5 py-1 rounded-full bg-dbNavy text-white text-xs font-mono font-bold uppercase">
+                    <i class="fa-solid fa-user-shield text-dbCyan"></i> Technical Transformation Lead
                   </span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- CIRCLE 4: ACCOUNTING FLOW SIMPLIFICATION -->
-        <div class="relative flex flex-col items-center w-56 h-56 shrink-0 flex-none">
-          <div class="w-56 h-56 perspective-1000 cursor-pointer"
-            onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-            <div class="flip-card-inner">
-
-              <!-- FRONT FACE -->
-              <div
-                class="flip-card-front bg-gradient-to-br from-amber-50/90 via-white to-amber-100/60 border-4 border-amber-200/80 shadow-lg hover:shadow-2xl hover:border-amber-500 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
-                <div
-                  class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/10 rounded-full blur-xl pointer-events-none">
+                  <span class="text-xs font-mono font-bold text-dbBlue">Primary Platform</span>
                 </div>
 
-                <div
-                  class="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-700 to-amber-500 text-white flex items-center justify-center text-lg font-black shadow-md mb-1.5">
-                  <i class="fa-solid fa-sitemap"></i>
+                <div class="space-y-2">
+                  <h3 class="text-3xl font-black text-dbNavy">DB-Internet</h3>
                 </div>
 
-                <span
-                  class="text-[9px] font-mono font-black text-amber-800 bg-amber-100/90 px-2.5 py-0.5 rounded-full border border-amber-200 uppercase mb-1">Simplification</span>
-                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">Accounting Flow Simplification</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Removed intermediate transformer from Strategic to DDA.</p>
-
-                <span
-                  class="text-[9px] font-black text-white bg-gradient-to-r from-amber-700 to-orange-600 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
-                  <i class="fa-solid fa-bolt text-amber-200 text-[9px]"></i> View Impact
-                </span>
-              </div>
-
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
-              <div
-                class="flip-card-back bg-gradient-to-br from-slate-900 via-amber-950 to-slate-950 border-4 border-amber-400 text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
-                <div
-                  class="absolute -bottom-8 -left-8 w-24 h-24 bg-amber-400/20 rounded-full blur-xl pointer-events-none">
-                </div>
-                <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
-                  Impact</span>
-                <h4 class="font-black text-white text-xs mb-1">Accounting Flow Simplification</h4>
-
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
-                  <span class="text-[9px] font-mono text-amber-300 block uppercase font-bold">Cost Saved</span>
-                  <span class="text-[10px] font-black text-amber-200 block">Saved Infrastructure &amp; Maintenance</span>
-                </div>
-
-                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
-                <div class="pt-0.5">
-                  <span
-                    class="bg-amber-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-amber-300/80 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-lightbulb text-[8px] text-amber-400"></i> We Think Commercially
-                  </span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- CIRCLE 5: NEWRELIC HP NONSTOP -->
-        <div class="relative flex flex-col items-center w-56 h-56 shrink-0 flex-none">
-          <div class="w-56 h-56 perspective-1000 cursor-pointer"
-            onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-            <div class="flip-card-inner">
-
-              <!-- FRONT FACE -->
-              <div
-                class="flip-card-front bg-gradient-to-br from-emerald-50/90 via-white to-emerald-100/60 border-4 border-emerald-200/80 shadow-lg hover:shadow-2xl hover:border-emerald-500 flex flex-col items-center justify-center p-5 text-center relative overflow-hidden">
-                <div
-                  class="absolute -top-10 -right-10 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl pointer-events-none">
-                </div>
-
-                <div
-                  class="w-11 h-11 rounded-full bg-gradient-to-tr from-emerald-800 to-emerald-500 text-white flex items-center justify-center text-lg font-black shadow-md mb-1.5">
-                  <i class="fa-solid fa-chart-pie"></i>
-                </div>
-
-                <span
-                  class="text-[9px] font-mono font-black text-emerald-800 bg-emerald-100/90 px-2.5 py-0.5 rounded-full border border-emerald-200 uppercase mb-1">Innovation</span>
-                <h3 class="font-black text-dbNavy text-xs leading-tight mb-1 px-1">NewRelic HP NonStop</h3>
-                <p class="text-[9px] text-slate-600 font-medium leading-tight mb-2 line-clamp-2 px-1">Built APM
-                  telemetry for HP NS mainframe systems.</p>
-
-                <span
-                  class="text-[9px] font-black text-white bg-gradient-to-r from-emerald-700 to-teal-600 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
-                  <i class="fa-solid fa-bolt text-emerald-200 text-[9px]"></i> View Impact
-                </span>
-              </div>
-
-              <!-- BACK FACE (IMPACT METRICS + HIGHLIGHTED BADGE WITH SOLID WHITE TEXT) -->
-              <div
-                class="flip-card-back bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-950 border-4 border-emerald-400 text-white shadow-2xl flex flex-col items-center justify-center p-4 text-center relative overflow-hidden space-y-1.5">
-                <div
-                  class="absolute -bottom-8 -left-8 w-24 h-24 bg-emerald-400/20 rounded-full blur-xl pointer-events-none">
-                </div>
-                <span class="text-[9px] font-mono font-black text-emerald-300 uppercase tracking-wider mb-0.5">Business
-                  Impact</span>
-                <h4 class="font-black text-white text-xs mb-1">NewRelic HP NonStop</h4>
-
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
-                  <span class="text-[9px] font-mono text-emerald-300 block uppercase font-bold">Strategic Value</span>
-                  <span class="text-[10px] font-black text-emerald-200 block">Advanced Observability</span>
-                </div>
-
-                <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
-                <div class="pt-0.5">
-                  <span
-                    class="bg-emerald-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-emerald-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                    <i class="fa-solid fa-rocket text-[8px] text-emerald-400"></i> Encourage Solutions
-                  </span>
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                  <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="text-[10px] font-mono text-slate-500 font-bold uppercase">COVERAGE</div>
+                    <div class="text-lg font-black text-dbNavy">16 Countries</div>
+                  </div>
+                  <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="text-[10px] font-mono text-slate-500 font-bold uppercase">INTEGRATION</div>
+                    <div class="text-lg font-black text-dbNavy">1K+ Interfaces</div>
+                  </div>
+                  <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="text-[10px] font-mono text-slate-500 font-bold uppercase">PORTFOLIO</div>
+                    <div class="text-lg font-black text-dbNavy">38 Product Lines</div>
+                  </div>
+                  <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="text-[10px] font-mono text-slate-500 font-bold uppercase">ARCHITECTURE</div>
+                    <div class="text-lg font-black text-dbNavy">HP NonStop</div>
+                  </div>
                 </div>
               </div>
 
@@ -802,144 +315,551 @@
         </div>
 
       </div>
+      </div>
 
-      <!-- BEYOND DAY-TO-DAY DELIVERABLES -->
-      <section class="space-y-5 pt-6 border-t border-slate-200/80">
-        <div class="flex items-center justify-between">
-          <h3 class="text-base font-black text-dbNavy tracking-tight flex items-center gap-2.5">
-            <div
-              class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-400/30 flex items-center justify-center shadow-2xs">
-              <i class="fa-solid fa-star text-amber-500 text-base"></i>
-            </div>
-            <span>Beyond Day-to-Day Deliverables</span>
-          </h3>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <!-- Bottom Scroll Prompt to Section 3 -->
+      <div class="pb-2 text-center">
+        <a href="#leadership-journey"
+          class="text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
 
-          <!-- BOX 1: 3RD PLACE GLOBAL HACKATHON WINNER -->
-          <div
-            class="group relative p-5 rounded-2xl bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-slate-900/10 border-2 border-amber-400/80 shadow-lg hover:shadow-2xl hover:border-amber-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden backdrop-blur-md space-y-3">
-            <div
-              class="absolute -right-8 -top-8 w-28 h-28 bg-amber-400/25 rounded-full blur-2xl group-hover:scale-150 transition-transform pointer-events-none">
-            </div>
+    </section>
 
-            <div class="space-y-3">
-              <div class="flex items-center justify-between gap-2">
-                <div
-                  class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-yellow-400 text-slate-950 flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform border border-amber-300/80 ring-2 ring-amber-400/20">
-                  <i class="fa-solid fa-trophy text-slate-950"></i>
-                </div>
-                <span
-                  class="text-[9px] font-mono font-bold text-amber-700 bg-amber-100/90 px-2 py-0.5 rounded-md border border-amber-200 uppercase">3rd
-                  Place Globally</span>
-              </div>
+    <!-- JS SCRIPT FOR TEAM MASTER-DETAIL INTERACTION WITH COIN ACHIEVEMENTS -->
+    <script>
+      const teamDetailsData = {
+        dbi: {
+          role: "Technical Transformation Lead",
+          category: "Primary Platform",
+          title: "DB-Internet",
+          description: "Critical core enterprise gateway connecting global banking applications across high-availability HP NonStop mainframes serving 16 countries and over 1,000 interfaces.",
+          metrics: [
+            { label: "COVERAGE", val: "16 Countries" },
+            { label: "INTEGRATION", val: "1K+ Interfaces" },
+            { label: "PORTFOLIO", val: "38 Product Lines" },
+            { label: "ARCHITECTURE", val: "HP NonStop" }
+          ],
+          footer: "Enterprise Banking Core",
+          achievements: [
+            {
+              frontTheme: "from-blue-50/90 via-white to-blue-100/60 border-blue-200/80 hover:border-dbBlue",
+              iconBg: "from-dbNavy to-blue-600",
+              icon: "fa-gears",
+              badgeStyle: "text-dbBlue bg-blue-100/90 border-blue-200",
+              tag: "Automation",
+              title: "Automated Binary Distribution",
+              desc: "Manual packaging to automated scripts.",
+              backTheme: "from-dbNavy via-blue-900 to-slate-950 border-blue-400",
+              labelColor: "text-cyan-300",
+              metricTitle: "Efficiency",
+              metricVal: "Reduced Man Days & Reliable Release",
+              pillarBadgeBg: "bg-blue-950/90 border-amber-300",
+              pillarIcon: "fa-arrow-trend-up text-amber-400",
+              pillarText: "Get Better at Getting Better"
+            },
+            {
+              frontTheme: "from-emerald-50/90 via-white to-emerald-100/60 border-emerald-200/80 hover:border-emerald-500",
+              iconBg: "from-emerald-800 to-emerald-500",
+              icon: "fa-chart-pie",
+              badgeStyle: "text-emerald-800 bg-emerald-100/90 border-emerald-200",
+              tag: "Innovation",
+              title: "NewRelic HP NonStop",
+              desc: "Built APM telemetry for HP NS mainframe systems.",
+              backTheme: "from-slate-900 via-emerald-950 to-slate-950 border-emerald-400",
+              labelColor: "text-emerald-300",
+              metricTitle: "Modernization",
+              metricVal: "Complete Telemetry & Decom Visibility",
+              pillarBadgeBg: "bg-emerald-950/90 border-emerald-300",
+              pillarIcon: "fa-rocket text-emerald-400",
+              pillarText: "Encourage solutions"
+            }
+          ]
+        },
+        kannon: {
+          role: "Technical Lead",
+          category: "Sidecar Service",
+          title: "Kannon Proxy",
+          description: "High-availability sidecar application engineered to supply live interest rate feeds into db-Internet while avoiding costly direct Kerberos connections.",
+          metrics: [
+            { label: "PATTERN", val: "Sidecar Service" },
+            { label: "FUNCTION", val: "Interest Rates" },
+            { label: "EFFICIENCY", val: "Cost Reduced" },
+            { label: "PLATFORM", val: "RedHat Fabric" }
+          ],
+          footer: "Sidecar Architecture",
+          achievements: [
+            {
+              frontTheme: "from-cyan-50/90 via-white to-cyan-100/60 border-cyan-200/80 hover:border-dbCyan",
+              iconBg: "from-teal-700 to-dbCyan",
+              icon: "fa-cubes-stacked",
+              badgeStyle: "text-teal-800 bg-cyan-100/90 border-cyan-200",
+              tag: "Compliance",
+              title: "Fabric on GCP Upgrade",
+              desc: "Upgraded containers for security & cluster resilience.",
+              backTheme: "from-slate-900 via-teal-950 to-slate-950 border-dbCyan",
+              labelColor: "text-dbCyan",
+              metricTitle: "Infrastructure Saved",
+              metricVal: "Saved 2 Fabric instances",
+              pillarBadgeBg: "bg-slate-950/90 border-cyan-300",
+              pillarIcon: "fa-people-group text-cyan-300",
+              pillarText: "Collaborate to Make Others Successful"
+            }
+          ]
+        },
+        esa: {
+          role: "Technical Lead",
+          category: "Forex & Metals",
+          title: "ESA Domain",
+          description: "Physical currency and precious metals trading ecosystem supporting operations across Deutsche Bank, ReiseBank, and Commerzbank.",
+          metrics: [
+            { label: "SCOPE", val: "Forex & Metals" },
+            { label: "AUTOMATION", val: "Cinovo Integrated" },
+            { label: "PARTNERS", val: "2 Major Banks" },
+            { label: "CLIENT RETENTION", val: "Safeguarded" }
+          ],
+          footer: "Client Value & Automation",
+          achievements: [
+            {
+              frontTheme: "from-purple-50/90 via-white to-purple-100/60 border-purple-300/80 hover:border-purple-500",
+              iconBg: "from-purple-800 to-indigo-600",
+              icon: "fa-vault",
+              badgeStyle: "text-purple-800 bg-purple-100/90 border-purple-200",
+              tag: "Migration",
+              title: "ESA Migration",
+              desc: "Led tech migration & Cinovo automation.",
+              backTheme: "from-slate-900 via-purple-950 to-slate-950 border-purple-400",
+              labelColor: "text-purple-300",
+              metricTitle: "Strategic Outcome",
+              metricVal: "Retained External Business",
+              pillarBadgeBg: "bg-purple-950/80 border-purple-400/80",
+              pillarIcon: "fa-handshake text-pink-400",
+              pillarText: "Take the Client Perspective"
+            }
+          ]
+        },
+        booking: {
+          role: "Migration SME",
+          category: "Strategic Redirector & Transformer",
+          title: "Booking API & SEP",
+          description: "Combined data transformation & strategic booking redirector ecosystem bridging strategic SDP engines to legacy DDA backends.",
+          metrics: [
+            { label: "TYPE", val: "Data Transformer" },
+            { label: "SOURCE", val: "Strategic SDP" },
+            { label: "ROLE", val: "Multi-DDA Redirector" },
+            { label: "IMPACT", val: "Infra Reduced" }
+          ],
+          footer: "Accounting & Fabric Upgrade",
+          achievements: [
+            {
+              frontTheme: "from-amber-50/90 via-white to-amber-100/60 border-amber-200/80 hover:border-amber-500",
+              iconBg: "from-amber-700 to-amber-500",
+              icon: "fa-sitemap",
+              badgeStyle: "text-amber-800 bg-amber-100/90 border-amber-200",
+              tag: "Simplification",
+              title: "Accounting Flow Simplification",
+              desc: "Removed intermediate transformer from Strategic to DDA.",
+              backTheme: "from-slate-900 via-amber-950 to-slate-950 border-amber-400",
+              labelColor: "text-amber-300",
+              metricTitle: "Cost Saved",
+              metricVal: "Saved Infrastructure & Maintenance",
+              pillarBadgeBg: "bg-amber-950/90 border-amber-300/80",
+              pillarIcon: "fa-lightbulb text-amber-400",
+              pillarText: "We Think Commercially"
+            },
+            {
+              frontTheme: "from-cyan-50/90 via-white to-cyan-100/60 border-cyan-200/80 hover:border-dbCyan",
+              iconBg: "from-teal-700 to-dbCyan",
+              icon: "fa-cubes-stacked",
+              badgeStyle: "text-teal-800 bg-cyan-100/90 border-cyan-200",
+              tag: "Compliance",
+              title: "Fabric on GCP Upgrade",
+              desc: "Upgraded containers for security & cluster resilience.",
+              backTheme: "from-slate-900 via-teal-950 to-slate-950 border-dbCyan",
+              labelColor: "text-dbCyan",
+              metricTitle: "Infrastructure Saved",
+              metricVal: "Saved 2 Fabric instances",
+              pillarBadgeBg: "bg-slate-950/90 border-cyan-300",
+              pillarIcon: "fa-people-group text-cyan-300",
+              pillarText: "Collaborate to Make Others Successful"
+            }
+          ]
+        },
+        beyond: {
+          role: "Innovation Leader & Hackathon Lead",
+          category: "Beyond the Regular Work",
+          title: "Beyond the Regular Work",
+          description: "Global hackathon victories, internal engineering tooling, and AI innovation initiatives driving organizational excellence beyond core deliverables.",
+          metrics: [
+            { label: "GLOBAL WIN", val: "3rd Place (SEED)" },
+            { label: "RUNNER-UP", val: "Frankfurt Lead (GROOT)" },
+            { label: "DEVER TOOL", val: "Safar SSH / SFTP" },
+            { label: "LEADERSHIP", val: "Innovation Driven" }
+          ],
+          footer: "Hackathons & Developer Tools",
+          achievements: [
+            {
+              frontTheme: "from-amber-50/90 via-white to-amber-100/60 border-amber-200/80 hover:border-amber-500",
+              iconBg: "from-amber-600 to-amber-400",
+              icon: "fa-trophy",
+              badgeStyle: "text-amber-800 bg-amber-100/90 border-amber-200",
+              tag: "Global Hackathon 2024",
+              title: "SEED Microfinance Platform",
+              desc: "Global 3rd Place Winner across Deutsche Bank.",
+              backTheme: "from-slate-900 via-amber-950 to-slate-950 border-amber-400",
+              labelColor: "text-amber-300",
+              metricTitle: "Global Recognition",
+              metricVal: "Global 3rd Place Win",
+              pillarBadgeBg: "bg-amber-950/90 border-amber-300",
+              pillarIcon: "fa-lightbulb text-amber-400",
+              pillarText: "We Think Commercially"
+            },
+            {
+              frontTheme: "from-indigo-50/90 via-white to-indigo-100/60 border-indigo-200/80 hover:border-indigo-500",
+              iconBg: "from-indigo-600 via-purple-600 to-pink-500",
+              icon: "fa-brain",
+              badgeStyle: "text-indigo-800 bg-indigo-100/90 border-indigo-200",
+              tag: "Global Hackathon 2026",
+              title: "GROOT AI Token Optimizer",
+              desc: "Team Lead of Frankfurt Runner-Up team.",
+              backTheme: "from-slate-900 via-indigo-950 to-slate-950 border-indigo-400",
+              labelColor: "text-indigo-300",
+              metricTitle: "AI Optimization",
+              metricVal: "Frankfurt Runner-Up Award",
+              pillarBadgeBg: "bg-indigo-950/90 border-indigo-300",
+              pillarIcon: "fa-rocket text-indigo-400",
+              pillarText: "Encourage solutions"
+            },
+            {
+              frontTheme: "from-cyan-50/90 via-white to-cyan-100/60 border-cyan-200/80 hover:border-cyan-500",
+              iconBg: "from-cyan-600 to-blue-500",
+              icon: "fa-terminal",
+              badgeStyle: "text-cyan-800 bg-cyan-100/90 border-cyan-200",
+              tag: "Developer Tool",
+              title: "Safar - Cross-Platform SSH Client",
+              desc: "PuTTY & WinSCP alternative engineered for Mac.",
+              backTheme: "from-slate-900 via-cyan-950 to-slate-950 border-cyan-400",
+              labelColor: "text-cyan-300",
+              metricTitle: "Productivity",
+              metricVal: "Cross-Platform SSH & SFTP Tool",
+              pillarBadgeBg: "bg-slate-950/90 border-cyan-300",
+              pillarIcon: "fa-screwdriver-wrench text-cyan-300",
+              pillarText: "Collaborate to Make Others Successful"
+            }
+          ]
+        }
+      };
 
-              <div class="space-y-1">
-                <span
-                  class="text-[9px] font-mono font-black text-amber-900 bg-gradient-to-r from-amber-300 to-yellow-400 px-2 py-0.5 rounded-full border border-amber-300 uppercase tracking-wider shadow-xs inline-flex items-center gap-1">
-                  <i class="fa-solid fa-earth-americas text-[8px]"></i> Global Hackathon 2025
+      let activeTeamKey = 'dbi';
+      let viewState = 'overview'; // 'overview' | 'list' | 'coin'
+      let selectedAchievementIndex = 0;
+
+      function selectTeamTab(key) {
+        activeTeamKey = key;
+        viewState = 'overview';
+        selectedAchievementIndex = 0;
+
+        // Reset all buttons
+        document.querySelectorAll('.team-tab-btn').forEach(btn => {
+          btn.className = "team-tab-btn w-full p-4 rounded-2xl bg-white text-dbNavy border-2 border-slate-200 shadow-xs hover:border-dbBlue flex items-center justify-between text-left transition-all";
+          const icon = btn.querySelector('.fa-chevron-right');
+          if (icon) icon.className = "fa-solid fa-chevron-right text-xs text-slate-400";
+        });
+
+        // Highlight selected button
+        const selectedBtn = document.getElementById(`team-tab-${key}`);
+        if (selectedBtn) {
+          selectedBtn.className = "team-tab-btn w-full p-4 rounded-2xl bg-slate-900 text-white border-2 border-dbBlue shadow-md flex items-center justify-between text-left transition-all";
+          const icon = selectedBtn.querySelector('.fa-chevron-right');
+          if (icon) icon.className = "fa-solid fa-chevron-right text-xs text-dbCyan";
+        }
+
+        renderTeamPane();
+      }
+
+      function showAchievementsList() {
+        viewState = 'list';
+        renderTeamPane();
+      }
+
+      function showSingleCoin(index) {
+        viewState = 'coin';
+        selectedAchievementIndex = index;
+        renderTeamPane();
+      }
+
+      function renderTeamPane() {
+        const d = teamDetailsData[activeTeamKey];
+        if (!d) return;
+
+        const pane = document.getElementById('team-detail-pane');
+
+        // Left-shift slide animation trigger
+        pane.classList.remove('opacity-100', 'translate-x-0');
+        pane.classList.add('opacity-0', 'translate-x-4');
+
+        setTimeout(() => {
+          pane.innerHTML = `
+            <div class="space-y-4">
+              <!-- HEADER -->
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <span class="px-3.5 py-1 rounded-full bg-dbNavy text-white text-xs font-mono font-bold uppercase">
+                  <i class="fa-solid fa-user-shield text-dbCyan"></i> ${d.role}
                 </span>
-                <h4
-                  class="text-sm font-black text-dbNavy leading-snug group-hover:text-amber-700 transition-colors pt-1">
-                  Global 3rd Place Winner
-                </h4>
+                <span class="text-xs font-mono font-bold text-dbBlue">${d.category}</span>
+              </div>
+
+              <!-- TITLE -->
+              <div class="space-y-1">
+                <h3 class="text-2xl font-black text-dbNavy">${d.title}</h3>
+              </div>
+
+              <!-- METRIC BADGES GRID -->
+              <div class="grid grid-cols-4 gap-2">
+                ${d.metrics.map(m => `
+                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
+                    <div class="text-[9px] font-mono text-slate-400 font-bold uppercase">${m.label}</div>
+                    <div class="text-xs font-black text-dbNavy">${m.val}</div>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- EMBEDDED CIRCULAR 3D FLIP COINS -->
+              <div class="pt-2 border-t border-slate-100">
+                <div class="grid ${d.achievements.length >= 3 ? 'grid-cols-1 md:grid-cols-3 justify-items-center' : d.achievements.length === 2 ? 'grid-cols-1 md:grid-cols-2 justify-items-center max-w-2xl mx-auto' : 'grid-cols-1 justify-items-center'} gap-6 py-2">
+                  ${d.achievements.map(c => `
+                    <div class="relative flex flex-col items-center w-60 h-60 shrink-0">
+                      <div class="w-60 h-60 perspective-1000 cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                          
+                          <!-- FRONT FACE (WHAT I HAVE DONE) -->
+                          <div class="flip-card-front bg-gradient-to-br ${c.frontTheme} border-4 rounded-full shadow-xl flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr ${c.iconBg} text-white flex items-center justify-center text-xl font-black shadow-md mb-2">
+                              <i class="fa-solid ${c.icon}"></i>
+                            </div>
+
+                            <span class="text-[10px] font-mono font-black ${c.badgeStyle} px-3 py-0.5 rounded-full border uppercase mb-1.5">${c.tag}</span>
+                            <h4 class="font-black text-dbNavy text-xs leading-snug mb-1 px-1">${c.title}</h4>
+                            <p class="text-[10px] text-slate-600 font-medium leading-relaxed mb-2 px-1 line-clamp-2">${c.desc}</p>
+
+                            <span class="text-[9px] font-black text-white bg-dbNavy px-3.5 py-1 rounded-full shadow-xs flex items-center gap-1.5 hover:scale-105 transition-transform">
+                              <i class="fa-solid fa-rotate text-amber-300 text-[9px]"></i> Flip Impact
+                            </span>
+                          </div>
+
+                          <!-- BACK FACE (BUSINESS IMPACT & MINDSET) -->
+                          <div class="flip-card-back bg-gradient-to-br ${c.backTheme} border-4 rounded-full text-white shadow-2xl flex flex-col items-center justify-center p-5 text-center relative overflow-hidden space-y-2">
+                            <span class="text-[10px] font-mono font-black ${c.labelColor} uppercase tracking-wider mb-0.5">Business Impact</span>
+                            <h4 class="font-black text-white text-xs mb-1">${c.title}</h4>
+
+                            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 w-full space-y-0.5">
+                              <span class="text-[9px] font-mono text-amber-300 block uppercase font-bold">${c.metricTitle}</span>
+                              <span class="text-xs font-black text-emerald-300 block leading-tight">${c.metricVal}</span>
+                            </div>
+
+                            <div class="pt-0.5">
+                              <span class="${c.pillarBadgeBg} text-white text-[8px] font-mono font-black px-3 py-1 rounded-full border inline-flex items-center gap-1 uppercase tracking-wider">
+                                <i class="fa-solid ${c.pillarIcon}"></i> ${c.pillarText}
+                              </span>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
               </div>
             </div>
-            <div class="pt-1 border-t border-amber-300/30">
-              <span
-                class="text-[9px] font-mono font-black text-amber-950 bg-amber-300/70 group-hover:bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-lg border border-amber-400/60 inline-flex items-center gap-1 uppercase tracking-wider transition-colors">
-                <i class="fa-solid fa-coins text-[9px] text-amber-900"></i> Microfinance Innovation
-              </span>
+          `;
+
+          // Trigger smooth left shift slide in
+          requestAnimationFrame(() => {
+            pane.classList.remove('opacity-0', 'translate-x-4');
+            pane.classList.add('opacity-100', 'translate-x-0');
+          });
+        }, 120);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        selectTeamTab('dbi');
+      });
+    </script>
+
+
+
+    </div>
+
+
+    </section>
+
+    <!-- SECTION 3: MINDSET SHIFT EVOLUTION & THANKS -->
+    <section id="leadership-journey"
+      class="min-h-screen flex flex-col justify-between items-center px-4 sm:px-8 py-10 bg-gradient-to-b from-slate-50 via-white to-blue-50/30 relative border-t border-slate-200 overflow-hidden">
+
+      <!-- Section Header -->
+      <div class="text-center space-y-2 max-w-4xl mx-auto pt-2">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-50 border border-blue-200 text-dbBlue text-xs font-mono font-bold uppercase tracking-widest shadow-xs">
+          <i class="fa-solid fa-arrow-trend-up text-dbBlue"></i>
+          <span>Mindset Shift Evolution</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-dbNavy tracking-tight">
+          From Developer to Transformation Lead
+        </h2>
+      </div>
+
+      <!-- Main Container: Single Box for Staircase Progression & Thanks Below -->
+      <div id="ladder-main-container" class="max-w-4xl mx-auto w-full my-auto px-2 sm:px-4 py-6 space-y-8">
+        
+        <!-- SINGLE BOX CONTAINING ALL 4 PROGRESSIVE STEPS (SHIFTED RIGHT STEP BY STEP) -->
+        <div class="glass-apple-card p-6 sm:p-8 rounded-3xl bg-white border-2 border-slate-200 shadow-2xl space-y-4 relative overflow-hidden">
+          
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-2">
+            <div class="text-xs font-mono font-bold text-dbBlue uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-stairs text-dbBlue"></i> Mindset Transformation Flow
+            </div>
+            <div class="text-[10px] font-mono font-bold text-slate-400 uppercase">
+              Foundation &rarr; Leadership
             </div>
           </div>
 
-          <!-- BOX 2: GLOBAL HACKATHON 2026 (GROOT AI OPTIMIZER) -->
-          <div
-            class="group relative p-5 rounded-2xl bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-slate-900/10 border-2 border-indigo-400/80 shadow-lg hover:shadow-2xl hover:border-indigo-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden backdrop-blur-md space-y-3">
-            <div
-              class="absolute -right-8 -top-8 w-28 h-28 bg-indigo-400/25 rounded-full blur-2xl group-hover:scale-150 transition-transform pointer-events-none">
-            </div>
-
-            <div class="space-y-3">
-              <div class="flex items-center justify-between gap-2">
-                <div
-                  class="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform border border-indigo-300/80 ring-2 ring-indigo-400/20">
-                  <i class="fa-solid fa-medal text-white"></i>
+          <!-- STEP 1: WHAT TO BUILD (VISIBLE INITIALLY -> CLICK REVEALS STEP 2) -->
+          <div id="mindset-step-1" onclick="revealStep(2)" class="relative group cursor-pointer transition-all duration-300 hover:translate-x-1 w-[82%] sm:w-[72%] ml-0">
+            <div class="p-4 rounded-2xl bg-slate-50 border-2 border-blue-200 shadow-sm group-hover:border-blue-500 group-hover:bg-blue-50/50 transition-all flex items-center justify-between gap-3 h-[76px]">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center text-base font-black shrink-0 shadow-md">
+                  <i class="fa-solid fa-cube"></i>
                 </div>
-                <span
-                  class="text-[9px] font-mono font-bold text-indigo-700 bg-indigo-100/90 px-2 py-0.5 rounded-md border border-indigo-200 uppercase">Team
-                  Lead Of Frankfurt Runner-Up</span>
+                <div>
+                  <div class="flex items-center gap-2 mb-0.5">
+                    <span class="text-[9px] font-mono font-black text-dbBlue bg-blue-100 px-2 py-0.5 rounded uppercase tracking-widest">FOUNDATION</span>
+                  </div>
+                  <h4 class="text-xs sm:text-base font-black text-dbNavy leading-tight">What to build</h4>
+                </div>
               </div>
-
-              <div class="space-y-1">
-                <span
-                  class="text-[9px] font-mono font-black text-indigo-900 bg-gradient-to-r from-indigo-200 to-purple-300 px-2 py-0.5 rounded-full border border-indigo-300 uppercase tracking-wider shadow-xs inline-flex items-center gap-1">
-                  <i class="fa-solid fa-brain text-[8px]"></i> Global Hackathon 2026
-                </span>
-                <h4
-                  class="text-sm font-black text-dbNavy leading-snug group-hover:text-indigo-700 transition-colors pt-1">
-                  GROOT AI Token Optimizer
-                </h4>
-              </div>
-            </div>
-
-            <div class="pt-1 border-t border-indigo-300/30">
-              <span
-                class="text-[9px] font-mono font-black text-indigo-950 bg-indigo-200/80 group-hover:bg-indigo-300 text-slate-950 px-2.5 py-0.5 rounded-lg border border-indigo-400/60 inline-flex items-center gap-1 uppercase tracking-wider transition-colors">
-                <i class="fa-solid fa-robot text-[9px] text-indigo-900"></i> Token Optimization
-              </span>
+              <span class="text-[10px] font-mono font-bold text-dbBlue bg-blue-50 px-3 py-1 rounded-full border border-blue-200 shrink-0 hidden sm:inline-block">Requirements</span>
             </div>
           </div>
 
-          <!-- BOX 3: SAFAR TOOL -->
-          <div
-            class="group relative p-5 rounded-2xl bg-gradient-to-br from-cyan-500/15 via-blue-500/5 to-slate-900/5 border-2 border-cyan-400/80 shadow-lg hover:shadow-2xl hover:border-cyan-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden backdrop-blur-md space-y-3">
-            <div
-              class="absolute -right-6 -top-6 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none">
-            </div>
-
-            <div class="space-y-3">
-              <div class="flex items-center justify-between gap-2">
-                <div
-                  class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 text-white flex items-center justify-center text-xl font-black shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                  <i class="fa-solid fa-terminal text-cyan-100"></i>
+          <!-- STEP 2: HOW TO BUILD IT (HIDDEN INITIALLY -> CLICK REVEALS STEP 3) -->
+          <div id="mindset-step-2" onclick="revealStep(3)" class="hidden opacity-0 translate-y-4 scale-95 transition-all duration-500 ease-out relative group cursor-pointer hover:translate-x-1 w-[82%] sm:w-[72%] ml-[6%] sm:ml-[9%]">
+            <div class="p-4 rounded-2xl bg-slate-50 border-2 border-indigo-200 shadow-sm group-hover:border-indigo-500 group-hover:bg-indigo-50/50 transition-all flex items-center justify-between gap-3 h-[76px]">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-base font-black shrink-0 shadow-md">
+                  <i class="fa-solid fa-gears"></i>
                 </div>
-                <span
-                  class="text-[9px] font-mono font-bold text-slate-500 bg-white/80 px-2 py-0.5 rounded-full border border-slate-200">PuTTY
-                  &amp; WinSCP for MAC</span>
+                <div>
+                  <div class="flex items-center gap-2 mb-0.5">
+                    <span class="text-[9px] font-mono font-black text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded uppercase tracking-widest">EXECUTION</span>
+                  </div>
+                  <h4 class="text-xs sm:text-base font-black text-dbNavy leading-tight">How to build it</h4>
+                </div>
               </div>
-
-              <div class="space-y-1">
-                <span
-                  class="text-[9px] font-mono font-black text-cyan-800 bg-cyan-100/90 px-2 py-0.5 rounded-full border border-cyan-200 uppercase tracking-wider inline-block shadow-2xs">Easy
-                  SSH + SFTP Tool</span>
-                <h4 class="text-sm font-black text-dbNavy group-hover:text-cyan-700 transition-colors pt-1">
-                  Safar - Cross-Platform SSH Client
-                </h4>
-              </div>
+              <span class="text-[10px] font-mono font-bold text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 shrink-0 hidden sm:inline-block">Architecture</span>
             </div>
+          </div>
 
-            <div class="pt-1 border-t border-cyan-300/30">
-              <span
-                class="text-[9px] font-mono font-black text-cyan-950 bg-cyan-200/70 group-hover:bg-cyan-300 text-slate-950 px-2.5 py-0.5 rounded-lg border border-cyan-400/60 inline-flex items-center gap-1 uppercase tracking-wider transition-colors">
-                <i class="fa-solid fa-screwdriver-wrench text-[9px] text-cyan-900"></i> Developer Productivity
+          <!-- STEP 3: WHY TO BUILD IT (HIDDEN INITIALLY -> CLICK REVEALS STEP 4) -->
+          <div id="mindset-step-3" onclick="revealStep(4)" class="hidden opacity-0 translate-y-4 scale-95 transition-all duration-500 ease-out relative group cursor-pointer hover:translate-x-1 w-[82%] sm:w-[72%] ml-[12%] sm:ml-[18%]">
+            <div class="p-4 rounded-2xl bg-slate-50 border-2 border-amber-300 shadow-sm group-hover:border-amber-500 group-hover:bg-amber-50/50 transition-all flex items-center justify-between gap-3 h-[76px]">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-base font-black shrink-0 shadow-md">
+                  <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 mb-0.5">
+                    <span class="text-[9px] font-mono font-black text-amber-800 bg-amber-100 px-2 py-0.5 rounded uppercase tracking-widest">BUSINESS PURPOSE</span>
+                  </div>
+                  <h4 class="text-xs sm:text-base font-black text-dbNavy leading-tight">Why to build it</h4>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 shrink-0 hidden sm:inline-block">Strategic Value</span>
+            </div>
+          </div>
+
+          <!-- STEP 4: HOW EFFECTIVELY IT CAN BE BUILT (HIDDEN INITIALLY -> CLICK REVEALS THANKS) -->
+          <div id="mindset-step-4" onclick="revealStep(5)" class="hidden opacity-0 translate-y-4 scale-95 transition-all duration-500 ease-out relative group cursor-pointer hover:translate-x-1 w-[82%] sm:w-[72%] ml-[18%] sm:ml-[27%]">
+            <div class="p-4 rounded-2xl bg-gradient-to-r from-dbNavy via-blue-950 to-slate-900 text-white border-2 border-emerald-400 shadow-xl group-hover:shadow-2xl flex items-center justify-between gap-3 ring-4 ring-emerald-500/20 h-[76px]">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 text-slate-950 flex items-center justify-center text-base font-black shrink-0 shadow-md">
+                  <i class="fa-solid fa-crown text-slate-950"></i>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 mb-0.5">
+                    <span class="text-[9px] font-mono font-black text-emerald-300 bg-emerald-950/90 px-2 py-0.5 rounded border border-emerald-400/40 uppercase tracking-widest">CURRENT STAGE</span>
+                  </div>
+                  <h4 class="text-xs sm:text-base font-black text-white leading-tight">How effectively it can be built</h4>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono font-black text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-300 px-3 py-1 rounded-full shadow-md shrink-0 hidden sm:flex items-center gap-1">
+                <i class="fa-solid fa-crown text-[9px]"></i> Leadership
               </span>
             </div>
           </div>
 
         </div>
-      </section>
+
+      </div>
+
+      <!-- Bottom Scroll Prompt to Section 4 -->
+      <div class="pb-2 text-center">
+        <a href="#thank-you"
+          class="text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 4: THANK YOU & STRATEGIC ALIGNMENT (STANDALONE FINAL SECTION)
+    =========================================== -->
+    <section id="thank-you"
+      class="h-screen min-h-screen flex flex-col justify-between items-center px-6 py-12 bg-gradient-to-b from-white via-slate-50 to-blue-50/50 relative border-t border-slate-200">
+
+      <div class="my-auto max-w-2xl mx-auto w-full">
+        <div id="thanks-card"
+          class="w-full glass-apple-card p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-white via-slate-50 to-blue-50/50 border-2 border-dbBlue/30 shadow-2xl text-center space-y-6">
+          <div
+            class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-tr from-dbNavy via-blue-900 to-dbBlue text-white flex items-center justify-center text-4xl font-black shadow-xl ring-8 ring-blue-500/10">
+            <i class="fa-solid fa-handshake text-amber-300"></i>
+          </div>
+
+          <div class="space-y-2">
+            <span
+              class="px-4 py-1 rounded-full bg-blue-100 text-dbBlue border border-blue-200 text-xs font-mono font-bold uppercase tracking-widest">
+              Strategic Alignment
+            </span>
+            <h2 class="text-6xl sm:text-8xl font-black text-dbNavy tracking-tight">
+              Thanks
+            </h2>
+            <p class="text-lg sm:text-2xl font-extrabold text-dbBlue max-w-md mx-auto leading-relaxed">
+              Open for Questions &amp; Strategic Discussion
+            </p>
+          </div>
+
+          <!-- Presenter Card -->
+          <div class="pt-4 max-w-sm mx-auto">
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-md space-y-2">
+              <div class="text-2xl font-black text-dbNavy">Nitin Silra</div>
+              <div
+                class="text-xs font-mono font-bold text-dbBlue uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200 inline-block">
+                Technical Transformation Lead
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-2 text-xs font-mono text-slate-400">
+      </div>
+
     </section>
 
   </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-200 bg-white/80 py-4">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between text-xs text-slate-500">
-      <span class="font-bold text-dbNavy">Nitin Silra</span>
-      <span>Deutsche Bank CBTECH Executive Portfolio</span>
-    </div>
-  </footer>
 
   <!-- POWERPOINT SLIDE PRESENTATION MODE OVERLAY -->
   <div id="presentation-modal"
@@ -952,7 +872,8 @@
       <div class="presentation-slide w-full h-full flex flex-col justify-center items-center">
         <div
           class="p-4 sm:p-10 md:p-12 bg-gradient-to-br from-dbNavy via-slate-900 to-slate-950 text-white shadow-2xl relative overflow-hidden border-0 space-y-4 sm:space-y-6 w-full h-full flex flex-col justify-between">
-          <div class="absolute -right-10 -bottom-10 w-60 sm:w-80 h-60 sm:h-80 bg-dbCyan/10 rounded-full blur-3xl pointer-events-none">
+          <div
+            class="absolute -right-10 -bottom-10 w-60 sm:w-80 h-60 sm:h-80 bg-dbCyan/10 rounded-full blur-3xl pointer-events-none">
           </div>
 
           <div class="relative z-10 space-y-3 sm:space-y-6 flex-1 flex flex-col justify-center">
@@ -990,9 +911,11 @@
 
             <!-- PROGRESSION ROADMAP -->
             <div class="pt-3 sm:pt-6 border-t border-white/10 mt-3 sm:mt-6">
-              <div class="bg-white/5 border border-white/10 backdrop-blur-md p-3 sm:p-6 rounded-xl sm:rounded-2xl space-y-2 sm:space-y-4">
+              <div
+                class="bg-white/5 border border-white/10 backdrop-blur-md p-3 sm:p-6 rounded-xl sm:rounded-2xl space-y-2 sm:space-y-4">
                 <div class="flex items-center justify-between border-b border-white/10 pb-2 sm:pb-3">
-                  <span class="text-[10px] sm:text-sm font-black uppercase tracking-wider text-dbCyan flex items-center gap-1.5 sm:gap-2">
+                  <span
+                    class="text-[10px] sm:text-sm font-black uppercase tracking-wider text-dbCyan flex items-center gap-1.5 sm:gap-2">
                     <i class="fa-solid fa-timeline text-amber-300"></i> Progression Roadmap
                   </span>
                 </div>
@@ -1003,36 +926,46 @@
                       class="absolute left-12 right-16 top-6 h-0.5 bg-gradient-to-r from-sky-400 via-purple-400 to-amber-400 opacity-50 pointer-events-none">
                     </div>
 
-                    <div class="relative flex flex-col items-center group cursor-pointer z-10 w-28 text-center space-y-2 shrink-0">
-                      <div class="w-10 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center text-base font-black shadow-md">
+                    <div
+                      class="relative flex flex-col items-center group cursor-pointer z-10 w-28 text-center space-y-2 shrink-0">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center text-base font-black shadow-md">
                         <i class="fa-solid fa-user-graduate"></i>
                       </div>
                       <span class="text-xs font-bold text-sky-200 leading-tight">Test Support</span>
                     </div>
 
-                    <div class="relative flex flex-col items-center group cursor-pointer z-10 w-28 text-center space-y-2 shrink-0">
-                      <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-base font-black shadow-md">
+                    <div
+                      class="relative flex flex-col items-center group cursor-pointer z-10 w-28 text-center space-y-2 shrink-0">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-base font-black shadow-md">
                         <i class="fa-solid fa-laptop-code"></i>
                       </div>
                       <span class="text-xs font-bold text-indigo-200 leading-tight">Developer</span>
                     </div>
 
-                    <div class="relative flex flex-col items-center group cursor-pointer z-10 w-28 text-center space-y-2 shrink-0">
-                      <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-base font-black shadow-md">
+                    <div
+                      class="relative flex flex-col items-center group cursor-pointer z-10 w-28 text-center space-y-2 shrink-0">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-base font-black shadow-md">
                         <i class="fa-solid fa-user-gear"></i>
                       </div>
                       <span class="text-xs font-bold text-purple-200 leading-tight">Tech Analyst</span>
                     </div>
 
-                    <div class="relative flex flex-col items-center group cursor-pointer z-10 w-32 text-center space-y-2 shrink-0">
-                      <div class="w-10 h-10 rounded-xl bg-teal-500 text-white flex items-center justify-center text-base font-black shadow-md">
+                    <div
+                      class="relative flex flex-col items-center group cursor-pointer z-10 w-32 text-center space-y-2 shrink-0">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-teal-500 text-white flex items-center justify-center text-base font-black shadow-md">
                         <i class="fa-solid fa-network-wired"></i>
                       </div>
                       <span class="text-xs font-bold text-teal-200 leading-tight">Migration SME</span>
                     </div>
 
-                    <div class="relative flex flex-col items-center group cursor-pointer z-10 w-40 text-center space-y-2 shrink-0">
-                      <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-400 to-amber-200 text-dbNavy flex items-center justify-center text-lg font-black shadow-md">
+                    <div
+                      class="relative flex flex-col items-center group cursor-pointer z-10 w-40 text-center space-y-2 shrink-0">
+                      <div
+                        class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-400 to-amber-200 text-dbNavy flex items-center justify-center text-lg font-black shadow-md">
                         <i class="fa-solid fa-user-tie"></i>
                       </div>
                       <span class="text-xs font-black text-amber-300 leading-tight">Technical Transformation Lead</span>
@@ -1041,31 +974,36 @@
 
                   <div class="sm:hidden relative space-y-2.5 pl-2.5 border-l-2 border-dashed border-cyan-400/40 ml-1">
                     <div class="relative flex items-center gap-2">
-                      <div class="w-6 h-6 rounded-md bg-sky-500 text-white flex items-center justify-center text-[10px] font-black shrink-0">
+                      <div
+                        class="w-6 h-6 rounded-md bg-sky-500 text-white flex items-center justify-center text-[10px] font-black shrink-0">
                         <i class="fa-solid fa-user-graduate"></i>
                       </div>
                       <span class="text-[11px] font-bold text-sky-200">Test Support</span>
                     </div>
                     <div class="relative flex items-center gap-2">
-                      <div class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-[10px] font-black shrink-0">
+                      <div
+                        class="w-6 h-6 rounded-md bg-indigo-600 text-white flex items-center justify-center text-[10px] font-black shrink-0">
                         <i class="fa-solid fa-laptop-code"></i>
                       </div>
                       <span class="text-[11px] font-bold text-indigo-200">Developer</span>
                     </div>
                     <div class="relative flex items-center gap-2">
-                      <div class="w-6 h-6 rounded-md bg-purple-600 text-white flex items-center justify-center text-[10px] font-black shrink-0">
+                      <div
+                        class="w-6 h-6 rounded-md bg-purple-600 text-white flex items-center justify-center text-[10px] font-black shrink-0">
                         <i class="fa-solid fa-user-gear"></i>
                       </div>
                       <span class="text-[11px] font-bold text-purple-200">Tech Analyst</span>
                     </div>
                     <div class="relative flex items-center gap-2">
-                      <div class="w-6 h-6 rounded-md bg-teal-500 text-white flex items-center justify-center text-[10px] font-black shrink-0">
+                      <div
+                        class="w-6 h-6 rounded-md bg-teal-500 text-white flex items-center justify-center text-[10px] font-black shrink-0">
                         <i class="fa-solid fa-network-wired"></i>
                       </div>
                       <span class="text-[11px] font-bold text-teal-200">Migration SME</span>
                     </div>
                     <div class="relative flex items-center gap-2">
-                      <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-400 to-amber-200 text-dbNavy flex items-center justify-center text-xs font-black shrink-0">
+                      <div
+                        class="w-7 h-7 rounded-lg bg-gradient-to-tr from-amber-400 to-amber-200 text-dbNavy flex items-center justify-center text-xs font-black shrink-0">
                         <i class="fa-solid fa-user-tie"></i>
                       </div>
                       <span class="text-[11px] font-black text-amber-300">Technical Transformation Lead</span>
@@ -1082,18 +1020,20 @@
       <div class="presentation-slide w-full h-full flex flex-col justify-center items-center">
         <div
           class="p-4 sm:p-10 md:p-12 bg-gradient-to-br from-dbNavy via-slate-900 to-slate-950 text-white relative overflow-hidden border-0 space-y-3 sm:space-y-6 w-full h-full flex flex-col justify-between">
-          
+
           <div class="flex items-center justify-between border-b border-slate-800 pb-2 sm:pb-4">
             <div class="flex items-center gap-2 sm:gap-3">
               <div
                 class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-tr from-dbNavy to-dbBlue text-white flex items-center justify-center font-bold shadow-md">
                 <i class="fa-solid fa-sitemap text-sm sm:text-lg"></i>
               </div>
-              <h2 class="text-base sm:text-2xl font-black text-white tracking-tight">Team Ownership &amp; System Architecture</h2>
+              <h2 class="text-base sm:text-2xl font-black text-white tracking-tight">Team Ownership &amp; System
+                Architecture</h2>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-6 relative z-10 items-stretch flex-1 my-auto group/topology">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-6 relative z-10 items-stretch flex-1 my-auto group/topology">
 
             <!-- LEFT COLUMN (LG: 8 COLS): STANDALONE DB-INTERNET + KANNON PROXY + BOOKING API -->
             <div class="lg:col-span-8 flex flex-col justify-between space-y-3 sm:space-y-6">
@@ -1109,45 +1049,64 @@
                     <i class="fa-solid fa-globe text-dbCyan"></i> DB-Internet
                   </h3>
                   <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
-                    <span class="bg-amber-400/20 text-amber-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-amber-400/40"><i class="fa-solid fa-earth-americas"></i> 17 Countries</span>
-                    <span class="bg-amber-400/20 text-amber-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-amber-400/40"><i class="fa-solid fa-boxes-packing"></i> 38 Product Lines</span>
-                    <span class="bg-amber-400/20 text-amber-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-amber-400/40"><i class="fa-solid fa-plug"></i> 1K+ Interfaces</span>
-                    <span class="bg-indigo-500/20 text-indigo-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-indigo-400/30"><i class="fa-solid fa-server"></i> HP NonStop Mainframe</span>
+                    <span
+                      class="bg-amber-400/20 text-amber-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-amber-400/40"><i
+                        class="fa-solid fa-earth-americas"></i> 16 Countries</span>
+                    <span
+                      class="bg-amber-400/20 text-amber-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-amber-400/40"><i
+                        class="fa-solid fa-boxes-packing"></i> 38 Product Lines</span>
+                    <span
+                      class="bg-amber-400/20 text-amber-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-amber-400/40"><i
+                        class="fa-solid fa-plug"></i> 1K+ Interfaces</span>
+                    <span
+                      class="bg-indigo-500/20 text-indigo-300 text-[10px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:py-1 rounded-lg border border-indigo-400/30"><i
+                        class="fa-solid fa-server"></i> HP NonStop Mainframe</span>
                   </div>
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
                 <!-- KANNON PROXY -->
-                <div class="bg-indigo-950/90 border border-indigo-400/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-md relative flex flex-col justify-between space-y-2 sm:space-y-4 transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
-                  <div class="absolute -top-3 left-4 bg-indigo-500 text-white text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
+                <div
+                  class="bg-indigo-950/90 border border-indigo-400/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-md relative flex flex-col justify-between space-y-2 sm:space-y-4 transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
+                  <div
+                    class="absolute -top-3 left-4 bg-indigo-500 text-white text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
                     <i class="fa-solid fa-user-gear"></i> Technical Lead
                   </div>
                   <div class="pt-1 flex items-center gap-2 sm:gap-3">
-                    <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-indigo-500/30 text-indigo-300 flex items-center justify-center text-xs sm:text-sm font-bold border border-indigo-400/50">
+                    <div
+                      class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-indigo-500/30 text-indigo-300 flex items-center justify-center text-xs sm:text-sm font-bold border border-indigo-400/50">
                       <i class="fa-solid fa-network-wired"></i>
                     </div>
                     <h4 class="text-sm sm:text-base font-black text-white">Kannon Proxy</h4>
                   </div>
                   <div class="flex flex-wrap gap-1.5 sm:gap-2">
-                    <span class="bg-indigo-500/20 text-indigo-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-indigo-400/30">Sidecar</span>
-                    <span class="bg-indigo-500/20 text-indigo-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-indigo-400/30">Interest Rates</span>
+                    <span
+                      class="bg-indigo-500/20 text-indigo-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-indigo-400/30">Sidecar</span>
+                    <span
+                      class="bg-indigo-500/20 text-indigo-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-indigo-400/30">Interest
+                      Rates</span>
                   </div>
                 </div>
 
                 <!-- BOOKING API -->
-                <div class="bg-orange-950/60 border border-orange-500/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-md relative flex flex-col justify-between space-y-2 sm:space-y-4 transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
-                  <div class="absolute -top-3 left-4 bg-orange-500 text-slate-950 text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
+                <div
+                  class="bg-orange-950/60 border border-orange-500/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-md relative flex flex-col justify-between space-y-2 sm:space-y-4 transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
+                  <div
+                    class="absolute -top-3 left-4 bg-orange-500 text-slate-950 text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
                     <i class="fa-solid fa-user-gear"></i> Migration SME
                   </div>
                   <div class="pt-1 flex items-center gap-2 sm:gap-3">
-                    <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-orange-500/30 text-orange-400 flex items-center justify-center text-xs sm:text-sm font-bold border border-orange-400/50">
+                    <div
+                      class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-orange-500/30 text-orange-400 flex items-center justify-center text-xs sm:text-sm font-bold border border-orange-400/50">
                       <i class="fa-solid fa-code"></i>
                     </div>
                     <h4 class="text-sm sm:text-base font-black text-white">Booking API</h4>
                   </div>
                   <div class="flex flex-wrap gap-1.5 sm:gap-2">
-                    <span class="bg-orange-500/20 text-amber-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-orange-400/30">Transformer Strategic to DDA</span>
+                    <span
+                      class="bg-orange-500/20 text-amber-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-orange-400/30">Transformer
+                      Strategic to DDA</span>
                   </div>
                 </div>
               </div>
@@ -1156,8 +1115,10 @@
             <!-- RIGHT COLUMN (LG: 4 COLS): ESA & BOOKING SEP -->
             <div class="lg:col-span-4 space-y-3 sm:space-y-6 flex flex-col justify-between">
               <!-- ESA -->
-              <div class="bg-gradient-to-br from-amber-950/80 via-slate-950 to-amber-950/60 border border-amber-500/90 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-lg relative space-y-2 sm:space-y-4 flex-1 flex flex-col justify-between transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
-                <div class="absolute -top-3 left-4 bg-amber-400 text-slate-950 text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
+              <div
+                class="bg-gradient-to-br from-amber-950/80 via-slate-950 to-amber-950/60 border border-amber-500/90 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-lg relative space-y-2 sm:space-y-4 flex-1 flex flex-col justify-between transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
+                <div
+                  class="absolute -top-3 left-4 bg-amber-400 text-slate-950 text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
                   <i class="fa-solid fa-user-tie"></i> Technical Lead
                 </div>
                 <div class="pt-1 sm:pt-2 space-y-2 sm:space-y-4">
@@ -1165,15 +1126,21 @@
                     <i class="fa-solid fa-vault text-amber-400 text-base sm:text-xl"></i> ESA
                   </h4>
                   <div class="flex flex-wrap gap-1.5 sm:gap-2">
-                    <span class="bg-amber-400/20 text-amber-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-amber-400/30">Forex &amp; Metals</span>
-                    <span class="bg-amber-400/20 text-amber-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-amber-400/30">Integrated Cinovo</span>
+                    <span
+                      class="bg-amber-400/20 text-amber-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-amber-400/30">Forex
+                      &amp; Metals</span>
+                    <span
+                      class="bg-amber-400/20 text-amber-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-amber-400/30">Integrated
+                      Cinovo</span>
                   </div>
                 </div>
               </div>
 
               <!-- BOOKING SEP -->
-              <div class="bg-slate-950/95 border border-emerald-500/90 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-lg relative space-y-2 sm:space-y-4 flex-1 flex flex-col justify-between transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
-                <div class="absolute -top-3 left-4 bg-emerald-500 text-slate-950 text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
+              <div
+                class="bg-slate-950/95 border border-emerald-500/90 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-lg relative space-y-2 sm:space-y-4 flex-1 flex flex-col justify-between transition-all duration-300 group-hover/topology:opacity-40 hover:!opacity-100 hover:-translate-y-1 cursor-pointer">
+                <div
+                  class="absolute -top-3 left-4 bg-emerald-500 text-slate-950 text-[9px] sm:text-[10px] font-black uppercase px-2.5 sm:px-3.5 py-0.5 rounded-full font-mono">
                   <i class="fa-solid fa-user-gear"></i> Migration SME
                 </div>
                 <div class="pt-1 sm:pt-2 space-y-2 sm:space-y-4">
@@ -1181,7 +1148,9 @@
                     <i class="fa-solid fa-book-bookmark text-emerald-400 text-base sm:text-xl"></i> Booking SEP
                   </h4>
                   <div class="flex flex-wrap gap-1.5 sm:gap-2">
-                    <span class="bg-emerald-500/20 text-emerald-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-emerald-400/30">Multi-DDA Redirector</span>
+                    <span
+                      class="bg-emerald-500/20 text-emerald-200 text-[10px] sm:text-xs font-mono font-bold px-2 py-0.5 sm:py-1 rounded border border-emerald-400/30">Multi-DDA
+                      Redirector</span>
                   </div>
                 </div>
               </div>
@@ -1193,18 +1162,22 @@
 
       <!-- SLIDE 3: KEY ACHIEVEMENTS (DARK BLUE EXECUTIVE GRADIENT) -->
       <div class="presentation-slide w-full h-full flex flex-col justify-center items-center">
-        <div class="p-4 sm:p-10 md:p-12 bg-gradient-to-br from-dbNavy via-slate-900 to-slate-950 text-white relative overflow-hidden border-0 space-y-3 sm:space-y-6 w-full h-full flex flex-col justify-between">
+        <div
+          class="p-4 sm:p-10 md:p-12 bg-gradient-to-br from-dbNavy via-slate-900 to-slate-950 text-white relative overflow-hidden border-0 space-y-3 sm:space-y-6 w-full h-full flex flex-col justify-between">
           <div class="flex items-center justify-between border-b border-slate-800 pb-2 sm:pb-4">
             <div class="flex items-center gap-2 sm:gap-3">
-              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-dbNavy via-blue-900 to-dbBlue text-white flex items-center justify-center font-black shadow-lg">
+              <div
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-dbNavy via-blue-900 to-dbBlue text-white flex items-center justify-center font-black shadow-lg">
                 <i class="fa-solid fa-trophy text-amber-300 text-xs sm:text-lg"></i>
               </div>
-              <h2 class="text-base sm:text-2xl font-black text-white tracking-tight">Key Achievements &amp; Strategic Deliveries</h2>
+              <h2 class="text-base sm:text-2xl font-black text-white tracking-tight">Key Achievements &amp; Strategic
+                Deliveries</h2>
             </div>
           </div>
 
           <!-- FIVE DEDICATED CIRCLES (3 PER ROW DESKTOP, 1 PER ROW MOBILE) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 py-4 items-center justify-items-center flex-1 my-auto max-w-6xl mx-auto">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 py-4 items-center justify-items-center flex-1 my-auto max-w-6xl mx-auto">
 
             <!-- CIRCLE 1: AUTOMATED BINARY DISTRIBUTION -->
             <div class="relative flex flex-col items-center w-56 h-56 shrink-0 flex-none">
@@ -1227,7 +1200,8 @@
                     <span
                       class="text-[9px] font-mono font-black text-cyan-300 bg-blue-900/90 px-2.5 py-0.5 rounded-full border border-blue-400/60 uppercase mb-1">Automation</span>
                     <h3 class="font-black text-white text-xs leading-tight mb-1 px-1">Automated Binary Distribution</h3>
-                    <p class="text-[9px] text-slate-300 font-medium leading-tight mb-2 line-clamp-2 px-1">Manual packaging to automated scripts.</p>
+                    <p class="text-[9px] text-slate-300 font-medium leading-tight mb-2 line-clamp-2 px-1">Manual
+                      packaging to automated scripts.</p>
 
                     <span
                       class="text-[9px] font-black text-white bg-gradient-to-r from-dbNavy to-blue-700 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
@@ -1241,20 +1215,24 @@
                     <div
                       class="absolute -bottom-8 -left-8 w-24 h-24 bg-blue-400/20 rounded-full blur-xl pointer-events-none">
                     </div>
-                    <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
+                    <span
+                      class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
                       Impact</span>
                     <h4 class="font-black text-white text-xs mb-1">Automated Binary Distribution</h4>
 
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
+                    <div
+                      class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
                       <span class="text-[9px] font-mono text-cyan-300 block uppercase font-bold">Efficiency</span>
-                      <span class="text-[10px] font-black text-emerald-300 block">Reduced ManDays &amp; Reliable Release</span>
+                      <span class="text-[10px] font-black text-emerald-300 block">Reduced Man Days &amp; Reliable
+                        Release</span>
                     </div>
 
                     <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
                     <div class="pt-0.5">
                       <span
                         class="bg-blue-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-amber-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                        <i class="fa-solid fa-arrow-trend-up text-[8px] text-amber-400"></i> Get Better at Getting Better
+                        <i class="fa-solid fa-arrow-trend-up text-[8px] text-amber-400"></i> Get Better at Getting
+                        Better
                       </span>
                     </div>
                   </div>
@@ -1284,7 +1262,8 @@
                     <span
                       class="text-[9px] font-mono font-black text-purple-300 bg-purple-900/90 px-2.5 py-0.5 rounded-full border border-purple-400/60 uppercase mb-1">Modernization</span>
                     <h3 class="font-black text-white text-xs leading-tight mb-1 px-1">ESA Migration</h3>
-                    <p class="text-[9px] text-slate-300 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated Currency
+                    <p class="text-[9px] text-slate-300 font-medium leading-tight mb-2 line-clamp-2 px-1">Migrated
+                      Currency
                       &amp; Metals domain to modern architecture.</p>
 
                     <span
@@ -1299,12 +1278,15 @@
                     <div
                       class="absolute -bottom-8 -left-8 w-24 h-24 bg-purple-400/20 rounded-full blur-xl pointer-events-none">
                     </div>
-                    <span class="text-[9px] font-mono font-black text-purple-300 uppercase tracking-wider mb-0.5">Business
+                    <span
+                      class="text-[9px] font-mono font-black text-purple-300 uppercase tracking-wider mb-0.5">Business
                       Impact</span>
                     <h4 class="font-black text-white text-xs mb-1">ESA Migration</h4>
 
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
-                      <span class="text-[9px] font-mono text-purple-300 block uppercase font-bold">Strategic Outcome</span>
+                    <div
+                      class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
+                      <span class="text-[9px] font-mono text-purple-300 block uppercase font-bold">Strategic
+                        Outcome</span>
                       <span class="text-[10px] font-black text-emerald-300 block">Retained External Business</span>
                     </div>
 
@@ -1362,7 +1344,8 @@
                     <h4 class="font-black text-white text-xs mb-1">Fabric on GCP Upgrade</h4>
 
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2 w-full space-y-0.5">
-                      <span class="text-[9px] font-mono text-cyan-300 block uppercase font-bold">Infrastructure Saved</span>
+                      <span class="text-[9px] font-mono text-cyan-300 block uppercase font-bold">Infrastructure
+                        Saved</span>
                       <span class="text-[10px] font-black text-emerald-300 block leading-tight">Saved 2 Fabric
                         instances</span>
                     </div>
@@ -1371,7 +1354,8 @@
                     <div class="pt-0.5">
                       <span
                         class="bg-slate-950/90 text-white text-[8px] sm:text-[9px] font-mono font-black px-2.5 py-0.5 rounded-full shadow-md border border-cyan-300 inline-flex items-center gap-1 uppercase tracking-wider">
-                        <i class="fa-solid fa-people-group text-[8px] text-cyan-300"></i> Collaborate to Make Others Successful
+                        <i class="fa-solid fa-people-group text-[8px] text-cyan-300"></i> Collaborate to Make Others
+                        Successful
                       </span>
                     </div>
                   </div>
@@ -1400,8 +1384,10 @@
 
                     <span
                       class="text-[9px] font-mono font-black text-amber-300 bg-amber-900/90 px-2.5 py-0.5 rounded-full border border-amber-400/60 uppercase mb-1">Simplification</span>
-                    <h3 class="font-black text-white text-xs leading-tight mb-1 px-1">Accounting Flow Simplification</h3>
-                    <p class="text-[9px] text-slate-300 font-medium leading-tight mb-2 line-clamp-2 px-1">Removed intermediate transformer from Strategic to DDA.</p>
+                    <h3 class="font-black text-white text-xs leading-tight mb-1 px-1">Accounting Flow Simplification
+                    </h3>
+                    <p class="text-[9px] text-slate-300 font-medium leading-tight mb-2 line-clamp-2 px-1">Removed
+                      intermediate transformer from Strategic to DDA.</p>
 
                     <span
                       class="text-[9px] font-black text-white bg-gradient-to-r from-amber-700 to-orange-600 px-3 py-1 rounded-full shadow-2xs flex items-center gap-1 hover:scale-105 transition-transform">
@@ -1415,13 +1401,16 @@
                     <div
                       class="absolute -bottom-8 -left-8 w-24 h-24 bg-amber-400/20 rounded-full blur-xl pointer-events-none">
                     </div>
-                    <span class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
+                    <span
+                      class="text-[9px] font-mono font-black text-amber-300 uppercase tracking-wider mb-0.5">Business
                       Impact</span>
                     <h4 class="font-black text-white text-xs mb-1">Accounting Flow Simplification</h4>
 
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
+                    <div
+                      class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
                       <span class="text-[9px] font-mono text-amber-300 block uppercase font-bold">Cost Saved</span>
-                      <span class="text-[10px] font-black text-amber-200 block">Saved Infrastructure &amp; Maintenance</span>
+                      <span class="text-[10px] font-black text-amber-200 block">Saved Infrastructure &amp;
+                        Maintenance</span>
                     </div>
 
                     <!-- EYE-PLEASING HIGHLIGHTED BADGE WITH SOLID WHITE TEXT -->
@@ -1473,12 +1462,15 @@
                     <div
                       class="absolute -bottom-8 -left-8 w-24 h-24 bg-emerald-400/20 rounded-full blur-xl pointer-events-none">
                     </div>
-                    <span class="text-[9px] font-mono font-black text-emerald-300 uppercase tracking-wider mb-0.5">Business
+                    <span
+                      class="text-[9px] font-mono font-black text-emerald-300 uppercase tracking-wider mb-0.5">Business
                       Impact</span>
                     <h4 class="font-black text-white text-xs mb-1">NewRelic HP NonStop</h4>
 
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
-                      <span class="text-[9px] font-mono text-emerald-300 block uppercase font-bold">Strategic Value</span>
+                    <div
+                      class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2.5 w-full space-y-0.5">
+                      <span class="text-[9px] font-mono text-emerald-300 block uppercase font-bold">Strategic
+                        Value</span>
                       <span class="text-[10px] font-black text-emerald-200 block">Advanced Observability</span>
                     </div>
 
@@ -1501,9 +1493,11 @@
 
       <!-- SLIDE 4: BEYOND DAY-TO-DAY DELIVERABLES (DARK BLUE EXECUTIVE GRADIENT) -->
       <div class="presentation-slide w-full h-full flex flex-col justify-center items-center">
-        <div class="p-4 sm:p-10 md:p-12 bg-gradient-to-br from-dbNavy via-slate-900 to-slate-950 text-white relative overflow-hidden border-0 space-y-3 sm:space-y-6 w-full h-full flex flex-col justify-start sm:justify-center">
+        <div
+          class="p-4 sm:p-10 md:p-12 bg-gradient-to-br from-dbNavy via-slate-900 to-slate-950 text-white relative overflow-hidden border-0 space-y-3 sm:space-y-6 w-full h-full flex flex-col justify-start sm:justify-center">
           <div class="flex items-center gap-2 sm:gap-3 border-b border-slate-800 pb-2 sm:pb-4">
-            <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-500/10 border border-amber-400/30 flex items-center justify-center shadow-2xs">
+            <div
+              class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-500/10 border border-amber-400/30 flex items-center justify-center shadow-2xs">
               <i class="fa-solid fa-star text-amber-400 text-sm sm:text-lg"></i>
             </div>
             <h2 class="text-base sm:text-2xl font-black text-white tracking-tight">Beyond Day-to-Day Deliverables</h2>
@@ -1511,56 +1505,78 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-6 my-auto items-start">
             <!-- BOX 1: 3RD PLACE GLOBAL HACKATHON WINNER -->
-            <div class="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-slate-900/40 border sm:border-2 border-amber-400/80 shadow-xl space-y-2 sm:space-y-4 transition-all duration-300 hover:-translate-y-1">
+            <div
+              class="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-slate-900/40 border sm:border-2 border-amber-400/80 shadow-xl space-y-2 sm:space-y-4 transition-all duration-300 hover:-translate-y-1">
               <div class="flex items-center justify-between gap-2">
-                <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-yellow-400 text-slate-950 flex items-center justify-center text-base sm:text-xl font-black shrink-0 shadow-md">
+                <div
+                  class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-to-tr from-amber-600 via-amber-500 to-yellow-400 text-slate-950 flex items-center justify-center text-base sm:text-xl font-black shrink-0 shadow-md">
                   <i class="fa-solid fa-trophy"></i>
                 </div>
-                <span class="text-[9px] sm:text-[10px] font-mono font-bold text-amber-300 bg-amber-950/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg border border-amber-400/40 uppercase">3rd Place Globally</span>
+                <span
+                  class="text-[9px] sm:text-[10px] font-mono font-bold text-amber-300 bg-amber-950/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg border border-amber-400/40 uppercase">3rd
+                  Place Globally</span>
               </div>
               <div class="space-y-1 sm:space-y-2">
-                <span class="text-[8px] sm:text-[9px] font-mono font-black text-amber-950 bg-amber-300 px-2 py-0.5 rounded-full inline-flex items-center gap-1 font-bold">
+                <span
+                  class="text-[8px] sm:text-[9px] font-mono font-black text-amber-950 bg-amber-300 px-2 py-0.5 rounded-full inline-flex items-center gap-1 font-bold">
                   <i class="fa-solid fa-earth-americas text-[8px]"></i> Global Hackathon 2025
                 </span>
-                <h4 class="text-sm sm:text-lg font-black text-white pt-0.5 sm:pt-1 leading-tight">Global 3rd Place Winner</h4>
+                <h4 class="text-sm sm:text-lg font-black text-white pt-0.5 sm:pt-1 leading-tight">Global 3rd Place
+                  Winner</h4>
                 <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed font-medium pt-0.5 sm:pt-1">
-                  Engineered an AI-assisted automated code transformation prototype for mainframe system modernization across multi-region engineering divisions.
+                  Engineered an AI-assisted automated code transformation prototype for mainframe system modernization
+                  across multi-region engineering divisions.
                 </p>
               </div>
             </div>
 
             <!-- BOX 2: GLOBAL HACKATHON 2026 (GROOT AI OPTIMIZER) -->
-            <div class="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-slate-900/40 border sm:border-2 border-indigo-400/80 shadow-xl space-y-2 sm:space-y-4 transition-all duration-300 hover:-translate-y-1">
+            <div
+              class="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-slate-900/40 border sm:border-2 border-indigo-400/80 shadow-xl space-y-2 sm:space-y-4 transition-all duration-300 hover:-translate-y-1">
               <div class="flex items-center justify-between gap-2">
-                <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 text-white flex items-center justify-center text-base sm:text-xl font-black shrink-0 shadow-md">
+                <div
+                  class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 text-white flex items-center justify-center text-base sm:text-xl font-black shrink-0 shadow-md">
                   <i class="fa-solid fa-medal"></i>
                 </div>
-                <span class="text-[9px] sm:text-[10px] font-mono font-bold text-indigo-300 bg-indigo-950/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg border border-indigo-400/40 uppercase">Frankfurt Runner-Up</span>
+                <span
+                  class="text-[9px] sm:text-[10px] font-mono font-bold text-indigo-300 bg-indigo-950/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg border border-indigo-400/40 uppercase">Frankfurt
+                  Runner-Up</span>
               </div>
               <div class="space-y-1 sm:space-y-2">
-                <span class="text-[8px] sm:text-[9px] font-mono font-black text-indigo-950 bg-indigo-200 px-2 py-0.5 rounded-full inline-flex items-center gap-1 font-bold">
+                <span
+                  class="text-[8px] sm:text-[9px] font-mono font-black text-indigo-950 bg-indigo-200 px-2 py-0.5 rounded-full inline-flex items-center gap-1 font-bold">
                   <i class="fa-solid fa-brain text-[8px]"></i> Global Hackathon 2026
                 </span>
-                <h4 class="text-sm sm:text-lg font-black text-white pt-0.5 sm:pt-1 leading-tight">GROOT AI Token Optimizer</h4>
+                <h4 class="text-sm sm:text-lg font-black text-white pt-0.5 sm:pt-1 leading-tight">GROOT AI Token
+                  Optimizer</h4>
                 <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed font-medium pt-0.5 sm:pt-1">
-                  Developed an intelligent token compression and context optimizer reducing LLM API consumption costs while maintaining high semantic accuracy.
+                  Developed an intelligent token compression and context optimizer reducing LLM API consumption costs
+                  while maintaining high semantic accuracy.
                 </p>
               </div>
             </div>
 
             <!-- BOX 3: SAFAR TOOL -->
-            <div class="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-slate-900/40 border sm:border-2 border-cyan-400/80 shadow-xl space-y-2 sm:space-y-4 transition-all duration-300 hover:-translate-y-1">
+            <div
+              class="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-slate-900/40 border sm:border-2 border-cyan-400/80 shadow-xl space-y-2 sm:space-y-4 transition-all duration-300 hover:-translate-y-1">
               <div class="flex items-center justify-between gap-2">
-                <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 text-white flex items-center justify-center text-base sm:text-xl font-black shrink-0 shadow-md">
+                <div
+                  class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 text-white flex items-center justify-center text-base sm:text-xl font-black shrink-0 shadow-md">
                   <i class="fa-solid fa-terminal"></i>
                 </div>
-                <span class="text-[9px] sm:text-[10px] font-mono font-bold text-cyan-300 bg-cyan-950/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg border border-cyan-400/40">PuTTY &amp; WinSCP for MAC</span>
+                <span
+                  class="text-[9px] sm:text-[10px] font-mono font-bold text-cyan-300 bg-cyan-950/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg border border-cyan-400/40">PuTTY
+                  &amp; WinSCP for MAC</span>
               </div>
               <div class="space-y-1 sm:space-y-2">
-                <span class="text-[8px] sm:text-[9px] font-mono font-black text-cyan-950 bg-cyan-200 px-2 py-0.5 rounded-full inline-block font-bold">Easy SSH + SFTP Tool</span>
-                <h4 class="text-sm sm:text-lg font-black text-white pt-0.5 sm:pt-1 leading-tight">Safar - Cross-Platform Client</h4>
+                <span
+                  class="text-[8px] sm:text-[9px] font-mono font-black text-cyan-950 bg-cyan-200 px-2 py-0.5 rounded-full inline-block font-bold">Easy
+                  SSH + SFTP Tool</span>
+                <h4 class="text-sm sm:text-lg font-black text-white pt-0.5 sm:pt-1 leading-tight">Safar - Cross-Platform
+                  Client</h4>
                 <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed font-medium pt-0.5 sm:pt-1">
-                  Created a cross-platform desktop GUI utility bridging PuTTY and WinSCP workflows seamlessly for macOS and Linux engineers.
+                  Created a cross-platform desktop GUI utility bridging PuTTY and WinSCP workflows seamlessly for macOS
+                  and Linux engineers.
                 </p>
               </div>
             </div>
@@ -1571,10 +1587,12 @@
     </div>
 
     <!-- PRESENTATION FOOTER BAR (ICON-ONLY CONTROLS & COUNTER) -->
-    <div class="w-full py-2.5 px-6 bg-slate-950 border-t border-slate-800/80 flex items-center justify-between z-30 shrink-0 shadow-2xl">
+    <div
+      class="w-full py-2.5 px-6 bg-slate-950 border-t border-slate-800/80 flex items-center justify-between z-30 shrink-0 shadow-2xl">
       <!-- LEFT SLIDE COUNTER -->
       <div class="flex items-center space-x-2">
-        <span id="slide-counter" class="text-xs font-mono font-black bg-slate-900 text-cyan-300 px-3.5 py-1 rounded-full border border-slate-800 shadow-inner">
+        <span id="slide-counter"
+          class="text-xs font-mono font-black bg-slate-900 text-cyan-300 px-3.5 py-1 rounded-full border border-slate-800 shadow-inner">
           1 / 4
         </span>
       </div>

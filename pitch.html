@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitin Silra | Executive Product Launch & Storytelling Presentation</title>
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dbNavy: '#001838',
+            dbBlue: '#004B93',
+            dbCyan: '#00B2FF',
+            execBg: '#F8FAFC',
+            execCardBg: '#FFFFFF',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Executive Light Design System (Static Visuals) */
+    body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .glass-light-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 10px 30px rgba(0, 24, 56, 0.05);
+    }
+
+    .glass-light-card-interactive {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .glass-light-card-interactive:hover {
+      border-color: #004B93;
+      box-shadow: 0 20px 40px rgba(0, 75, 147, 0.12);
+    }
+
+    .gradient-text-db {
+      background: linear-gradient(135deg, #001838 0%, #004B93 60%, #00B2FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Modal / Drawer Overlay */
+    .drawer-overlay {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+
+<body class="antialiased text-slate-900 bg-slate-50">
+
+  <!-- TOP EXECUTIVE NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 px-6 py-4 shadow-xs">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="w-8 h-8 bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-center text-dbNavy">
+            <i class="fa-solid fa-arrow-left text-xs"></i>
+          </div>
+          <div>
+            <div class="text-[10px] font-mono text-slate-500 uppercase tracking-widest font-bold">Return to Portfolio</div>
+            <div class="text-sm font-black text-dbNavy">Nitin Silra</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-6 text-xs font-semibold text-slate-600">
+        <span class="px-3 py-1 rounded-full bg-blue-50 text-dbBlue border border-blue-200 flex items-center gap-2 font-mono">
+          <i class="fa-solid fa-chalkboard-user text-dbBlue"></i>
+          Executive 9-Min Storytelling Mode
+        </span>
+        <span class="text-slate-300">|</span>
+        <span class="font-mono text-dbNavy font-bold">Deutsche Bank CBTECH</span>
+      </div>
+
+      <a href="index.html" class="px-4 py-2 text-xs font-bold text-dbNavy bg-slate-100 hover:bg-slate-200 rounded-xl border border-slate-300 transition">
+        Full Portfolio Site
+      </a>
+    </div>
+  </header>
+
+  <main class="relative pt-20">
+
+    <!-- ==========================================
+         SECTION 1: HERO SECTION (NO BADGES)
+    =========================================== -->
+    <section class="relative min-h-[75vh] flex items-center justify-center px-6 py-20 bg-gradient-to-b from-white via-slate-50 to-blue-50/30">
+      <div class="max-w-5xl mx-auto text-center space-y-8">
+        
+        <!-- Header Tag -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-dbNavy text-xs font-mono font-bold uppercase tracking-widest">
+          <i class="fa-solid fa-building-columns text-dbBlue"></i>
+          <span>Deutsche Bank Executive Presentation</span>
+        </div>
+
+        <!-- Presenter Name & Role -->
+        <div>
+          <h1 class="text-5xl sm:text-7xl font-black tracking-tight text-dbNavy mb-3">
+            Nitin Silra
+          </h1>
+          <p class="text-xl sm:text-2xl font-extrabold text-dbBlue tracking-wide">
+            Technical Transformation Lead
+          </p>
+        </div>
+
+        <!-- Large Hero Title -->
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-slate-900 max-w-4xl mx-auto tracking-tight">
+          Transforming Legacy Platforms into <span class="gradient-text-db">Modern, Simplified & Cost-Effective</span> Solutions
+        </h2>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: TEAM OWNERSHIP & DOMAIN MAP
+    =========================================== -->
+    <section id="teams" class="py-20 px-6 border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-dbBlue font-bold">Organizational Leadership</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-dbNavy mt-1">Team Ownership & Domain Scope</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto mt-2 text-sm font-medium">Platforms and core architecture domains led across Deutsche Bank CBTECH enterprise infrastructure.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          
+          <!-- LEFT COLUMN (LG: 8 COLS): DB-INTERNET MAIN PLATFORM + SUB-COMPONENTS -->
+          <div class="lg:col-span-8 flex flex-col justify-between space-y-6">
+            
+            <!-- DB-INTERNET HERO CARD -->
+            <div class="glass-light-card p-6 sm:p-8 rounded-3xl border-2 border-dbBlue bg-gradient-to-br from-white via-slate-50 to-blue-50/50 shadow-md relative space-y-5">
+              <div class="flex items-center justify-between">
+                <span class="px-3.5 py-1 rounded-full bg-dbNavy text-white text-[11px] font-mono font-bold uppercase tracking-wider">
+                  <i class="fa-solid fa-user-shield text-dbCyan"></i> Technical Transformation Lead
+                </span>
+                <span class="text-xs font-mono font-bold text-dbBlue">Primary Platform</span>
+              </div>
+
+              <div class="space-y-3">
+                <h3 class="text-3xl sm:text-4xl font-black text-dbNavy tracking-tight flex items-center gap-3">
+                  <i class="fa-solid fa-globe text-dbBlue"></i> DB-Internet
+                </h3>
+                <p class="text-xs text-slate-600 font-medium leading-relaxed">Critical core enterprise gateway connecting global banking applications across high-availability HP NonStop mainframes.</p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="bg-blue-50 text-dbNavy text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-blue-200 flex items-center gap-1.5">
+                  <i class="fa-solid fa-earth-americas text-dbBlue"></i> 16 Countries
+                </span>
+                <span class="bg-blue-50 text-dbNavy text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-blue-200 flex items-center gap-1.5">
+                  <i class="fa-solid fa-boxes-packing text-dbBlue"></i> 38 Product Lines
+                </span>
+                <span class="bg-blue-50 text-dbNavy text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-blue-200 flex items-center gap-1.5">
+                  <i class="fa-solid fa-plug text-dbBlue"></i> 1K+ Interfaces
+                </span>
+                <span class="bg-indigo-50 text-indigo-900 text-xs font-mono font-bold px-3 py-1.5 rounded-xl border border-indigo-200 flex items-center gap-1.5">
+                  <i class="fa-solid fa-server text-indigo-700"></i> HP NonStop Mainframe
+                </span>
+              </div>
+            </div>
+
+            <!-- SUB-COMPONENTS: KANNON PROXY & BOOKING API -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              
+              <!-- KANNON PROXY -->
+              <div class="glass-light-card p-6 rounded-3xl border border-indigo-200 bg-white shadow-xs space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-900 text-[10px] font-mono font-bold uppercase">Technical Lead</span>
+                  <i class="fa-solid fa-network-wired text-indigo-600"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-black text-dbNavy">Kannon Proxy</h4>
+                  <p class="text-xs text-slate-500 font-medium mt-1">High-availability sidecar supplying live interest rate feeds.</p>
+                </div>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="bg-indigo-50 text-indigo-900 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md border border-indigo-200">Sidecar</span>
+                  <span class="bg-indigo-50 text-indigo-900 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md border border-indigo-200">Interest Rates</span>
+                </div>
+              </div>
+
+              <!-- BOOKING API -->
+              <div class="glass-light-card p-6 rounded-3xl border border-orange-200 bg-white shadow-xs space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-900 text-[10px] font-mono font-bold uppercase">Migration SME</span>
+                  <i class="fa-solid fa-code text-orange-600"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-black text-dbNavy">Booking API</h4>
+                  <p class="text-xs text-slate-500 font-medium mt-1">Data transformer bridging strategic SDP to legacy DDA engines.</p>
+                </div>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="bg-orange-50 text-orange-900 text-[10px] font-mono font-bold px-2 py-0.5 rounded-md border border-orange-200">Strategic Transformer</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN (LG: 4 COLS): ESA & BOOKING SEP -->
+          <div class="lg:col-span-4 space-y-6 flex flex-col justify-between">
+            
+            <!-- ESA CARD -->
+            <div class="glass-light-card p-6 sm:p-7 rounded-3xl border border-amber-200 bg-amber-50/40 shadow-xs space-y-5 flex-1 flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-3 py-0.5 rounded-full bg-amber-200 text-amber-950 text-[10px] font-mono font-bold uppercase">Technical Lead</span>
+                  <i class="fa-solid fa-vault text-amber-700"></i>
+                </div>
+                <h4 class="text-xl font-black text-dbNavy flex items-center gap-2">
+                  ESA Domain
+                </h4>
+                <p class="text-xs text-slate-600 font-medium">Physical currency & precious metals platform servicing Deutsche Bank, ReiseBank, and Commerzbank.</p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="bg-amber-100 text-amber-950 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-200">Forex & Metals</span>
+                <span class="bg-amber-100 text-amber-950 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-200">Cinovo Integrated</span>
+              </div>
+            </div>
+
+            <!-- BOOKING SEP CARD -->
+            <div class="glass-light-card p-6 sm:p-7 rounded-3xl border border-emerald-200 bg-emerald-50/40 shadow-xs space-y-5 flex-1 flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="px-3 py-0.5 rounded-full bg-emerald-200 text-emerald-950 text-[10px] font-mono font-bold uppercase">Migration SME</span>
+                  <i class="fa-solid fa-book-bookmark text-emerald-700"></i>
+                </div>
+                <h4 class="text-xl font-black text-dbNavy flex items-center gap-2">
+                  Booking SEP
+                </h4>
+                <p class="text-xs text-slate-600 font-medium">Multi-DDA strategic booking redirector replacing legacy DBI & Collector APIs.</p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="bg-emerald-100 text-emerald-950 text-[10px] font-mono font-bold px-2.5 py-1 rounded-lg border border-emerald-200">Strategic Redirector</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: DRIVING TRANSFORMATION THROUGH TECHNOLOGY & BUSINESS VALUE (UNIFIED 6 KEY DELIVERIES)
+    =========================================== -->
+    <section id="transformation" class="py-20 px-6 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-dbBlue font-bold">Strategic Portfolio</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-dbNavy mt-1">Driving Transformation Through Technology & Business Value</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto mt-2 text-sm font-medium">Click any achievement card to inspect the challenge, action, and executive business outcome.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- CARD 1: AUTOMATION - RMS MODERNIZATION -->
+          <div onclick="openCardModal('automation')" class="glass-light-card glass-light-card-interactive p-8 rounded-3xl cursor-pointer relative group flex flex-col justify-between bg-white border border-slate-200">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-dbNavy text-xs font-mono font-bold uppercase">Automation</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-dbBlue transition"></i>
+              </div>
+
+              <h3 class="text-2xl font-black text-dbNavy mb-3">RMS Modernization</h3>
+              <p class="text-xs text-slate-600 font-medium mb-6">Transformed manual Revision Management System releases into automated Bitbucket & Jenkins CI/CD pipelines.</p>
+
+              <!-- Visual Flow -->
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono font-bold text-slate-700">
+                <span>RMS</span>
+                <i class="fa-solid fa-arrow-right text-dbBlue text-[10px]"></i>
+                <span>Bitbucket</span>
+                <i class="fa-solid fa-arrow-right text-dbBlue text-[10px]"></i>
+                <span>Jenkins</span>
+                <i class="fa-solid fa-arrow-right text-dbBlue text-[10px]"></i>
+                <span class="text-dbBlue">CI/CD</span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span>CI/CD Pipeline Impact</span>
+              <span class="text-dbBlue font-bold">Inspect Details <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+            </div>
+          </div>
+
+          <!-- CARD 2: MODERNIZATION - CLOUD & OBSERVABILITY -->
+          <div onclick="openCardModal('modernization')" class="glass-light-card glass-light-card-interactive p-8 rounded-3xl cursor-pointer relative group flex flex-col justify-between bg-white border border-slate-200">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-900 text-xs font-mono font-bold uppercase">Modernization</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-indigo-700 transition"></i>
+              </div>
+
+              <h3 class="text-2xl font-black text-dbNavy mb-3">Fabric OCP4 & Cloud Stack</h3>
+              <p class="text-xs text-slate-600 font-medium mb-6">Migrated core platform workloads from Fabric OCP3 to OCP4, aligning HP NonStop with modern Red Hat standards.</p>
+
+              <!-- Visual Flow -->
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono font-bold text-slate-700">
+                <span>HP NonStop</span>
+                <i class="fa-solid fa-arrow-right text-indigo-600 text-[10px]"></i>
+                <span>Fabric OCP4</span>
+                <i class="fa-solid fa-arrow-right text-indigo-600 text-[10px]"></i>
+                <span class="text-indigo-700">Cloud Ready</span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span>Cloud Migration</span>
+              <span class="text-indigo-700 font-bold">Inspect Details <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+            </div>
+          </div>
+
+          <!-- CARD 3: SIMPLIFICATION - ACCOUNTING ECOSYSTEM -->
+          <div onclick="openCardModal('simplification')" class="glass-light-card glass-light-card-interactive p-8 rounded-3xl cursor-pointer relative group flex flex-col justify-between bg-white border border-slate-200">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-mono font-bold uppercase">Simplification</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-emerald-700 transition"></i>
+              </div>
+
+              <h3 class="text-2xl font-black text-dbNavy mb-3">Booking API Simplification</h3>
+              <p class="text-xs text-slate-600 font-medium mb-6">Decommissioned DBI Booking API and merged data flows directly into Booking SEP to eliminate legacy infrastructure.</p>
+
+              <!-- Visual Flow -->
+              <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 space-y-2 text-[11px] font-mono">
+                <div class="flex items-center justify-between text-rose-700">
+                  <span class="font-bold">BEFORE:</span>
+                  <span class="line-through">SDP → DBI Booking API → Collector</span>
+                </div>
+                <div class="h-0.5 bg-slate-300"></div>
+                <div class="flex items-center justify-between text-emerald-700 font-bold">
+                  <span>AFTER:</span>
+                  <span>Strategic SDP → Booking SEP</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span>Decommissioning Outcome</span>
+              <span class="text-emerald-700 font-bold">Inspect Details <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+            </div>
+          </div>
+
+          <!-- CARD 4: COST OPTIMIZATION - KANNON PROXY -->
+          <div onclick="openCardModal('cost')" class="glass-light-card glass-light-card-interactive p-8 rounded-3xl cursor-pointer relative group flex flex-col justify-between bg-white border border-slate-200">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-mono font-bold uppercase">Cost Optimization</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-cyan-700 transition"></i>
+              </div>
+
+              <h3 class="text-2xl font-black text-dbNavy mb-3">Kannon Proxy</h3>
+              <p class="text-xs text-slate-600 font-medium mb-6">Architected sidecar service supplying live interest rate feeds while avoiding costly direct Kerberos connections.</p>
+
+              <!-- Visual Stats -->
+              <div class="grid grid-cols-2 gap-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-center">
+                <div class="p-2 rounded-lg bg-rose-50 border border-rose-200">
+                  <div class="text-[10px] text-slate-500 font-mono font-bold">OPERATIONAL COST</div>
+                  <div class="text-sm font-black text-rose-700">Cost ↓</div>
+                </div>
+                <div class="p-2 rounded-lg bg-emerald-50 border border-emerald-200">
+                  <div class="text-[10px] text-slate-500 font-mono font-bold">PLATFORM EFFICIENCY</div>
+                  <div class="text-sm font-black text-emerald-700">Efficiency ↑</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span>Sidecar Architecture</span>
+              <span class="text-cyan-700 font-bold">Inspect Details <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+            </div>
+          </div>
+
+          <!-- CARD 5: CLIENT VALUE - ESA MIGRATION -->
+          <div onclick="openCardModal('client')" class="glass-light-card glass-light-card-interactive p-8 rounded-3xl cursor-pointer relative group flex flex-col justify-between bg-white border border-slate-200">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-mono font-bold uppercase">Client Value</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-amber-700 transition"></i>
+              </div>
+
+              <h3 class="text-2xl font-black text-dbNavy mb-3">ESA Migration</h3>
+              <p class="text-xs text-slate-600 font-medium mb-6">Led technical migration & Cinovo automation for physical currency and precious metals trading across major banks.</p>
+
+              <!-- Visual Flow -->
+              <div class="flex items-center justify-around p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono font-bold text-slate-800">
+                <span>DB</span>
+                <i class="fa-solid fa-arrows-left-right text-amber-600"></i>
+                <span>ReiseBank</span>
+                <i class="fa-solid fa-arrows-left-right text-amber-600"></i>
+                <span>Commerzbank</span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span>Client Retention Outcome</span>
+              <span class="text-amber-700 font-bold">Inspect Details <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+            </div>
+          </div>
+
+          <!-- CARD 6: INNOVATION - AI TOKEN OPTIMIZER & SAFAR -->
+          <div onclick="openCardModal('innovation')" class="glass-light-card glass-light-card-interactive p-8 rounded-3xl cursor-pointer relative group flex flex-col justify-between bg-white border border-slate-200">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-mono font-bold uppercase">Innovation</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-purple-700 transition"></i>
+              </div>
+
+              <h3 class="text-2xl font-black text-dbNavy mb-3">AI Innovation & Productivity</h3>
+              <p class="text-xs text-slate-600 font-medium mb-6">Built AI Token Optimizer (2026 Hackathon), Microfinance Platform (3rd Global 2025), and Safar Mac Terminal Tool.</p>
+
+              <!-- Visual Flow -->
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono font-bold">
+                <span class="px-2 py-1 bg-purple-50 text-purple-900 rounded border border-purple-200">Microfinance</span>
+                <i class="fa-solid fa-arrow-right text-purple-600 text-[10px]"></i>
+                <span class="px-2 py-1 bg-purple-50 text-purple-900 rounded border border-purple-200">AI Token</span>
+                <i class="fa-solid fa-arrow-right text-purple-600 text-[10px]"></i>
+                <span class="px-2 py-1 bg-purple-50 text-purple-900 rounded border border-purple-200">Safar</span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span>Global Awards & Tools</span>
+              <span class="text-purple-700 font-bold">Inspect Details <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: SIGNATURE ACHIEVEMENT (NEW RELIC FOR HP NONSTOP)
+    =========================================== -->
+    <section class="py-20 px-6 border-t border-slate-200 bg-white">
+      <div class="max-w-5xl mx-auto">
+        
+        <div class="text-center mb-12">
+          <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-mono font-bold uppercase">Signature Invention</span>
+          <h2 class="text-4xl sm:text-5xl font-black text-dbNavy mt-2">Building What Did Not Exist</h2>
+          <p class="text-slate-600 max-w-xl mx-auto mt-2 text-sm font-medium">Engineering custom observability for HP NonStop enterprise architecture.</p>
+        </div>
+
+        <div class="glass-light-card p-8 sm:p-10 rounded-3xl border border-slate-200 bg-slate-50 shadow-md">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+              <div class="text-[11px] font-mono text-rose-700 font-bold mb-1">CHALLENGE</div>
+              <h3 class="text-base font-bold text-dbNavy mb-2">No Native Agent</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">New Relic had zero native observability support for HP NonStop platforms.</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+              <div class="text-[11px] font-mono text-amber-700 font-bold mb-1">THINKING</div>
+              <h3 class="text-base font-bold text-dbNavy mb-2">Build Custom APM</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Refused limitation & designed custom telemetry extraction architecture.</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+              <div class="text-[11px] font-mono text-dbBlue font-bold mb-1">SOLUTION</div>
+              <h3 class="text-base font-bold text-dbNavy mb-2">NonStop Collector</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Streamed db-Internet workloads straight into New Relic dashboards.</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200">
+              <div class="text-[11px] font-mono text-emerald-800 font-bold mb-1">OUTCOME</div>
+              <h3 class="text-base font-bold text-dbNavy mb-2">Modern Observability</h3>
+              <p class="text-xs text-slate-700 leading-relaxed font-medium">Full system visibility supporting decommissioning and modernization.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: LEADERSHIP JOURNEY
+    =========================================== -->
+    <section class="py-20 px-6 border-t border-slate-200 bg-slate-50">
+      <div class="max-w-6xl mx-auto">
+        
+        <div class="text-center mb-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-dbBlue font-bold">Career Evolution</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-dbNavy mt-1">Leadership Progression</h2>
+          <p class="text-slate-600 max-w-xl mx-auto mt-2 text-sm font-medium">A steady progression from core engineering to enterprise technical transformation leadership.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          
+          <div onclick="openRoleModal('dev')" class="glass-light-card p-5 rounded-2xl text-center cursor-pointer hover:border-dbBlue transition bg-white border border-slate-200">
+            <div class="text-[10px] font-mono text-slate-400 font-bold mb-1">STAGE 01</div>
+            <div class="text-sm font-bold text-dbNavy mb-1">Developer</div>
+            <div class="text-[10px] text-dbBlue font-mono font-bold">Core Coding</div>
+          </div>
+
+          <div onclick="openRoleModal('test')" class="glass-light-card p-5 rounded-2xl text-center cursor-pointer hover:border-dbBlue transition bg-white border border-slate-200">
+            <div class="text-[10px] font-mono text-slate-400 font-bold mb-1">STAGE 02</div>
+            <div class="text-sm font-bold text-dbNavy mb-1">Test Support</div>
+            <div class="text-[10px] text-dbBlue font-mono font-bold">Quality Assurance</div>
+          </div>
+
+          <div onclick="openRoleModal('analyst')" class="glass-light-card p-5 rounded-2xl text-center cursor-pointer hover:border-dbBlue transition bg-white border border-slate-200">
+            <div class="text-[10px] font-mono text-slate-400 font-bold mb-1">STAGE 03</div>
+            <div class="text-sm font-bold text-dbNavy mb-1">Tech Analyst</div>
+            <div class="text-[10px] text-dbBlue font-mono font-bold">Systems Design</div>
+          </div>
+
+          <div onclick="openRoleModal('sme')" class="glass-light-card p-5 rounded-2xl text-center cursor-pointer hover:border-dbBlue transition bg-white border border-slate-200">
+            <div class="text-[10px] font-mono text-slate-400 font-bold mb-1">STAGE 04</div>
+            <div class="text-sm font-bold text-dbNavy mb-1">Migration SME</div>
+            <div class="text-[10px] text-dbBlue font-mono font-bold">Cloud & Legacy</div>
+          </div>
+
+          <div onclick="openRoleModal('lead')" class="glass-light-card p-5 rounded-2xl text-center cursor-pointer hover:border-dbBlue transition bg-white border border-slate-200">
+            <div class="text-[10px] font-mono text-slate-400 font-bold mb-1">STAGE 05</div>
+            <div class="text-sm font-bold text-dbNavy mb-1">Technical Lead</div>
+            <div class="text-[10px] text-dbBlue font-mono font-bold">Team Delivery</div>
+          </div>
+
+          <div onclick="openRoleModal('transform')" class="glass-light-card p-5 rounded-2xl text-center cursor-pointer border-2 border-dbBlue bg-blue-50/50 shadow-md">
+            <div class="text-[10px] font-mono text-dbBlue font-bold mb-1">CURRENT</div>
+            <div class="text-sm font-black text-dbNavy mb-1">Transformation Lead</div>
+            <div class="text-[10px] text-emerald-700 font-mono font-bold">Executive Value</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: INNOVATION WALL (3 TILES)
+    =========================================== -->
+    <section class="py-20 px-6 border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-purple-700 font-bold">Beyond Daily Delivery</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-dbNavy mt-1">Innovation Wall</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="glass-light-card p-8 rounded-3xl border border-slate-200 bg-slate-50 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="text-xs font-mono font-bold text-purple-800 uppercase mb-2">GLOBAL HACKATHON 2025</div>
+              <div class="text-2xl font-black text-dbNavy mb-3">3rd Place Globally</div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-6">Financial Inclusion platform assisting underprivileged individuals with microloans (€50 - €5,000) using automated expense analysis.</p>
+            </div>
+            <div class="px-3 py-2 rounded-xl bg-purple-100 border border-purple-200 text-xs font-mono font-bold text-purple-900 text-center">Microfinance Platform</div>
+          </div>
+
+          <div class="glass-light-card p-8 rounded-3xl border border-slate-200 bg-slate-50 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="text-xs font-mono font-bold text-dbBlue uppercase mb-2">GLOBAL HACKATHON 2026</div>
+              <div class="text-2xl font-black text-dbNavy mb-3">AI Token Optimizer</div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-6">Engineered AI token usage optimization to drastically reduce LLM API operational expenses for enterprise business units.</p>
+            </div>
+            <div class="px-3 py-2 rounded-xl bg-blue-100 border border-blue-200 text-xs font-mono font-bold text-dbBlue text-center">AI Cost Reduction</div>
+          </div>
+
+          <div class="glass-light-card p-8 rounded-3xl border border-slate-200 bg-slate-50 flex flex-col justify-between shadow-xs">
+            <div>
+              <div class="text-xs font-mono font-bold text-emerald-800 uppercase mb-2">PERSONAL INNOVATION</div>
+              <div class="text-2xl font-black text-dbNavy mb-3">Safar Mac Tool</div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-6">Integrated 6530 Terminal, PuTTY, WinSCP, & Secure Tunneling into a unified native macOS productivity experience for SLIMITS team.</p>
+            </div>
+            <div class="px-3 py-2 rounded-xl bg-emerald-100 border border-emerald-200 text-xs font-mono font-bold text-emerald-900 text-center">6530 + SSH + WinSCP</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: CLOSING SECTION (VISUAL LEADERSHIP MINDSET)
+    =========================================== -->
+    <section class="py-24 px-6 border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-blue-50/50 text-center">
+      <div class="max-w-5xl mx-auto space-y-12">
+        
+        <span class="px-4 py-1.5 rounded-full bg-blue-100 text-dbNavy border border-blue-200 text-xs font-mono uppercase font-bold tracking-widest">
+          Executive Leadership Mindset
+        </span>
+
+        <!-- VISUAL MINDSET SHIFT DIAGRAM (CLEAN & EYE-PLEASING) -->
+        <div class="glass-light-card p-8 sm:p-12 rounded-3xl border border-slate-200 bg-white shadow-xl space-y-8">
+          
+          <div class="text-center max-w-2xl mx-auto space-y-2">
+            <div class="text-xs font-mono font-bold text-dbBlue uppercase tracking-wider">Strategic Transformation</div>
+            <h3 class="text-2xl sm:text-4xl font-black text-dbNavy">Value-Driven Engineering</h3>
+          </div>
+
+          <!-- STEP-BY-STEP VISUAL PROGRESSION FLOW -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch relative">
+            
+            <!-- STAGE 1: TECHNICAL FOCUS -->
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 flex flex-col justify-between text-left">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Stage 01</span>
+                <i class="fa-solid fa-code text-slate-400"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-500 mb-1">PAST MINDSET</div>
+                <div class="text-lg font-black text-slate-800">What are we building?</div>
+              </div>
+              <div class="pt-3 border-t border-slate-200/80 text-[11px] font-mono text-slate-500">
+                Technical Delivery Focus
+              </div>
+            </div>
+
+            <!-- STAGE 2: PROCESS FOCUS -->
+            <div class="p-6 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-4 flex flex-col justify-between text-left">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono font-bold text-dbBlue uppercase">Stage 02</span>
+                <i class="fa-solid fa-gears text-dbBlue"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-dbBlue mb-1">EVOLVED MINDSET</div>
+                <div class="text-lg font-black text-dbNavy">How are we building it?</div>
+              </div>
+              <div class="pt-3 border-t border-blue-200/80 text-[11px] font-mono text-dbBlue font-bold">
+                Architecture & Standards
+              </div>
+            </div>
+
+            <!-- STAGE 3: EXECUTIVE BUSINESS VALUE CORE (HIGHLIGHTED HERO CARD) -->
+            <div class="p-6 sm:p-7 rounded-2xl bg-dbNavy text-white border-2 border-dbBlue shadow-xl space-y-4 flex flex-col justify-between text-left relative overflow-hidden">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded-full bg-dbBlue text-dbCyan text-[10px] font-mono font-bold uppercase">Executive Today</span>
+                <i class="fa-solid fa-chart-line text-dbCyan text-lg"></i>
+              </div>
+
+              <div>
+                <div class="text-xs font-mono font-bold text-dbCyan mb-1 uppercase tracking-wider">STRATEGIC GOAL</div>
+                <div class="text-xl sm:text-2xl font-black text-white leading-tight">Deliver Business Value</div>
+              </div>
+
+              <!-- KEY METRIC PILLS -->
+              <div class="grid grid-cols-2 gap-2 pt-2">
+                <div class="px-2.5 py-1.5 rounded-lg bg-white/10 text-white text-[11px] font-mono font-bold flex items-center gap-1.5 border border-white/10">
+                  <i class="fa-solid fa-arrow-down-short-wide text-emerald-400"></i> Cost ↓
+                </div>
+                <div class="px-2.5 py-1.5 rounded-lg bg-white/10 text-white text-[11px] font-mono font-bold flex items-center gap-1.5 border border-white/10">
+                  <i class="fa-solid fa-compress text-dbCyan"></i> Complexity ↓
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="pt-6">
+          <a href="index.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-extrabold text-white bg-dbNavy hover:bg-dbBlue shadow-lg transition border border-dbNavy">
+            <span>Explore Complete Interactive Portfolio</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       MODAL DRAWER FOR DETAILED EXPANDABLE DETAILS
+  =========================================== -->
+  <div id="executive-drawer" class="fixed inset-0 z-50 drawer-overlay hidden flex items-center justify-center p-4 sm:p-6">
+    <div class="glass-light-card max-w-2xl w-full p-8 rounded-3xl border border-slate-300 relative shadow-2xl space-y-6 bg-white">
+      
+      <button onclick="closeExecutiveDrawer()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="drawer-header" class="border-b border-slate-100 pb-4">
+        <!-- Injected via JS -->
+      </div>
+
+      <div id="drawer-body" class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <!-- Injected via JS -->
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex justify-end">
+        <button onclick="closeExecutiveDrawer()" class="px-5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-dbNavy transition">
+          Close Details
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Expandable Drawer Data & Functions
+    const modalData = {
+      automation: {
+        title: "RMS Modernization & CI/CD",
+        badge: "Automation Impact",
+        challenge: "Legacy Revision Management System (RMS) relied on manual component packaging, manual environment promotions, and high developer overhead.",
+        action: "Introduced Bitbucket source control, configured automated Jenkins build/test pipelines, and established a standardized CI/CD model.",
+        outcome: "Drastically reduced manual release effort, improved deployment reliability, eliminated operational deployment bottlenecks."
+      },
+      modernization: {
+        title: "Fabric OCP4 Cloud Migration",
+        badge: "Modernization Impact",
+        challenge: "Platforms needed upgrading to modern Deutsche Bank Red Hat Fabric OCP4 standards and real-time operational visibility.",
+        action: "Led migration of Kannon Proxy, DBI Booking API, Collector API, and integrated custom New Relic APM telemetry.",
+        outcome: "Resilient cloud-ready architecture, high supportability, aligned with strategic enterprise standards."
+      },
+      simplification: {
+        title: "Booking API & Accounting Simplification",
+        badge: "Simplification Impact",
+        challenge: "DBI Booking API and Collector Booking API added unnecessary architectural hops and support maintenance between strategic SDP and legacy platforms.",
+        action: "Led technical migration decommissioning DBI Booking API into Booking SEP, with Collector API decommissioning actively in flight.",
+        outcome: "Substantial infrastructure savings, reduced operational support surface, accelerated legacy system retirement."
+      },
+      cost: {
+        title: "Kannon Proxy Sidecar Pattern",
+        badge: "Cost Optimization",
+        challenge: "Connecting Kannon directly to HP NonStop Kerberos introduced exorbitant operational and licensing overhead.",
+        action: "Architected a high-efficiency sidecar proxy service delivering real-time interest rate updates without expensive direct connections.",
+        outcome: "Achieved exact business requirement while dramatically cutting operational and licensing costs."
+      },
+      client: {
+        title: "ESA Multi-Bank Migration",
+        badge: "Client Value",
+        challenge: "Physical currency and metals platform suffered from operational delays and risk to external banking client retention.",
+        action: "Led technical migration, integrated Cinovo automated workflows, collaborated across DB, ReiseBank, and Commerzbank business leads.",
+        outcome: "Improved operational efficiency, safeguarded key revenue streams, delivered client-centric execution."
+      },
+      innovation: {
+        title: "AI Token Optimizer & Personal Innovation",
+        badge: "Innovation Impact",
+        challenge: "Solving enterprise cost and user experience friction outside standard delivery scope.",
+        action: "Built 3rd Place Global Financial Inclusion Microfinance platform (2025), AI Token Cost Optimizer (2026), and Safar Mac Terminal Tool.",
+        outcome: "Recognized innovation leadership and practical productivity tools adopted by team members."
+      }
+    };
+
+    function openCardModal(key) {
+      const data = modalData[key];
+      if (!data) return;
+
+      document.getElementById('drawer-header').innerHTML = `
+        <span class="px-3 py-1 rounded-full bg-blue-100 text-dbNavy text-[10px] font-mono uppercase font-bold">${data.badge}</span>
+        <h3 class="text-2xl font-bold text-dbNavy mt-2">${data.title}</h3>
+      `;
+
+      document.getElementById('drawer-body').innerHTML = `
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-xs font-mono text-rose-700 font-bold mb-1">THE CHALLENGE</div>
+          <p class="text-slate-700 text-xs sm:text-sm">${data.challenge}</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-xs font-mono text-dbBlue font-bold mb-1">WHAT WAS DONE</div>
+          <p class="text-slate-700 text-xs sm:text-sm">${data.action}</p>
+        </div>
+        <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
+          <div class="text-xs font-mono text-emerald-800 font-bold mb-1">EXECUTIVE BUSINESS IMPACT</div>
+          <p class="text-slate-900 text-xs sm:text-sm font-semibold">${data.outcome}</p>
+        </div>
+      `;
+
+      document.getElementById('executive-drawer').classList.remove('hidden');
+    }
+
+    function openRoleModal(role) {
+      document.getElementById('drawer-header').innerHTML = `
+        <span class="px-3 py-1 rounded-full bg-blue-100 text-dbNavy text-[10px] font-mono font-bold uppercase">Leadership Progression</span>
+        <h3 class="text-2xl font-bold text-dbNavy mt-2">Career Milestone Details</h3>
+      `;
+      document.getElementById('drawer-body').innerHTML = `
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <p class="text-slate-700 text-sm">Demonstrated consistent growth from hands-on software development to enterprise technical transformation leadership across 15+ years of complex banking architecture.</p>
+        </div>
+      `;
+      document.getElementById('executive-drawer').classList.remove('hidden');
+    }
+
+    function closeExecutiveDrawer() {
+      document.getElementById('executive-drawer').classList.add('hidden');
+    }
+  </script>
+</body>
+
+</html>

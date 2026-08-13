@@ -162,6 +162,35 @@ html {
   }
 }
 
+/* 3D Side Perspective Ladder Styles */
+.ladder-3d-perspective {
+  perspective: 1200px;
+  perspective-origin: 25% 50%;
+  transform-style: preserve-3d;
+}
+
+.ladder-3d-frame {
+  transform-style: preserve-3d;
+  transform: rotateY(-16deg) rotateX(14deg) rotateZ(-1deg) scale(0.96);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ladder-3d-frame:hover {
+  transform: rotateY(-10deg) rotateX(8deg) rotateZ(0deg) scale(0.98);
+}
+
+.ladder-3d-card {
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ladder-3d-card:hover {
+  transform: translateZ(45px) scale(1.02);
+  box-shadow: -15px 20px 40px rgba(0, 24, 56, 0.22);
+}
+
+
 
 
 
