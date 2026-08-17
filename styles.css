@@ -1,198 +1,342 @@
-/* Common Stylesheet for Deutsche Bank Executive Portfolio */
+/* Common Stylesheet for Executive Portfolio – Apple Launch Style */
+
+/* ── Base ── */
 body {
   background-color: #f8fafc;
-  background-image: radial-gradient(rgba(0, 80, 157, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-.glass-header {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.hub-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 12px -2px rgba(0, 24, 56, 0.04);
-  transition: all 0.25s ease;
-}
-
-.nav-btn, .tab-btn {
-  position: relative;
-  transition: all 0.25s ease;
-  color: #64748b;
-  font-weight: 600;
-}
-
-.nav-btn.active, .tab-btn.active {
-  color: #001838;
-  background-color: #f1f5f9;
-}
-
-.nav-btn.active::after, .tab-btn.active::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 12px;
-  right: 12px;
-  height: 3px;
-  background-color: #00509d;
-  border-radius: 3px 3px 0 0;
-}
-
-.tab-panel {
-  display: block;
-  scroll-margin-top: 5rem;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
-@keyframes pulseArrow {
-  0%, 100% {
-    transform: translateX(0);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateX(5px);
-    opacity: 1;
-  }
+/* ── Scroll Snap Sections ── */
+.opportunity-section {
+  scroll-snap-align: start;
 }
 
-.animate-pulse-arrow {
-  animation: pulseArrow 1.5s ease-in-out infinite;
+/* ── Glass Cards ── */
+.glass-apple-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 50px rgba(0, 24, 56, 0.06);
 }
 
-/* 3D Flip Card Styles for Achievement Circles */
-.perspective-1000 {
-  perspective: 1000px;
-  width: 16rem !important; /* 256px (larger executive coin) */
-  height: 16rem !important; /* 256px */
-  position: relative !important;
-  display: inline-block !important;
+/* ── Gradient Text ── */
+.gradient-text-db {
+  background: linear-gradient(135deg, #001838 0%, #004B93 60%, #00B2FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.flip-card-inner {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 16rem !important;
-  height: 16rem !important;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-  transform-origin: center center;
-}
-
-.flip-card-inner.flipped {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute !important;
-  width: 16rem !important;
-  height: 16rem !important;
-  top: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
-  -webkit-backface-visibility: hidden !important;
-  backface-visibility: hidden !important;
-  border-radius: 9999px !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-  clip-path: circle(50% at 50% 50%) !important;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
-/* Presentation Slide Mode Styles */
-#presentation-modal {
-  width: 100vw;
-  height: 100vh;
-}
-
-#presentation-modal:not(.hidden) {
-  display: flex !important;
-}
-
-.presentation-slide {
-  display: none !important;
+/* ── Scroll-Triggered Fade-In Animations ── */
+.fade-in-up {
   opacity: 0;
-  transform: scale(0.98);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  width: 100%;
-  height: 100%;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.presentation-slide.active-slide {
-  display: flex !important;
+.fade-in-up.visible {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
 
-.slide-dot {
-  width: 10px;
-  height: 10px;
+.fade-in-up.delay-1 { transition-delay: 0.1s; }
+.fade-in-up.delay-2 { transition-delay: 0.2s; }
+.fade-in-up.delay-3 { transition-delay: 0.3s; }
+.fade-in-up.delay-4 { transition-delay: 0.4s; }
+.fade-in-up.delay-5 { transition-delay: 0.5s; }
+
+/* ── Flow Cards (Constraint / Solution / Impact) ── */
+.flow-card {
+  position: relative;
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem;
+  backdrop-filter: blur(12px);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+
+.flow-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 24, 56, 0.1);
+}
+
+/* Constraint card */
+.flow-card--constraint {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
+  border: 2px solid #fed7aa;
+}
+
+.flow-card--constraint .flow-card__icon {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  color: white;
+}
+
+/* Solution card */
+.flow-card--solution {
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+  border: 2px solid #bfdbfe;
+}
+
+.flow-card--solution .flow-card__icon {
+  background: linear-gradient(135deg, #004B93, #00B2FF);
+  color: white;
+}
+
+/* Impact card */
+.flow-card--impact {
+  background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+  border: 2px solid #a7f3d0;
+}
+
+.flow-card--impact .flow-card__icon {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+}
+
+.flow-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.flow-card__label {
+  font-size: 0.625rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.flow-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flow-card__list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.flow-card__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.flow-card--constraint .flow-card__list li::before {
+  background: #f97316;
+}
+
+.flow-card--solution .flow-card__list li::before {
+  background: #004B93;
+}
+
+.flow-card--impact .flow-card__list li::before {
+  background: #059669;
+}
+
+/* ── Flow Arrow Connector ── */
+.flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* ── Tag Line (Top-Left) ── */
+.tag-line {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #004B93;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #001838 0%, #004B93 60%, #00B2FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Metadata Pills (Bottom Corners) ── */
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  background-color: #334155;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  font-size: 0.6875rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid;
+  transition: transform 0.2s ease;
 }
 
-.slide-dot:hover {
-  background-color: #64748b;
+.meta-pill:hover {
+  transform: scale(1.05);
 }
 
-/* Mobile Optimization for Presentation Mode & Coins */
-@media (max-width: 640px) {
-  .perspective-1000 {
-    width: 14.5rem !important; /* 232px - full prominent single-column coin on mobile */
-    height: 14.5rem !important;
-  }
-
-  .flip-card-inner,
-  .flip-card-front,
-  .flip-card-back {
-    width: 14.5rem !important;
-    height: 14.5rem !important;
-  }
+.meta-pill--app {
+  background: #eff6ff;
+  color: #004B93;
+  border-color: #bfdbfe;
 }
 
-/* 3D Side Perspective Ladder Styles */
-.ladder-3d-perspective {
-  perspective: 1200px;
-  perspective-origin: 25% 50%;
-  transform-style: preserve-3d;
+.meta-pill--platform {
+  background: #f1f5f9;
+  color: #475569;
+  border-color: #e2e8f0;
 }
 
-.ladder-3d-frame {
-  transform-style: preserve-3d;
-  transform: rotateY(-16deg) rotateX(14deg) rotateZ(-1deg) scale(0.96);
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+.meta-pill--ecdf {
+  background: #fdf4ff;
+  color: #7e22ce;
+  border-color: #e9d5ff;
 }
 
-.ladder-3d-frame:hover {
-  transform: rotateY(-10deg) rotateX(8deg) rotateZ(0deg) scale(0.98);
+.meta-pill--kompass {
+  background: #f0fdf4;
+  color: #15803d;
+  border-color: #bbf7d0;
 }
 
-.ladder-3d-card {
-  transform-style: preserve-3d;
-  transform: translateZ(20px);
+/* ── Section Backgrounds ── */
+.section-bg-1 {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #eff6ff 100%);
+}
+
+.section-bg-2 {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 40%, #f0fdf4 100%);
+}
+
+.section-bg-3 {
+  background: linear-gradient(180deg, #ffffff 0%, #fefce8 30%, #f8fafc 100%);
+}
+
+.section-bg-4 {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 40%, #eff6ff 100%);
+}
+
+.section-bg-5 {
+  background: linear-gradient(180deg, #ffffff 0%, #fdf4ff 30%, #f8fafc 100%);
+}
+
+.section-bg-beyond {
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 40%, #ffffff 100%);
+}
+
+/* ── Opportunity Number Badge ── */
+.opp-number {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 900;
+  font-size: 0.75rem;
+  background: linear-gradient(135deg, #001838, #004B93);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 24, 56, 0.2);
+}
+
+/* ── Innovation Cards (Beyond Section) ── */
+.innovation-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.75rem;
   transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.ladder-3d-card:hover {
-  transform: translateZ(45px) scale(1.02);
-  box-shadow: -15px 20px 40px rgba(0, 24, 56, 0.22);
+.innovation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 
+.innovation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 24, 56, 0.08);
+}
 
+.innovation-card--seed::before {
+  background: linear-gradient(90deg, #f59e0b, #eab308);
+}
 
+.innovation-card--seed { border-color: #fde68a; }
 
+.innovation-card--groot::before {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
 
+.innovation-card--groot { border-color: #ddd6fe; }
 
+.innovation-card--safar::before {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
 
+.innovation-card--safar { border-color: #a5f3fc; }
+
+/* ── Scroll Indicator Bounce ── */
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.scroll-indicator {
+  animation: gentleBounce 2s ease-in-out infinite;
+}
+
+/* ── Responsive Adjustments ── */
+@media (max-width: 768px) {
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .tag-line {
+    font-size: 0.875rem;
+  }
+
+  .flow-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .flow-card__list li {
+    font-size: 0.75rem;
+  }
+}
