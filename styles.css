@@ -8,12 +8,26 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
 }
 
-/* ── Scroll Snap Sections ── */
-.opportunity-section {
-  scroll-snap-align: start;
+/* Only enable scroll snap on large desktop viewports where sections fit comfortably */
+@media (min-width: 1024px) and (min-height: 700px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  .opportunity-section {
+    scroll-snap-align: start;
+  }
+}
+
+/* Ensure mobile sections can expand to fit content without clipping or overlapping */
+@media (max-width: 1023px) {
+  .opportunity-section {
+    height: auto !important;
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 /* ── Glass Cards ── */

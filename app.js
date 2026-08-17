@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', (e) => {
     if (isScrolling) return;
+    
+    // Disable keyboard section-jumping on mobile and tablet screens
+    if (window.innerWidth < 1024) return;
 
     const currentSection = getCurrentSection();
     const currentIndex = Array.from(sections).indexOf(currentSection);
