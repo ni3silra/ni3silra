@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitin Silra | Executive Portfolio (3D Transition Edition)</title>
+  <meta name="description"
+    content="Executive portfolio of Nitin Silra – Technical Transformation Lead showcasing strategic achievements in enterprise modernization.">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dbNavy: '#001838',
+            dbBlue: '#004B93',
+            dbCyan: '#00B2FF',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ── 3D Perspective & Layout Framework ── */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden !important;
+      background-color: #f0f7ff; /* Soft blue-tinted white background */
+    }
+
+    /* Container holding all 3D layers */
+    .presentation-container {
+      perspective: 2000px;
+      perspective-origin: 50% 50%;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Section defaults for 3D card layout */
+    .opportunity-section {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh !important;
+      margin: 0 !important;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 1.4s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Active state - center stage */
+    .opportunity-section.active-sec {
+      transform: rotateX(0deg) translateZ(0px) translateY(0px) scale(1);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      z-index: 10;
+    }
+
+    /* Flipped up (past section when scrolling down / advancing) */
+    .opportunity-section.past-sec {
+      transform: rotateX(-55deg) translateZ(150px) translateY(-150px) scale(0.9);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Flipped down (future section when scrolling down / advancing) */
+    .opportunity-section.future-sec {
+      transform: rotateX(55deg) translateZ(150px) translateY(150px) scale(0.9);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Adjust scroll indicators to prevent layout shifts */
+    .scroll-indicator {
+      cursor: pointer;
+    }
+
+    /* Clean transition overlay for depth */
+    .depth-glow {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at center, transparent 60%, rgba(219, 234, 254, 0.5) 100%);
+      z-index: 5;
+    }
+
+    /* Slide Sub-steps override */
+    .opportunity-section .flow-card,
+    .opportunity-section .innovation-card {
+      opacity: 0 !important;
+      transform: translateY(40px) !important;
+      transition: transform 1.0s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      pointer-events: none !important;
+    }
+    
+    .opportunity-section .flow-card.step-revealed,
+    .opportunity-section .innovation-card.step-revealed {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      pointer-events: auto !important;
+    }
+  </style>
+</head>
+
+<body class="text-slate-900 font-sans antialiased min-h-screen bg-slate-50">
+
+  <div class="depth-glow"></div>
+
+  <main class="presentation-container">
+
+    <!-- ==========================================
+         SECTION 1: SUMMARY (100VH FULL SCREEN APPLE HERO)
+    =========================================== -->
+    <section id="summary"
+      class="opportunity-section active-sec flex flex-col justify-between items-center px-6 py-12 bg-gradient-to-b from-white via-slate-50 to-blue-50/40 relative border-b border-slate-200">
+
+      <!-- Top Spacer / Tag Container -->
+      <div class="pt-2">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-dbBlue text-xs font-mono font-bold uppercase tracking-widest">
+          <i class="fa-solid fa-award text-dbBlue"></i>
+          <span>Executive Profile</span>
+        </div>
+      </div>
+
+      <!-- Center Content -->
+      <div class="max-w-5xl mx-auto text-center space-y-6 sm:space-y-8 my-auto">
+        <!-- Name & Primary Title -->
+        <div class="space-y-2">
+          <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-dbNavy">
+            Nitin Silra
+          </h1>
+          <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-dbBlue tracking-wide">
+            Technical Transformation Lead
+          </p>
+        </div>
+
+        <!-- Hero Headline -->
+        <h2
+          class="text-2xl sm:text-4xl lg:text-5xl font-black leading-tight text-slate-900 max-w-4xl mx-auto tracking-tight">
+          Transforming Legacy Platforms into <span class="gradient-text-db">Modern, Simplified & Cost-Effective
+            Solutions</span>
+        </h2>
+
+        <!-- Consistent Product Launch Feature Cards (5 Equal Boxes) -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-5xl mx-auto pt-2">
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-business-time text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">9.5+ Years Experience</div>
+          </div>
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-arrows-rotate text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Legacy <i
+                class="fa-solid fa-arrow-right text-[10px] text-dbBlue mx-1"></i> Modern</div>
+          </div>
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-gears text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Manual <i
+                class="fa-solid fa-arrow-right text-[10px] text-dbBlue mx-1"></i> Automation</div>
+          </div>
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">OnPremise <i
+                class="fa-solid fa-arrow-right text-[10px] text-dbBlue mx-1"></i> Cloud</div>
+          </div>
+
+          <div
+            class="p-3.5 sm:p-4 rounded-2xl bg-white border-2 border-slate-200 shadow-sm hover:border-dbBlue transition flex flex-col justify-between text-center space-y-2 col-span-2 md:col-span-1">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-server text-sm"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Modernization of HP NS</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="pb-2 text-center">
+        <a data-target="opp-1"
+          class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         OPPORTUNITY 1: Enterprise Observability Transformation
+    =========================================== -->
+    <section id="opp-1"
+      class="opportunity-section future-sec flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-8 section-bg-1 relative border-b border-slate-200">
+
+      <!-- Top Bar: Tag Line + Opportunity Badge -->
+      <div class="flex items-center justify-between w-full">
+        <div class="tag-line fade-in-up">From Reactive to Proactive</div>
+        <div class="flex items-center gap-2 fade-in-up delay-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-mono font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-user-tie"></i> Technical Transformation Lead
+          </div>
+        </div>
+      </div>
+
+      <!-- Center: Title + Flow Cards -->
+      <div class="max-w-7xl mx-auto w-full my-auto space-y-8 sm:space-y-10">
+
+        <!-- Achievement Title -->
+        <div class="text-center fade-in-up delay-1">
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-dbNavy leading-tight">
+            Enterprise Observability<br class="hidden sm:block"> <span class="gradient-text-db">Transformation</span>
+          </h2>
+        </div>
+
+        <!-- Constraint → Solution → Impact Flow -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch">
+
+          <!-- CONSTRAINT -->
+          <div class="flow-card flow-card--constraint fade-in-up delay-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <span class="flow-card__label text-orange-600">The Constraint</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Legacy HP NonStop platforms lacked real-time monitoring, creating troubleshooting bottlenecks.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-orange-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#HP-NonStop</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#No-Observability</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Reactive-Support</span>
+            </div>
+          </div>
+
+          <!-- SOLUTION -->
+          <div class="flow-card flow-card--solution fade-in-up delay-3">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <span class="flow-card__label text-dbBlue">The Solution</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Designed a custom real-time telemetry framework streaming HP NonStop metrics into New Relic.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-blue-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Custom-APM</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#New-Relic</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#RealTime-Data</span>
+            </div>
+          </div>
+
+          <!-- IMPACT -->
+          <div class="flow-card flow-card--impact fade-in-up delay-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="flow-card__label text-emerald-700">Business Impact</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Scaled observability across global business systems, modernizing support operations.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-emerald-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#1000+Services</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#16-Locations</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#DevOps</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Bar: App/Platform (left) | ECDF/Kompass (right) -->
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap gap-2 fade-in-up delay-4">
+          <span class="meta-pill meta-pill--app"><i class="fa-solid fa-building-columns text-[9px]"></i> DB
+            Internet</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-solid fa-server text-[9px]"></i> HP NonStop</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-solid fa-chart-area text-[9px]"></i> New Relic</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end fade-in-up delay-5">
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-trophy text-[9px]"></i> Achieves</span>
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-gears text-[9px]"></i> Operates</span>
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Encourage
+            Solutions</span>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="pb-2 text-center">
+        <a data-target="opp-5"
+          class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 6: Fabric 2.0 Modernization
+    =========================================== -->
+    <section id="opp-5"
+      class="opportunity-section future-sec flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-8 section-bg-5 relative border-b border-slate-200">
+
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between w-full">
+        <div class="tag-line fade-in-up">Turning Complexity into Savings</div>
+        <div class="flex items-center gap-2 fade-in-up delay-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-mono font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-user-tie"></i> Team Aligner And Mentor
+          </div>
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div class="max-w-7xl mx-auto w-full my-auto space-y-8 sm:space-y-10">
+
+        <div class="text-center fade-in-up delay-1">
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-dbNavy leading-tight">
+            Fabric 2.0<br class="hidden sm:block"> <span class="gradient-text-db">Modernization</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch">
+
+          <!-- CONSTRAINT -->
+          <div class="flow-card flow-card--constraint fade-in-up delay-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <span class="flow-card__label text-orange-600">The Constraint</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Fragmented priorities and complex dependencies across 5 different engineering teams.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-orange-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#5-Teams</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Dependencies</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Delay-Risks</span>
+            </div>
+          </div>
+
+          <!-- SOLUTION -->
+          <div class="flow-card flow-card--solution fade-in-up delay-3">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <span class="flow-card__label text-dbBlue">The Solution</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Led cross-team planning, unified migration roadmaps, and mentored developer teams.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-blue-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Coordination</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Sync-Meetings</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Mentorship</span>
+            </div>
+          </div>
+
+          <!-- IMPACT -->
+          <div class="flow-card flow-card--impact fade-in-up delay-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="flow-card__label text-emerald-700">Business Impact</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Successfully migrated applications, achieving significant recurring cost savings.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-emerald-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#4-Apps-Migrated</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#250K-Saved</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#Reduced-Complexity</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap gap-2 fade-in-up delay-4">
+          <span class="meta-pill meta-pill--app"><i class="fa-solid fa-network-wired text-[9px]"></i> Kannon
+            Proxy</span>
+          <span class="meta-pill meta-pill--app"><i class="fa-solid fa-gears text-[9px]"></i> Booking API</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-solid fa-cubes-stacked text-[9px]"></i> Fabric
+            2.0</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end fade-in-up delay-5">
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-handshake text-[9px]"></i> Engages</span>
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-bullhorn text-[9px]"></i> Influences</span>
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Collaborate &amp;
+            Inspire</span>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="pb-2 text-center">
+        <a data-target="opp-2"
+          class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         OPPORTUNITY 2: Kannon Proxy Sidecar for DB Internet
+    =========================================== -->
+    <section id="opp-2"
+      class="opportunity-section future-sec flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-8 section-bg-2 relative border-b border-slate-200">
+
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between w-full">
+        <div class="tag-line fade-in-up">Solving a Million-Dollar Problem</div>
+        <div class="flex items-center gap-2 fade-in-up delay-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-mono font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-user-tie"></i> Technical Lead
+          </div>
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div class="max-w-7xl mx-auto w-full my-auto space-y-8 sm:space-y-10">
+
+        <div class="text-center fade-in-up delay-1">
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-dbNavy leading-tight">
+            Kannon Proxy Sidecar<br class="hidden sm:block"> <span class="gradient-text-db">for DB Internet</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch">
+
+          <!-- CONSTRAINT -->
+          <div class="flow-card flow-card--constraint fade-in-up delay-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <span class="flow-card__label text-orange-600">The Constraint</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Required Kerberos authentication on HP NonStop, risking a projected ~$1M upgrade cost.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-orange-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Kerberos</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#1M-Projected-Cost</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Service-Risk</span>
+            </div>
+          </div>
+
+          <!-- SOLUTION -->
+          <div class="flow-card flow-card--solution fade-in-up delay-3">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <span class="flow-card__label text-dbBlue">The Solution</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Designed a secure Fabric sidecar architecture to handle authentication off the main platform.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-blue-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Sidecar-Design</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Fabric</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#REST-Auth</span>
+            </div>
+          </div>
+
+          <!-- IMPACT -->
+          <div class="flow-card flow-card--impact fade-in-up delay-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="flow-card__label text-emerald-700">Business Impact</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Avoided $1M in costs while securing interest-rate services across multiple countries.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-emerald-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#1M-Saved</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#9+Countries</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#Zero-Complexity</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap gap-2 fade-in-up delay-4">
+          <span class="meta-pill meta-pill--app"><i class="fa-solid fa-building-columns text-[9px]"></i> DB
+            Internet</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-solid fa-server text-[9px]"></i> HP NonStop</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-solid fa-cubes-stacked text-[9px]"></i> Fabric</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-solid fa-network-wired text-[9px]"></i> Kannon</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end fade-in-up delay-5">
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-pen-ruler text-[9px]"></i> Designs</span>
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-brain text-[9px]"></i> Thinks</span>
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Encourage
+            Solutions</span>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="pb-2 text-center">
+        <a data-target="opp-3"
+          class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 4: Software Delivery Modernization
+    =========================================== -->
+    <section id="opp-3"
+      class="opportunity-section future-sec flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-8 section-bg-3 relative border-b border-slate-200">
+
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between w-full">
+        <div class="tag-line fade-in-up">Giving Engineers Their Time Back</div>
+        <div class="flex items-center gap-2 fade-in-up delay-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-mono font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-user-tie"></i> Technical Lead
+          </div>
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div class="max-w-7xl mx-auto w-full my-auto space-y-8 sm:space-y-10">
+
+        <div class="text-center fade-in-up delay-1">
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-dbNavy leading-tight">
+            Software Delivery<br class="hidden sm:block"> <span class="gradient-text-db">Modernization</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch">
+
+          <!-- CONSTRAINT -->
+          <div class="flow-card flow-card--constraint fade-in-up delay-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <span class="flow-card__label text-orange-600">The Constraint</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Manual and error-prone deployments created bottlenecks for engineering delivery.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-orange-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Manual-Deploy</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Time-Sink</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Bottlenecks</span>
+            </div>
+          </div>
+
+          <!-- SOLUTION -->
+          <div class="flow-card flow-card--solution fade-in-up delay-3">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <span class="flow-card__label text-dbBlue">The Solution</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Standardized build files using Maven and established automated Jenkins CI/CD pipelines.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-blue-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Maven</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Jenkins-CICD</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Automation</span>
+            </div>
+          </div>
+
+          <!-- IMPACT -->
+          <div class="flow-card flow-card--impact fade-in-up delay-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="flow-card__label text-emerald-700">Business Impact</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Accelerated deployment times significantly, saving engineering resources.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-emerald-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#5-Min-Deploy</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#99.99%-Success</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#50+Days-Saved</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap gap-2 fade-in-up delay-4">
+          <span class="meta-pill meta-pill--app"><i class="fa-solid fa-building-columns text-[9px]"></i> DB
+            Internet</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-solid fa-server text-[9px]"></i> HP NonStop</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-brands fa-java text-[9px]"></i> Java / Maven</span>
+          <span class="meta-pill meta-pill--platform"><i class="fa-brands fa-jenkins text-[9px]"></i> Jenkins</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end fade-in-up delay-5">
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-truck-fast text-[9px]"></i> Delivers</span>
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-trophy text-[9px]"></i> Achieves</span>
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Get Better at
+            Getting Better</span>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="pb-2 text-center">
+        <a data-target="opp-4"
+          class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 5: ESA Modernization
+    =========================================== -->
+    <section id="opp-4"
+      class="opportunity-section future-sec flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-8 section-bg-4 relative border-b border-slate-200">
+
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between w-full">
+        <div class="tag-line fade-in-up">Building Bridges Across Organizations</div>
+        <div class="flex items-center gap-2 fade-in-up delay-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-mono font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-user-tie"></i> Technical Lead
+          </div>
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div class="max-w-7xl mx-auto w-full my-auto space-y-8 sm:space-y-10">
+
+        <div class="text-center fade-in-up delay-1">
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-dbNavy leading-tight">
+            ESA<br class="hidden sm:block"> <span class="gradient-text-db">Modernization</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch">
+
+          <!-- CONSTRAINT -->
+          <div class="flow-card flow-card--constraint fade-in-up delay-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <span class="flow-card__label text-orange-600">The Constraint</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              High operational complexity in aligning multi-bank systems and varying partner roadmaps.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-orange-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Multi-Bank</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Legacy-Risk</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-1 rounded">#Alignment-Gap</span>
+            </div>
+          </div>
+
+          <!-- SOLUTION -->
+          <div class="flow-card flow-card--solution fade-in-up delay-3">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <span class="flow-card__label text-dbBlue">The Solution</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Bridged stakeholder communication gaps and translated key technical dependencies.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-blue-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Technical-Lead</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Roadmap-Sync</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-dbBlue bg-blue-50 px-2.5 py-1 rounded">#Consensus</span>
+            </div>
+          </div>
+
+          <!-- IMPACT -->
+          <div class="flow-card flow-card--impact fade-in-up delay-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flow-card__icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="flow-card__label text-emerald-700">Business Impact</span>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Secured multi-bank consensus and successfully modernized critical shared interfaces.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-emerald-100">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#Partner-BuyIn</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#3-Interfaces</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">#Risk-Reduced</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap gap-2 fade-in-up delay-4">
+          <span class="meta-pill meta-pill--app"><i class="fa-solid fa-vault text-[9px]"></i> ESA</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end fade-in-up delay-5">
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-bullhorn text-[9px]"></i> Influences</span>
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-handshake text-[9px]"></i> Engages</span>
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Take the Client
+            Perspective</span>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="pb-2 text-center">
+        <a data-target="beyond"
+          class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 7: Beyond Day-to-Day Contributions (Consolidated)
+    =========================================== -->
+    <section id="beyond"
+      class="opportunity-section future-sec flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-8 section-bg-beyond relative border-b border-slate-200">
+
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between w-full">
+        <div class="tag-line fade-in-up">Innovation Beyond the Day Job</div>
+        <div class="flex items-center gap-2 fade-in-up delay-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-mono font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-user-tie"></i> Innovator
+          </div>
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div class="max-w-7xl mx-auto w-full my-auto space-y-8">
+
+        <div class="text-center fade-in-up delay-1">
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-dbNavy leading-tight">
+            Beyond<br class="hidden sm:block"> <span class="gradient-text-db">Day-to-Day</span>
+          </h2>
+        </div>
+
+        <!-- 3 Innovation Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+
+          <!-- Safar -->
+          <div class="innovation-card innovation-card--safar fade-in-up delay-2">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-400 text-white flex items-center justify-center text-lg font-black shadow-md">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+              <div>
+                <div class="text-[9px] font-mono font-black text-cyan-700 uppercase tracking-wider">Developer Tool</div>
+                <h4 class="text-sm font-black text-dbNavy">Safar SSH/SFTP</h4>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Developed a cross-platform SSH &amp; SFTP utility addressing Mac tooling gaps for HP NonStop.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-cyan-200">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-cyan-700 bg-cyan-50 px-2.5 py-1 rounded">#SSH-Client</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-cyan-700 bg-cyan-50 px-2.5 py-1 rounded">#Developer-Tools</span>
+            </div>
+            <div class="pt-3 border-t border-cyan-200">
+              <div class="flex items-center gap-2">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-mono font-black shadow-md shadow-cyan-500/20 border-none transition-transform hover:scale-105">
+                  <i class="fa-solid fa-users text-xs"></i> Ready for Engineers
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SEED -->
+          <div class="innovation-card innovation-card--seed fade-in-up delay-3">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-white flex items-center justify-center text-lg font-black shadow-md">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div>
+                <div class="text-[9px] font-mono font-black text-amber-700 uppercase tracking-wider">Global Hackathon 2025</div>
+                <h4 class="text-sm font-black text-dbNavy">SEED Microfinance</h4>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Designed an innovative microfinance platform supporting underserved global communities.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-amber-200">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-1 rounded">#Microfinance</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-1 rounded">#Global-Collaboration</span>
+            </div>
+            <div class="pt-3 border-t border-amber-200">
+              <div class="flex items-center gap-2">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 text-amber-950 text-xs font-mono font-black shadow-md shadow-amber-500/20 border-none transition-transform hover:scale-105">
+                  <i class="fa-solid fa-trophy text-xs"></i> Global 3rd Place (2025)
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- GROOT -->
+          <div class="innovation-card innovation-card--groot fade-in-up delay-4">
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-11 h-11 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 text-white flex items-center justify-center text-lg font-black shadow-md">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <div class="text-[9px] font-mono font-black text-purple-700 uppercase tracking-wider">Global Hackathon 2026</div>
+                <h4 class="text-sm font-black text-dbNavy">GROOT AI Optimizer</h4>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm font-medium text-slate-700 leading-relaxed mb-4">
+              Led Frankfurt team to build an AI-driven token optimizer reducing operational costs.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-3 border-t border-purple-200">
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded">#AI-Optimization</span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded">#Cost-Reduction</span>
+            </div>
+            <div class="pt-3 border-t border-purple-200">
+              <div class="flex items-center gap-2">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-violet-600 to-purple-500 text-white text-xs font-mono font-black shadow-md shadow-purple-500/20 border-none transition-transform hover:scale-105">
+                  <i class="fa-solid fa-medal text-xs"></i> Frankfurt Runner-Up (2026)
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap gap-2 fade-in-up delay-4">
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-brain text-[9px]"></i> Thinks</span>
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-pen-ruler text-[9px]"></i> Designs</span>
+          <span class="meta-pill meta-pill--ecdf"><i class="fa-solid fa-handshake text-[9px]"></i> Engages</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end fade-in-up delay-5">
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Encourage
+            Solutions</span>
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Collaborate</span>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="pb-2 text-center">
+        <a data-target="thank-you"
+          class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1 text-[11px] font-mono uppercase tracking-widest">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 8: THANK YOU
+    =========================================== -->
+    <section id="thank-you"
+      class="opportunity-section future-sec flex flex-col justify-between px-6 sm:px-10 lg:px-16 py-8 section-bg-1 relative">
+
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between w-full">
+        <div class="tag-line fade-in-up">Strategic Alignment</div>
+        <div class="flex items-center gap-2 fade-in-up delay-1">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-dbBlue text-[10px] font-mono font-bold uppercase tracking-widest">
+            <i class="fa-solid fa-handshake"></i> Thank You
+          </div>
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div class="max-w-3xl mx-auto w-full my-auto text-center space-y-8 fade-in-up delay-2">
+        <div
+          class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-tr from-dbNavy via-blue-900 to-dbBlue text-white flex items-center justify-center text-4xl font-black shadow-xl ring-8 ring-blue-500/10">
+          <i class="fa-solid fa-handshake text-amber-300"></i>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-5xl sm:text-7xl lg:text-8xl font-black text-dbNavy tracking-tight">
+            Thanks
+          </h2>
+          <p class="text-xl sm:text-2xl font-extrabold text-dbBlue max-w-lg mx-auto leading-relaxed">
+            Open for Questions &amp; Strategic Discussion
+          </p>
+        </div>
+
+        <!-- Presenter Card -->
+        <div class="pt-2 max-w-sm mx-auto">
+          <div class="p-6 rounded-2xl bg-white border-2 border-slate-200 shadow-md space-y-2">
+            <div class="text-2xl font-black text-dbNavy">Nitin Silra</div>
+            <div
+              class="text-xs font-mono font-bold text-dbBlue uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200 inline-block">
+              Technical Transformation Lead
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar (matching style) -->
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap gap-2 fade-in-up delay-4">
+          <span class="meta-pill meta-pill--app"><i class="fa-solid fa-award text-[9px]"></i> Executive Profile</span>
+        </div>
+        <div class="flex flex-wrap gap-2 justify-end fade-in-up delay-5">
+          <span class="meta-pill meta-pill--kompass"><i class="fa-solid fa-compass text-[9px]"></i> Technical
+            Transformation Lead</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ── 3D Scroll & Navigation Logic ── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.opportunity-section');
+      let currentIndex = 0;
+      let isTransitioning = false;
+      let currentStep = 0;
+
+      // Initialize sections classes
+      function initSections() {
+        sections.forEach((sec, idx) => {
+          sec.classList.remove('active-sec', 'past-sec', 'future-sec');
+          if (idx === currentIndex) {
+            sec.classList.add('active-sec');
+            triggerFadeInAnimations(sec);
+            // First slide defaults to showing step-cards if any
+            const stepCards = sec.querySelectorAll('.flow-card, .innovation-card');
+            stepCards.forEach(card => card.classList.add('step-revealed'));
+            currentStep = stepCards.length;
+          } else if (idx < currentIndex) {
+            sec.classList.add('past-sec');
+          } else {
+            sec.classList.add('future-sec');
+          }
+        });
+      }
+
+      // Triggers visibility classes of children with .fade-in-up
+      function triggerFadeInAnimations(section) {
+        // Reset and animate active section
+        const fadeElements = section.querySelectorAll('.fade-in-up');
+        fadeElements.forEach(el => {
+          el.classList.remove('visible');
+          // Force reflow/repaint to ensure animation triggers again
+          void el.offsetWidth;
+          el.classList.add('visible');
+        });
+      }
+
+      // Transition function
+      function goToSection(index, startAtEnd = false) {
+        if (index < 0 || index >= sections.length || isTransitioning || index === currentIndex) return;
+        isTransitioning = true;
+
+        currentIndex = index;
+
+        sections.forEach((sec, idx) => {
+          sec.classList.remove('active-sec', 'past-sec', 'future-sec');
+          if (idx === currentIndex) {
+            sec.classList.add('active-sec');
+            triggerFadeInAnimations(sec);
+
+            // Set sub-steps based on direction
+            const stepCards = sec.querySelectorAll('.flow-card, .innovation-card');
+            if (startAtEnd) {
+              currentStep = stepCards.length;
+              stepCards.forEach(card => card.classList.add('step-revealed'));
+            } else {
+              currentStep = 0;
+              stepCards.forEach(card => card.classList.remove('step-revealed'));
+            }
+          } else if (idx < currentIndex) {
+            sec.classList.add('past-sec');
+          } else {
+            sec.classList.add('future-sec');
+          }
+        });
+
+        // Match the transition delay of 1.4s in CSS
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 1400);
+      }
+
+      function handleNextStep() {
+        const activeSec = sections[currentIndex];
+        const stepCards = activeSec.querySelectorAll('.flow-card, .innovation-card');
+
+        if (stepCards.length > 0 && currentStep < stepCards.length) {
+          stepCards[currentStep].classList.add('step-revealed');
+          currentStep++;
+        } else {
+          // If no more steps, go to next section
+          goToSection(currentIndex + 1);
+        }
+      }
+
+      function handlePrevStep() {
+        const activeSec = sections[currentIndex];
+        const stepCards = activeSec.querySelectorAll('.flow-card, .innovation-card');
+
+        if (stepCards.length > 0 && currentStep > 0) {
+          currentStep--;
+          stepCards[currentStep].classList.remove('step-revealed');
+        } else {
+          // If no previous steps, go to previous section starting at its end
+          goToSection(currentIndex - 1, true);
+        }
+      }
+
+      // Intercept and bind indicator buttons
+      document.querySelectorAll('.scroll-indicator').forEach(indicator => {
+        indicator.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = indicator.getAttribute('data-target');
+          const targetIdx = Array.from(sections).findIndex(s => s.id === targetId);
+          if (targetIdx !== -1) {
+            goToSection(targetIdx);
+          }
+        });
+      });
+
+      // Handle standard keys
+      document.addEventListener('keydown', (e) => {
+        if (isTransitioning) return;
+        if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          handleNextStep();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          handlePrevStep();
+        } else if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+          e.preventDefault();
+          goToSection(currentIndex + 1);
+        } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+          e.preventDefault();
+          goToSection(currentIndex - 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          goToSection(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          goToSection(sections.length - 1);
+        }
+      });
+
+      // Throttled Scroll / Wheel Interceptor
+      let wheelAccumulator = 0;
+      const wheelThreshold = 40; // Sensitivity parameter
+      document.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        if (isTransitioning) return;
+
+        wheelAccumulator += e.deltaY;
+
+        if (Math.abs(wheelAccumulator) >= wheelThreshold) {
+          if (wheelAccumulator > 0) {
+            goToSection(currentIndex + 1);
+          } else {
+            goToSection(currentIndex - 1);
+          }
+          wheelAccumulator = 0;
+        }
+      }, { passive: false });
+
+      // Touch / Swipe Navigation for Mobile Devices
+      let touchStartY = 0;
+      let touchEndY = 0;
+      const minSwipeDistance = 50;
+
+      document.addEventListener('touchstart', (e) => {
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
+
+      document.addEventListener('touchend', (e) => {
+        if (isTransitioning) return;
+        touchEndY = e.changedTouches[0].screenY;
+        const diffY = touchStartY - touchEndY;
+
+        if (Math.abs(diffY) >= minSwipeDistance) {
+          if (diffY > 0) {
+            // Swiped up -> next slide
+            goToSection(currentIndex + 1);
+          } else {
+            // Swiped down -> prev slide
+            goToSection(currentIndex - 1);
+          }
+        }
+      }, { passive: true });
+
+      // Run initial layout setup
+      initSections();
+    });
+  </script>
+
+</body>
+
+</html>
