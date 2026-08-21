@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nitin Silra | Interactive Executive Portfolio</title>
-  <meta name="description" content="Interactive executive portfolio of Nitin Silra – Technical Transformation Lead.">
+  <title>Nitin Silra | Executive Portfolio (Strategic Transformation Hub)</title>
+  <meta name="description"
+    content="Executive portfolio of Nitin Silra – Technical Transformation Lead. Strategic achievements in enterprise modernization.">
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Tailwind CSS CDN -->
@@ -24,15 +28,13 @@
             dbCyan: '#00B2FF',
             brandAchieves: '#059669', // Emerald 600
             brandDesigns: '#0284c7',  // Sky 600
-            brandDelivers: '#4f46e5', // Indigo 600
             brandInfluences: '#d97706',// Amber 600
-            brandEngages: '#e11d48',   // Rose 600
-            brandThinks: '#c026d3',    // Fuchsia 600
-            brandControls: '#0d9488',  // Teal 600
-            brandOperates: '#475569',  // Slate 600
+            brandEngages: '#4f46e5',   // Indigo 600
+            brandThinks: '#0891b2',    // Cyan 600
+            brandAwards: '#9333ea',    // Purple 600
           },
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           }
         }
@@ -41,520 +43,950 @@
   </script>
 
   <style>
-    /* Glassmorphism utility classes for light mode */
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(12px) saturate(120%);
-      -webkit-backdrop-filter: blur(12px) saturate(120%);
-      border: 1px solid rgba(226, 232, 240, 0.8);
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(226, 232, 240, 0.8);
-      box-shadow: 0 10px 30px -5px rgba(0, 24, 56, 0.08), 0 4px 6px -2px rgba(0, 24, 56, 0.03);
-    }
-    
-    /* Background grid pattern */
-    .bg-grid {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(0, 75, 147, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 75, 147, 0.03) 1px, transparent 1px);
+    /* ── Base Aesthetics (Clean White with Subtle Blue Tint, No Grid) ── */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      background-color: #f8fbff;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      overflow-x: hidden;
     }
 
-    /* Glow overlays for light mode */
+    /* ── Glassmorphism ── */
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid rgba(226, 232, 240, 0.85);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 10px 30px -5px rgba(0, 24, 56, 0.06), 0 4px 6px -2px rgba(0, 24, 56, 0.02);
+    }
+
+    /* ── Glowing Ambient Orbs ── */
     .glow-circle {
-      filter: blur(120px);
-      opacity: 0.08;
+      filter: blur(130px);
+      opacity: 0.12;
       pointer-events: none;
     }
 
-    /* Radial positioning for desktop */
-    @media (min-width: 1024px) {
-      .node-container {
-        position: relative;
-        width: 600px;
-        height: 600px;
-      }
-      .node-center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 112px;
-        height: 112px;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .node-outer {
-        position: absolute;
-        width: 64px;
-        height: 64px;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      /* Node positions around center (8 points symmetrical layout, radius = 230px) */
-      .node-0 { top: 50%; left: calc(50% + 230px); }     /* 0 deg (Right) */
-      .node-1 { top: calc(50% + 163px); left: calc(50% + 163px); } /* 45 deg */
-      .node-2 { top: calc(50% + 230px); left: 50%; }     /* 90 deg (Bottom) */
-      .node-3 { top: calc(50% + 163px); left: calc(50% - 163px); } /* 135 deg */
-      .node-4 { top: 50%; left: calc(50% - 230px); }     /* 180 deg (Left) */
-      .node-5 { top: calc(50% - 163px); left: calc(50% - 163px); } /* 225 deg */
-      .node-6 { top: calc(50% - 230px); left: 50%; }     /* 270 deg (Top) */
-      .node-7 { top: calc(50% - 163px); left: calc(50% + 163px); } /* 315 deg */
+    /* ── Gradient Text ── */
+    .gradient-text-db {
+      background: linear-gradient(135deg, #001838 0%, #004B93 60%, #00B2FF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    /* Pulse animations */
-    @keyframes pulse-slow {
-      0%, 100% { transform: scale(1); opacity: 0.15; }
-      50% { transform: scale(1.05); opacity: 0.3; }
+    /* ── Ultra-Smooth Stage Container & Synchronized Cross-Morph ── */
+    .stage-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-items: center;
+      width: 100%;
+      min-height: 85vh;
+      position: relative;
     }
-    .animate-pulse-slow {
-      animation: pulse-slow 4s infinite;
+
+    #page-intro,
+    #page-hub {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      width: 100%;
+      transform-origin: center center;
+      will-change: transform, opacity, filter;
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.9s ease;
+    }
+
+    /* Page 1 (Intro) Active State */
+    #page-intro.is-active-page {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      filter: blur(0px);
+      visibility: visible;
+      pointer-events: auto;
+      z-index: 10;
+    }
+
+    /* Page 1 (Intro) Morphed / Converged into Center */
+    #page-intro.is-hidden-page {
+      transform: scale(0.15) translateY(0);
+      opacity: 0;
+      filter: blur(8px);
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Page 2 (Hub) Active State */
+    #page-hub.is-active-page {
+      transform: scale(1);
+      opacity: 1;
+      filter: blur(0px);
+      visibility: visible;
+      pointer-events: auto;
+      z-index: 10;
+    }
+
+    /* Page 2 (Hub) Contracted / Hidden State */
+    #page-hub.is-hidden-page {
+      transform: scale(0.65);
+      opacity: 0;
+      filter: blur(8px);
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Radial Hub & 6-Branch Layout ── */
+    .hub-stage {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      height: 680px;
+      margin: 0 auto;
+    }
+
+    /* Center Circle in between */
+    .hub-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 30;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 6 Radial Branches - Initially Blurred State */
+    .branch-node {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      cursor: default;
+      filter: blur(4.5px);
+      opacity: 0.6;
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.35s ease,
+        filter 0.35s ease,
+        box-shadow 0.35s ease;
+      will-change: transform, opacity, filter;
+    }
+
+    /* Desktop Exact Symmetrical Coordinates (Hexagonal Balance around Center) */
+    /* Branch 0: Top-Right (Observability) */
+    .branch-pos-0 {
+      top: 20%;
+      left: 78%;
+    }
+
+    /* Branch 1: Mid-Right (Kannon Proxy) */
+    .branch-pos-1 {
+      top: 50%;
+      left: 85%;
+    }
+
+    /* Branch 2: Bottom-Right (dbESA-NG) */
+    .branch-pos-2 {
+      top: 80%;
+      left: 78%;
+    }
+
+    /* Branch 3: Bottom-Left (Fabric 2.0) */
+    .branch-pos-3 {
+      top: 80%;
+      left: 22%;
+    }
+
+    /* Branch 4: Mid-Left (Safar SSH/SFTP) */
+    .branch-pos-4 {
+      top: 50%;
+      left: 15%;
+    }
+
+    /* Branch 5: Top-Left (Global AI Hackathons) */
+    .branch-pos-5 {
+      top: 20%;
+      left: 22%;
+    }
+
+    /* Once discovered via keystroke, keep branch permanently crystal clear */
+    .branch-node.is-cleared {
+      filter: blur(0px) !important;
+      opacity: 1 !important;
+    }
+
+    /* Branch Zoom & Crystal Clear Unblur on Active Keystroke Step Selection ONLY */
+    .branch-node.is-active {
+      transform: translate(-50%, -50%) scale(1.22);
+      filter: blur(0px) !important;
+      opacity: 1 !important;
+      z-index: 50;
+    }
+
+    /* Unrevealed sibling branches remain softly blurred during spotlight */
+    .hub-stage.has-focus .branch-node:not(.is-cleared):not(.is-active) {
+      opacity: 0.3;
+      filter: blur(5px) grayscale(25%);
+    }
+
+    /* Previously cleared branches stay clear during spotlight */
+    .hub-stage.has-focus .branch-node.is-cleared:not(.is-active) {
+      opacity: 0.85;
+      filter: blur(0px) !important;
+    }
+
+    /* SVG dynamic branch connection lines */
+    .branch-line {
+      transition: stroke-width 0.4s ease, opacity 0.4s ease, filter 0.4s ease;
+      stroke-dasharray: 6;
+      animation: dashMove 30s linear infinite;
+    }
+
+    .branch-line.line-active {
+      stroke-width: 4.5 !important;
+      opacity: 1 !important;
+      stroke-dasharray: none !important;
+      filter: drop-shadow(0 0 10px currentColor);
+    }
+
+    @keyframes dashMove {
+      to {
+        stroke-dashoffset: -300;
+      }
+    }
+
+    /* 3D Flip Card Effect for Center Hub Circle */
+    .center-flipper {
+      perspective: 1000px;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .center-flipper-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+    }
+
+    .center-flipper-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .center-card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 9999px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .center-face-front {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
+
+    .center-face-back {
+      transform: rotateY(180deg);
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Pulse wave animations for central circle aura */
+    .pulse-ring-1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 190px;
+      height: 190px;
+      border-radius: 9999px;
+      border: 2px solid rgba(0, 75, 147, 0.35);
+      transform: translate(-50%, -50%);
+      animation: pulse-ring 3.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .pulse-ring-2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 240px;
+      height: 240px;
+      border-radius: 9999px;
+      border: 1.5px solid rgba(0, 178, 255, 0.3);
+      transform: translate(-50%, -50%);
+      animation: pulse-ring-slow 4.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite 1.2s;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: translate(-50%, -50%) scale(0.92);
+        opacity: 0.75;
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.22);
+        opacity: 0.05;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(0.92);
+        opacity: 0.75;
+      }
+    }
+
+    @keyframes pulse-ring-slow {
+      0% {
+        transform: translate(-50%, -50%) scale(0.95);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.38);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(0.95);
+        opacity: 0.6;
+      }
+    }
+
+    /* Scroll Indicator Gentle Bounce */
+    @keyframes gentleBounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(6px);
+      }
+    }
+
+    .scroll-indicator {
+      animation: gentleBounce 2.2s ease-in-out infinite;
+    }
+
+    /* Responsive adjustments for medium & small devices */
+    @media (max-width: 1023px) {
+      .hub-stage {
+        height: auto;
+        min-height: 720px;
+      }
+
+      .branch-pos-0 {
+        top: 16%;
+        left: 82%;
+      }
+
+      .branch-pos-1 {
+        top: 50%;
+        left: 88%;
+      }
+
+      .branch-pos-2 {
+        top: 84%;
+        left: 82%;
+      }
+
+      .branch-pos-3 {
+        top: 84%;
+        left: 18%;
+      }
+
+      .branch-pos-4 {
+        top: 50%;
+        left: 12%;
+      }
+
+      .branch-pos-5 {
+        top: 16%;
+        left: 18%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hub-stage {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+      }
+
+      #connections-svg {
+        display: none;
+      }
+
+      .hub-center {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 1rem;
+      }
+
+      .branch-node {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100%;
+        max-width: 380px;
+      }
+
+      .branch-node.is-active {
+        transform: scale(1.05) !important;
+        filter: blur(0px) !important;
+        opacity: 1 !important;
+      }
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans min-h-screen overflow-x-hidden flex flex-col justify-between relative selection:bg-dbBlue/20 selection:text-dbNavy">
 
-  <!-- Glow effects -->
+<body
+  class="bg-[#f8fbff] text-slate-800 font-sans min-h-screen overflow-x-hidden flex flex-col justify-between relative selection:bg-dbBlue/20 selection:text-dbNavy">
+
+  <!-- Ambient Glow Elements (Subtle Blue Tint Accent) -->
   <div class="absolute w-[600px] h-[600px] bg-dbCyan rounded-full glow-circle top-[-200px] left-[-200px]"></div>
-  <div class="absolute w-[500px] h-[500px] bg-brandDelivers rounded-full glow-circle bottom-[-200px] right-[-200px]"></div>
-  <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+  <div class="absolute w-[550px] h-[550px] bg-brandEngages rounded-full glow-circle bottom-[-200px] right-[-200px]">
+  </div>
 
-  <!-- Main Views Container -->
-  <main class="flex-grow flex items-center justify-center w-full z-10 p-4 md:p-8">
+  <!-- Main Container -->
+  <main class="flex-grow flex items-center justify-center w-full z-10 p-4 sm:p-6 md:p-8">
 
-    <!-- PAGE 1: INTRODUCTION -->
-    <div id="page-intro" class="w-full max-w-4xl mx-auto flex flex-col justify-between items-center space-y-12 py-10 transition-all duration-700 ease-out transform opacity-100 scale-100">
-      
-      <!-- Top Tag -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-dbBlue text-xs font-mono font-bold uppercase tracking-widest">
-        <i class="fa-solid fa-award text-dbBlue animate-pulse"></i>
-        <span>Executive Transformation Lead</span>
+    <div class="stage-container">
+
+      <!-- ==========================================
+           PAGE 1: INTRODUCTION HERO
+      =========================================== -->
+      <div id="page-intro"
+        class="is-active-page max-w-4xl mx-auto flex flex-col justify-between items-center space-y-9 py-6">
+
+        <!-- Top Tag -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-dbBlue text-xs font-mono font-bold uppercase tracking-widest border border-blue-200 shadow-sm">
+          <i class="fa-solid fa-award text-dbBlue"></i>
+          <span>Executive Profile</span>
+        </div>
+
+        <!-- Main Title Section -->
+        <div class="text-center space-y-4">
+          <h1 class="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight text-dbNavy leading-none">
+            Nitin Silra
+          </h1>
+          <p class="text-xl sm:text-2xl md:text-3xl font-black tracking-wide text-dbBlue">
+            Technical Transformation Lead
+          </p>
+          <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold max-w-3xl mx-auto leading-tight text-slate-800">
+            Transforming Legacy Platforms into <span class="gradient-text-db">Modern, Simplified & Cost-Effective
+              Solutions</span>
+          </p>
+        </div>
+
+        <!-- Key Metrics Strip -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3.5 w-full pt-6 border-t border-slate-200">
+          <div class="p-3.5 rounded-2xl bg-white border-2 border-slate-200 text-center space-y-1 shadow-sm">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-business-time text-xs"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">9.5+ Years Exp</div>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-white border-2 border-slate-200 text-center space-y-1 shadow-sm">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-sack-dollar text-xs"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Saved $1M+</div>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-white border-2 border-slate-200 text-center space-y-1 shadow-sm">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-cubes text-xs"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Modernization</div>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-white border-2 border-slate-200 text-center space-y-1 shadow-sm">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-robot text-xs"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">AI Empowered</div>
+          </div>
+
+          <div
+            class="p-3.5 rounded-2xl bg-white border-2 border-slate-200 text-center space-y-1 shadow-sm col-span-2 md:col-span-1">
+            <div
+              class="w-8 h-8 mx-auto rounded-xl bg-blue-50 border border-blue-200 text-dbBlue flex items-center justify-center">
+              <i class="fa-solid fa-trophy text-xs"></i>
+            </div>
+            <div class="text-xs font-black text-dbNavy">Hackathon Winner</div>
+          </div>
+        </div>
+
+        <!-- Arrow Down Navigation Trigger -->
+        <div class="pt-4 pb-2 text-center">
+          <a onclick="switchPage('page-hub')"
+            class="scroll-indicator text-slate-400 hover:text-dbBlue transition flex flex-col items-center gap-1.5 text-xs font-mono uppercase tracking-widest cursor-pointer group"
+            title="Click or Press ↓ to Enter Hub">
+          </a>
+        </div>
+
       </div>
 
-      <!-- Main Title -->
-      <div class="text-center space-y-6">
-        <h1 class="text-6xl md:text-8xl font-black tracking-tight text-dbNavy leading-none">
-          Nitin Silra
-        </h1>
-        <p class="text-xl md:text-3xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-dbBlue via-dbCyan to-indigo-600">
-          Technical Transformation Lead
-        </p>
-        <p class="text-slate-600 max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed">
-          Driving high-impact platform modernization. Simplifying legacy complexities, streamlining delivery pipelines, and maximizing structural efficiency with multi-million dollar business impact.
-        </p>
-      </div>
 
-      <!-- Interactive Button to Hub -->
-      <div>
-        <button onclick="switchPage('page-hub')" class="group relative px-8 py-4 rounded-full bg-gradient-to-r from-dbBlue to-indigo-800 font-bold text-white text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-[0_10px_25px_rgba(0,75,147,0.25)] hover:scale-105 overflow-hidden">
-          <span class="relative z-10 flex items-center gap-2">
-            Explore Transformation Hub <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-          </span>
-          <span class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-        </button>
-      </div>
+      <!-- ==========================================
+           PAGE 2: STRATEGIC HUB (CENTER CIRCLE + 6 ACHIEVEMENT BRANCHES)
+      =========================================== -->
+      <div id="page-hub"
+        class="is-hidden-page max-w-7xl mx-auto flex flex-col items-center justify-center py-4 relative">
 
-      <!-- Key metrics strip -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full pt-8 border-t border-slate-200">
-        <div class="text-center">
-          <div class="text-2xl font-black text-dbNavy">9.5+ Years</div>
-          <div class="text-xs text-slate-500 font-mono uppercase tracking-wider">Experience</div>
+        <!-- Top Minimal Tag -->
+        <div class="w-full flex items-center justify-center mb-4 px-2 sm:px-6">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-dbBlue text-xs font-mono font-bold uppercase tracking-widest shadow-sm">
+            <i class="fa-solid fa-compass"></i>
+            <span>Strategic Transformation Hub</span>
+          </div>
         </div>
-        <div class="text-center">
-          <div class="text-2xl font-black text-brandAchieves">$1.25M+</div>
-          <div class="text-xs text-slate-500 font-mono uppercase tracking-wider">Costs Saved</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl font-black text-dbBlue">1000+</div>
-          <div class="text-xs text-slate-500 font-mono uppercase tracking-wider">Services Monitored</div>
-        </div>
-        <div class="text-center">
-          <div class="text-2xl font-black text-brandThinks">Global</div>
-          <div class="text-xs text-slate-500 font-mono uppercase tracking-wider">Hackathon Winner</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- PAGE 2: HUB (SPLIT VIEW ON DESKTOP: LEFT CIRCLE, RIGHT PERSISTENT DETAILS) -->
-    <div id="page-hub" class="hidden w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 py-6 transition-all duration-700 ease-out transform opacity-0 scale-95 relative">
+        <!-- 6-Branch Radial Stage -->
+        <div class="hub-stage" id="hubStage">
 
-      <!-- Left Side: Circular Map (takes up 45% on desktop and aligned left) -->
-      <div class="w-full lg:w-[45%] flex items-center justify-start lg:pl-8 relative min-h-[500px]">
-        
-        <!-- Desktop Node Layout Container -->
-        <div class="hidden lg:block node-container flex-shrink-0">
-          
-          <!-- SVG Connections Background (Nested inside node-container for absolute 1-to-1 pixel centering) -->
-          <svg class="absolute inset-0 w-full h-full pointer-events-none" id="connections-svg" viewBox="0 0 600 600">
-            <!-- Radial spokes connecting center node to the 8 outer nodes (radius = 230px) -->
-            <line x1="300" y1="300" x2="530" y2="300" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
-            <line x1="300" y1="300" x2="463" y2="463" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
-            <line x1="300" y1="300" x2="300" y2="530" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
-            <line x1="300" y1="300" x2="137" y2="463" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
-            <line x1="300" y1="300" x2="70" y2="300" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
-            <line x1="300" y1="300" x2="137" y2="137" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
-            <line x1="300" y1="300" x2="300" y2="70" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
-            <line x1="300" y1="300" x2="463" y2="137" stroke="#004B93" stroke-width="2" stroke-dasharray="4" class="opacity-25" />
+          <!-- SVG Connection Lines radiating from Center (550, 340) to each Branch -->
+          <svg class="absolute inset-0 w-full h-full pointer-events-none" id="connections-svg" viewBox="0 0 1100 680"
+            preserveAspectRatio="none">
+            <defs>
+              <!-- Branch 0 Gradient (Emerald: Top-Right) -->
+              <linearGradient id="grad-0" gradientUnits="userSpaceOnUse" x1="550" y1="340" x2="858" y2="136">
+                <stop offset="0%" stop-color="#004B93" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#059669" stop-opacity="0.95" />
+              </linearGradient>
+              <!-- Branch 1 Gradient (Sky Blue: Mid-Right) -->
+              <linearGradient id="grad-1" gradientUnits="userSpaceOnUse" x1="550" y1="340" x2="935" y2="340">
+                <stop offset="0%" stop-color="#004B93" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#0284c7" stop-opacity="0.95" />
+              </linearGradient>
+              <!-- Branch 2 Gradient (Amber: Bottom-Right) -->
+              <linearGradient id="grad-2" gradientUnits="userSpaceOnUse" x1="550" y1="340" x2="858" y2="544">
+                <stop offset="0%" stop-color="#004B93" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#d97706" stop-opacity="0.95" />
+              </linearGradient>
+              <!-- Branch 3 Gradient (Indigo: Bottom-Left) -->
+              <linearGradient id="grad-3" gradientUnits="userSpaceOnUse" x1="550" y1="340" x2="242" y2="544">
+                <stop offset="0%" stop-color="#004B93" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.95" />
+              </linearGradient>
+              <!-- Branch 4 Gradient (Cyan: Mid-Left) -->
+              <linearGradient id="grad-4" gradientUnits="userSpaceOnUse" x1="550" y1="340" x2="165" y2="340">
+                <stop offset="0%" stop-color="#004B93" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#0891b2" stop-opacity="0.95" />
+              </linearGradient>
+              <!-- Branch 5 Gradient (Purple: Top-Left) -->
+              <linearGradient id="grad-5" gradientUnits="userSpaceOnUse" x1="550" y1="340" x2="242" y2="136">
+                <stop offset="0%" stop-color="#004B93" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#9333ea" stop-opacity="0.95" />
+              </linearGradient>
+            </defs>
+
+            <!-- 6 Radial Spoke Connector Lines (All 6 Visible & Connected) -->
+            <!-- Line 0: Center -> Branch 0 (Top-Right) -->
+            <line id="line-0" x1="550" y1="340" x2="858" y2="136" stroke="url(#grad-0)" stroke-width="3"
+              class="branch-line opacity-55" />
+            <!-- Line 1: Center -> Branch 1 (Mid-Right) -->
+            <line id="line-1" x1="550" y1="340" x2="935" y2="340" stroke="url(#grad-1)" stroke-width="3"
+              class="branch-line opacity-55" />
+            <!-- Line 2: Center -> Branch 2 (Bottom-Right) -->
+            <line id="line-2" x1="550" y1="340" x2="858" y2="544" stroke="url(#grad-2)" stroke-width="3"
+              class="branch-line opacity-55" />
+            <!-- Line 3: Center -> Branch 3 (Bottom-Left) -->
+            <line id="line-3" x1="550" y1="340" x2="242" y2="544" stroke="url(#grad-3)" stroke-width="3"
+              class="branch-line opacity-55" />
+            <!-- Line 4: Center -> Branch 4 (Mid-Left) -->
+            <line id="line-4" x1="550" y1="340" x2="165" y2="340" stroke="url(#grad-4)" stroke-width="3"
+              class="branch-line opacity-55" />
+            <!-- Line 5: Center -> Branch 5 (Top-Left) -->
+            <line id="line-5" x1="550" y1="340" x2="242" y2="136" stroke="url(#grad-5)" stroke-width="3"
+              class="branch-line opacity-55" />
           </svg>
 
-          <!-- Central Circle -->
-          <div class="node-center text-center">
-            <div class="relative w-28 h-28 flex items-center justify-center rounded-full bg-white border-2 border-dbBlue shadow-[0_8px_30px_rgba(0,75,147,0.15)]">
-              <div class="absolute inset-0 rounded-full border border-dbBlue animate-ping opacity-20"></div>
-              <div>
-                <span class="block text-xs font-mono tracking-widest text-slate-400 uppercase">Core</span>
-                <span class="block text-sm font-black text-dbNavy">Nitin Silra</span>
+          <!-- ==========================================
+               MAIN CIRCLE IN BETWEEN (3D FLIPPER CORE)
+          =========================================== -->
+          <div class="hub-center">
+            <div class="relative w-40 h-40 flex items-center justify-center">
+              <!-- Pulsing Concentric Aura Rings (Mathematically & Visually Centered) -->
+              <div class="pulse-ring-1"></div>
+              <div class="pulse-ring-2"></div>
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-dbBlue/15 rounded-full blur-xl pointer-events-none">
+              </div>
+
+              <!-- 3D Central Flipper Core (Click to Flip & Reveal Unicorn Emblem) -->
+              <div class="center-flipper group" onclick="toggleCenterFlip(event)"
+                title="Click to flip and reveal Unicorn Core">
+                <div id="centerFlipperInner" class="center-flipper-inner">
+
+                  <!-- FRONT FACE: Only Name, Nothing Else -->
+                  <div id="centerCore"
+                    class="center-card-face center-face-front bg-gradient-to-br from-white via-slate-50 to-blue-50 border-4 border-dbNavy shadow-[0_15px_45px_rgba(0,24,56,0.18)] p-3 group-hover:border-dbBlue group-hover:shadow-[0_0_40px_rgba(0,75,147,0.35)] transition-all flex items-center justify-center">
+                    <span class="text-lg sm:text-xl font-black text-dbNavy tracking-tight">Nitin Silra</span>
+                  </div>
+
+                  <!-- BACK FACE: Only Unicorn Emblem / Icon, No Text -->
+                  <div
+                    class="center-card-face center-face-back bg-gradient-to-br from-slate-900 via-dbNavy to-blue-900 border-4 border-dbCyan shadow-[0_0_45px_rgba(0,178,255,0.45)] p-0.5 overflow-hidden">
+                    <img src="img/unicorn-emblem.jpg" alt="Unicorn" class="w-full h-full object-cover rounded-full">
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- ==========================================
+               THE 6 ACHIEVEMENT BRANCHES (SEQUENTIAL STEPPING 0 -> 5 VIA KEYSTROKES)
+          =========================================== -->
+
+          <!-- BRANCH 0: Enterprise Observability (Top-Right) -->
+          <div class="branch-node branch-pos-0" id="branch-0">
+            <div
+              class="glass-card rounded-2xl p-3.5 sm:p-4 border-2 border-emerald-300 shadow-lg flex items-center gap-3.5 min-w-[240px] sm:min-w-[270px] transition-all duration-300 group bg-white/95">
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white flex items-center justify-center text-xl font-black shadow-md">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="text-left space-y-0.5">
+                <div class="text-[9px] font-mono font-bold uppercase tracking-wider text-emerald-700">Observability APM
+                </div>
+                <h3 class="text-sm sm:text-base font-black text-dbNavy tracking-tight leading-snug">Enterprise
+                  Observability</h3>
+                <div class="text-[10px] font-mono font-bold text-slate-500">1000+ Services • New Relic</div>
               </div>
             </div>
           </div>
 
-          <!-- Node 0: Achieves (Observability) -->
-          <div class="node-outer node-0" onclick="selectNode(0)" onmouseenter="focusNode(0)" onmouseleave="unfocusNode(0)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandAchieves text-brandAchieves flex items-center justify-center cursor-pointer hover:bg-brandAchieves hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(5,150,105,0.3)] transition duration-300">
-              <i class="fa-solid fa-chart-line text-lg"></i>
+          <!-- BRANCH 1: Kannon Proxy Sidecar (Mid-Right) -->
+          <div class="branch-node branch-pos-1" id="branch-1">
+            <div
+              class="glass-card rounded-2xl p-3.5 sm:p-4 border-2 border-sky-300 shadow-lg flex items-center gap-3.5 min-w-[240px] sm:min-w-[270px] transition-all duration-300 group bg-white/95">
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-400 text-white flex items-center justify-center text-xl font-black shadow-md">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="text-left space-y-0.5">
+                <div class="text-[9px] font-mono font-bold uppercase tracking-wider text-sky-700">Security Architecture
+                </div>
+                <h3 class="text-sm sm:text-base font-black text-dbNavy tracking-tight leading-snug">Kannon Proxy Sidecar
+                </h3>
+                <div class="text-[10px] font-mono font-bold text-slate-500">Saved $1M • 9+ Countries</div>
+              </div>
             </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandAchieves font-mono">Achieves</span>
           </div>
 
-          <!-- Node 1: Designs (Kannon Proxy) -->
-          <div class="node-outer node-1" onclick="selectNode(1)" onmouseenter="focusNode(1)" onmouseleave="unfocusNode(1)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandDesigns text-brandDesigns flex items-center justify-center cursor-pointer hover:bg-brandDesigns hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(2,132,199,0.3)] transition duration-300">
-              <i class="fa-solid fa-server text-lg"></i>
+          <!-- BRANCH 2: dbESA-NG Migration (Bottom-Right) -->
+          <div class="branch-node branch-pos-2" id="branch-2">
+            <div
+              class="glass-card rounded-2xl p-3.5 sm:p-4 border-2 border-amber-300 shadow-lg flex items-center gap-3.5 min-w-[240px] sm:min-w-[270px] transition-all duration-300 group bg-white/95">
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-white flex items-center justify-center text-xl font-black shadow-md">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <div class="text-left space-y-0.5">
+                <div class="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-700">Bank Migration</div>
+                <h3 class="text-sm sm:text-base font-black text-dbNavy tracking-tight leading-snug">dbESA-NG Migration
+                </h3>
+                <div class="text-[10px] font-mono font-bold text-slate-500">Saved $200K • Multi-Bank Consensus</div>
+              </div>
             </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandDesigns font-mono">Designs</span>
           </div>
 
-          <!-- Node 2: Delivers (Software CI/CD) -->
-          <div class="node-outer node-2" onclick="selectNode(2)" onmouseenter="focusNode(2)" onmouseleave="unfocusNode(2)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandDelivers text-brandDelivers flex items-center justify-center cursor-pointer hover:bg-brandDelivers hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(79,70,229,0.3)] transition duration-300">
-              <i class="fa-solid fa-truck-fast text-lg"></i>
+          <!-- BRANCH 3: Fabric 2.0 Mandate (Bottom-Left) -->
+          <div class="branch-node branch-pos-3" id="branch-3">
+            <div
+              class="glass-card rounded-2xl p-3.5 sm:p-4 border-2 border-indigo-300 shadow-lg flex items-center gap-3.5 min-w-[240px] sm:min-w-[270px] transition-all duration-300 group bg-white/95">
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-tr from-indigo-600 to-blue-500 text-white flex items-center justify-center text-xl font-black shadow-md">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <div class="text-left space-y-0.5">
+                <div class="text-[9px] font-mono font-bold uppercase tracking-wider text-indigo-700">Mentorship &
+                  Delivery
+                </div>
+                <h3 class="text-sm sm:text-base font-black text-dbNavy tracking-tight leading-snug">Fabric 2.0 Mandate
+                </h3>
+                <div class="text-[10px] font-mono font-bold text-slate-500">4 Apps Migrated • Saved $250K</div>
+              </div>
             </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandDelivers font-mono">Delivers</span>
           </div>
 
-          <!-- Node 3: Influences (ESA Alignment) -->
-          <div class="node-outer node-3" onclick="selectNode(3)" onmouseenter="focusNode(3)" onmouseleave="unfocusNode(3)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandInfluences text-brandInfluences flex items-center justify-center cursor-pointer hover:bg-brandInfluences hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(217,119,6,0.3)] transition duration-300">
-              <i class="fa-solid fa-bullhorn text-lg"></i>
+          <!-- BRANCH 4: Safar SSH & SFTP (Mid-Left) -->
+          <div class="branch-node branch-pos-4" id="branch-4">
+            <div
+              class="glass-card rounded-2xl p-3.5 sm:p-4 border-2 border-cyan-300 shadow-lg flex items-center gap-3.5 min-w-[240px] sm:min-w-[270px] transition-all duration-300 group bg-white/95">
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-tr from-cyan-600 to-teal-400 text-white flex items-center justify-center text-xl font-black shadow-md">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+              <div class="text-left space-y-0.5">
+                <div class="text-[9px] font-mono font-bold uppercase tracking-wider text-cyan-700">Developer Tooling
+                </div>
+                <h3 class="text-sm sm:text-base font-black text-dbNavy tracking-tight leading-snug">Safar SSH/SFTP Tool
+                </h3>
+                <div class="text-[10px] font-mono font-bold text-slate-500">Cross-Platform • Engineer Ready</div>
+              </div>
             </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandInfluences font-mono">Influences</span>
           </div>
 
-          <!-- Node 4: Engages (Fabric Migration) -->
-          <div class="node-outer node-4" onclick="selectNode(4)" onmouseenter="focusNode(4)" onmouseleave="unfocusNode(4)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandEngages text-brandEngages flex items-center justify-center cursor-pointer hover:bg-brandEngages hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(225,29,72,0.3)] transition duration-300">
-              <i class="fa-solid fa-handshake text-lg"></i>
+          <!-- BRANCH 5: Global AI Hackathons (Top-Left) -->
+          <div class="branch-node branch-pos-5" id="branch-5">
+            <div
+              class="glass-card rounded-2xl p-3.5 sm:p-4 border-2 border-purple-300 shadow-lg flex items-center gap-3.5 min-w-[240px] sm:min-w-[270px] transition-all duration-300 group bg-white/95">
+              <div
+                class="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-tr from-purple-600 to-fuchsia-500 text-white flex items-center justify-center text-xl font-black shadow-md">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="text-left space-y-0.5">
+                <div class="text-[9px] font-mono font-bold uppercase tracking-wider text-purple-700">Global Innovation
+                </div>
+                <h3 class="text-sm sm:text-base font-black text-dbNavy tracking-tight leading-snug">Global AI Hackathons
+                </h3>
+                <div class="text-[10px] font-mono font-bold text-slate-500">SEED Microfinance & GROOT AI</div>
+              </div>
             </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandEngages font-mono">Engages</span>
-          </div>
-
-          <!-- Node 5: Thinks (Innovation Tools) -->
-          <div class="node-outer node-5" onclick="selectNode(5)" onmouseenter="focusNode(5)" onmouseleave="unfocusNode(5)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandThinks text-brandThinks flex items-center justify-center cursor-pointer hover:bg-brandThinks hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(192,38,211,0.3)] transition duration-300">
-              <i class="fa-solid fa-brain text-lg"></i>
-            </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandThinks font-mono">Thinks</span>
-          </div>
-
-          <!-- Node 6: Controls (Security Governance) -->
-          <div class="node-outer node-6" onclick="selectNode(6)" onmouseenter="focusNode(6)" onmouseleave="unfocusNode(6)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandControls text-brandControls flex items-center justify-center cursor-pointer hover:bg-brandControls hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(13,148,136,0.3)] transition duration-300">
-              <i class="fa-solid fa-shield-halved text-lg"></i>
-            </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandControls font-mono">Controls</span>
-          </div>
-
-          <!-- Node 7: Operates (System Operations) -->
-          <div class="node-outer node-7" onclick="selectNode(7)" onmouseenter="focusNode(7)" onmouseleave="unfocusNode(7)">
-            <div class="w-16 h-16 rounded-full bg-white border-2 border-brandOperates text-brandOperates flex items-center justify-center cursor-pointer hover:bg-brandOperates hover:text-white hover:scale-110 shadow-md hover:shadow-[0_0_20px_rgba(71,85,105,0.3)] transition duration-300">
-              <i class="fa-solid fa-gears text-lg"></i>
-            </div>
-            <span class="absolute top-[72px] left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-brandOperates font-mono">Operates</span>
           </div>
 
         </div>
 
-        <!-- Mobile List Trigger -->
-        <div class="lg:hidden w-full max-w-sm flex flex-wrap gap-2.5 justify-center py-4">
-          <button onclick="selectNode(0)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandAchieves text-brandAchieves shadow-sm">Achieves</button>
-          <button onclick="selectNode(1)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandDesigns text-brandDesigns shadow-sm">Designs</button>
-          <button onclick="selectNode(2)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandDelivers text-brandDelivers shadow-sm">Delivers</button>
-          <button onclick="selectNode(3)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandInfluences text-brandInfluences shadow-sm">Influences</button>
-          <button onclick="selectNode(4)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandEngages text-brandEngages shadow-sm">Engages</button>
-          <button onclick="selectNode(5)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandThinks text-brandThinks shadow-sm">Thinks</button>
-          <button onclick="selectNode(6)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandControls text-brandControls shadow-sm">Controls</button>
-          <button onclick="selectNode(7)" class="px-4 py-2 text-xs font-mono font-bold rounded-full bg-white border border-brandOperates text-brandOperates shadow-sm">Operates</button>
-        </div>
-
-      </div>
-
-      <!-- Right Side: Details Card Display Panel (takes up 55% space) -->
-      <div class="w-full lg:w-[55%] px-4 z-20">
-        <div id="details-panel" class="glass-panel p-8 rounded-3xl min-h-[460px] border border-slate-200 shadow-xl flex flex-col justify-center transition-all duration-300">
-          <div class="text-slate-400 text-sm text-center font-mono uppercase tracking-wider animate-pulse">
-            <i class="fa-solid fa-hand-pointer text-lg mb-2 block text-dbBlue/50"></i>
-            Click any ECDF category circle to view details
-          </div>
-        </div>
       </div>
 
     </div>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="w-full text-center py-6 text-slate-400 font-mono text-[10px] uppercase tracking-wider z-10 border-t border-slate-200 bg-white/50">
-    © 2026 Nitin Silra • Built for Strategic Leadership Alignment
-  </footer>
-
-  <!-- Interactivity Script -->
+  <!-- Interactivity & Sequential Key Stepping Logic -->
   <script>
-    // Node details comprehensive data represented by hashtags
-    const nodeDetails = [
-      {
-        category: "Achieves",
-        tagline: "From Reactive to Proactive",
-        project: "Enterprise Observability",
-        role: "Technical Transformation Lead",
-        platforms: ["DB Internet", "HP NonStop", "New Relic"],
-        color: "text-brandAchieves",
-        gradient: "from-emerald-600 to-emerald-400",
-        constraintHashtags: ["#HP-NonStop", "#No-Observability", "#Reactive-Support"],
-        solutionHashtags: ["#Custom-Telemetry-Streams", "#New-Relic", "#RealTime-Metrics"],
-        impactHashtags: ["#1000+Services-Monitored", "#16-Global-Locations", "#DevOps-Modernized"]
-      },
-      {
-        category: "Designs",
-        tagline: "Solving a Million-Dollar Problem",
-        project: "Kannon Proxy Sidecar",
-        role: "Technical Lead",
-        platforms: ["DB Internet", "HP NonStop", "Fabric", "Kannon"],
-        color: "text-brandDesigns",
-        gradient: "from-sky-600 to-sky-400",
-        constraintHashtags: ["#Kerberos-Auth", "#Legacy-Platform-Risk", "#1M-Projected-Cost"],
-        solutionHashtags: ["#Fabric-Sidecar-Design", "#Authentication-Decoupled", "#REST-Secured"],
-        impactHashtags: ["#$1M-Saved", "#9+Countries-Secured", "#Zero-Complexity"]
-      },
-      {
-        category: "Delivers",
-        tagline: "Giving Engineers Their Time Back",
-        project: "Software Delivery Modernization",
-        role: "Technical Lead",
-        platforms: ["DB Internet", "HP NonStop", "Java / Maven", "Jenkins"],
-        color: "text-brandDelivers",
-        gradient: "from-indigo-600 to-indigo-400",
-        constraintHashtags: ["#Manual-Deployments", "#Error-Prone-Releases", "#Delivery-Bottlenecks"],
-        solutionHashtags: ["#Maven-Standardization", "#Jenkins-CICD-Pipelines", "#Deployment-Automation"],
-        impactHashtags: ["#5-Min-Automated-Deploy", "#99.99%-Success-Rate", "#50+Engineering-Days-Saved"]
-      },
-      {
-        category: "Influences",
-        tagline: "Building Bridges Across Organizations",
-        project: "ESA Modernization",
-        role: "Technical Lead",
-        platforms: ["ESA Platform"],
-        color: "text-brandInfluences",
-        gradient: "from-amber-600 to-amber-400",
-        constraintHashtags: ["#Multi-Bank-Systems", "#Varying-Partner-Roadmaps", "#Alignment-Complexity"],
-        solutionHashtags: ["#Stakeholder-Alignment", "#Communication-Bridge", "#Dependency-Resolution"],
-        impactHashtags: ["#Multi-Bank-Consensus", "#3-Shared-Interfaces-Synced", "#Integration-Risk-Reduced"]
-      },
-      {
-        category: "Engages",
-        tagline: "Turning Complexity into Savings",
-        project: "Fabric 2.0 Modernization",
-        role: "Team Aligner And Mentor",
-        platforms: ["Kannon Proxy", "Booking API", "Fabric 2.0"],
-        color: "text-brandEngages",
-        gradient: "from-rose-600 to-rose-400",
-        constraintHashtags: ["#Fragmented-Priorities", "#Cross-Team-Dependencies", "#5-Dev-Teams"],
-        solutionHashtags: ["#Cross-Team-Planning", "#Unified-Migration-Roadmap", "#Developer-Mentorship"],
-        impactHashtags: ["#4-Apps-Successfully-Migrated", "#$250K-Recurring-Savings", "#System-Complexity-Reduced"]
-      },
-      {
-        category: "Thinks",
-        tagline: "Innovation Beyond the Day Job",
-        project: "Beyond Day-to-Day Contributions",
-        role: "Innovator",
-        platforms: ["Safar SSH", "SEED Platform", "GROOT AI"],
-        color: "text-brandThinks",
-        gradient: "from-fuchsia-600 to-fuchsia-400",
-        constraintHashtags: ["#macOS-Tooling-Gaps", "#High-Token-Operating-Costs", "#Underserved-Communities"],
-        solutionHashtags: ["#Safar-SSH-SFTP-Client", "#SEED-Microfinance-Platform", "#GROOT-AI-Token-Optimizer"],
-        impactHashtags: ["#Global-3rd-Place-Hackathon", "#Frankfurt-Runner-Up", "#Safar-Deployed-to-Engineers"]
-      },
-      {
-        category: "Controls",
-        tagline: "Mitigating Platform Risks",
-        project: "Security Governance & Controls",
-        role: "Technical Lead",
-        platforms: ["Fabric Security", "Kerberos", "HP NonStop"],
-        color: "text-brandControls",
-        gradient: "from-teal-600 to-teal-400",
-        constraintHashtags: ["#Compliance-Deadline", "#Security-Gaps", "#Audit-Risks"],
-        solutionHashtags: ["#Sidecar-Isolation", "#Access-Control", "#Token-Validation"],
-        impactHashtags: ["#Zero-Audit-Findings", "#Secure-Modernization", "#Interest-Services-Secured"]
-      },
-      {
-        category: "Operates",
-        tagline: "Ensuring System Reliability",
-        project: "Telemetry Operations & Alerting",
-        role: "Technical Transformation Lead",
-        platforms: ["New Relic", "HP NonStop Telemetry"],
-        color: "text-brandOperates",
-        gradient: "from-slate-600 to-slate-400",
-        constraintHashtags: ["#Manual-Outage-Checks", "#Reactive-Resolution", "#Alerting-Delays"],
-        solutionHashtags: ["#RealTime-Alerting", "#Telemetry-Streams", "#Automated-Rules"],
-        impactHashtags: ["#99.99%-System-Uptime", "#Fast-MTTR", "#1000+Services-Monitored"]
-      }
-    ];
+    let currentPage = 'page-intro';
+    let currentStep = -1; // -1: none active, 0..5: branch 0..5
+    const TOTAL_BRANCHES = 6;
+    let isTransitioning = false;
 
+    // ── Synchronized GPU-Accelerated Cross-Morphing Transition ──
     function switchPage(targetId) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
       const pageIntro = document.getElementById('page-intro');
       const pageHub = document.getElementById('page-hub');
-      
+
       if (targetId === 'page-hub') {
-        pageIntro.classList.remove('opacity-100', 'scale-100');
-        pageIntro.classList.add('opacity-0', 'scale-95');
-        
+        currentPage = 'page-hub';
+        currentStep = -1; // Reset to neutral state so nothing is opened on landing
+
+        // Reset branch active states
+        document.querySelectorAll('.branch-node').forEach(n => n.classList.remove('is-active'));
+        document.querySelectorAll('.branch-line').forEach(l => l.classList.remove('line-active'));
+        const stage = document.getElementById('hubStage');
+        if (stage) stage.classList.remove('has-focus');
+
+        // Synchronous cross-fade & zoom
+        pageIntro.classList.remove('is-active-page');
+        pageIntro.classList.add('is-hidden-page');
+
+        pageHub.classList.remove('is-hidden-page');
+        pageHub.classList.add('is-active-page');
+
         setTimeout(() => {
-          pageIntro.classList.add('hidden');
-          pageHub.classList.remove('hidden');
-          
-          setTimeout(() => {
-            pageHub.classList.remove('opacity-0', 'scale-95');
-            pageHub.classList.add('opacity-100', 'scale-100');
-          }, 50);
-        }, 500);
+          isTransitioning = false;
+        }, 900);
       } else {
-        pageHub.classList.remove('opacity-100', 'scale-100');
-        pageHub.classList.add('opacity-0', 'scale-95');
-        
+        currentPage = 'page-intro';
+        currentStep = -1;
+
+        // Reset active state on hub branches
+        document.querySelectorAll('.branch-node').forEach(n => n.classList.remove('is-active'));
+        document.querySelectorAll('.branch-line').forEach(l => l.classList.remove('line-active'));
+        const stage = document.getElementById('hubStage');
+        if (stage) stage.classList.remove('has-focus');
+
+        // Synchronous cross-fade & zoom back
+        pageHub.classList.remove('is-active-page');
+        pageHub.classList.add('is-hidden-page');
+
+        pageIntro.classList.remove('is-hidden-page');
+        pageIntro.classList.add('is-active-page');
+
         setTimeout(() => {
-          pageHub.classList.add('hidden');
-          pageIntro.classList.remove('hidden');
-          
-          setTimeout(() => {
-            pageIntro.classList.remove('opacity-0', 'scale-95');
-            pageIntro.classList.add('opacity-100', 'scale-100');
-          }, 50);
-        }, 500);
+          isTransitioning = false;
+        }, 900);
       }
     }
 
-    function selectNode(index) {
-      // Toggle outer circles active rings
-      const nodes = document.querySelectorAll('.node-outer');
+    // ── Activate Step (Spotlight on Box, Spoke & Center) ──
+    function activateStep(stepIndex) {
+      if (stepIndex < 0 || stepIndex >= TOTAL_BRANCHES) return;
+      currentStep = stepIndex;
+
+      const stage = document.getElementById('hubStage');
+      if (stage) stage.classList.add('has-focus');
+
+      const nodes = document.querySelectorAll('.branch-node');
+      const lines = document.querySelectorAll('.branch-line');
+
       nodes.forEach((node, idx) => {
-        const circleBtn = node.querySelector('.rounded-full');
-        if (idx === index) {
-          circleBtn.classList.add('ring-4', 'ring-offset-2', 'ring-dbBlue', 'scale-110');
-          focusNode(idx);
+        if (idx === stepIndex) {
+          node.classList.add('is-active', 'is-cleared');
         } else {
-          circleBtn.classList.remove('ring-4', 'ring-offset-2', 'ring-dbBlue', 'scale-110');
-          unfocusNode(idx);
+          node.classList.remove('is-active');
         }
       });
 
-      // Retrieve Node details
-      const panel = document.getElementById('details-panel');
-      const data = nodeDetails[index];
-
-      // Structure Platform/App pill tags
-      const platformPillsHtml = data.platforms.map(p => 
-        `<span class="px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold font-mono">${p}</span>`
-      ).join(' ');
-
-      // Build hashtag structures (enlarged text/pill padding)
-      const constraintHtml = data.constraintHashtags.map(tag => 
-        `<span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 shadow-sm font-semibold">${tag}</span>`
-      ).join(' ');
-
-      const solutionHtml = data.solutionHashtags.map(tag => 
-        `<span class="text-xs font-mono px-3.5 py-1.5 rounded-full bg-blue-50 text-dbBlue border border-blue-200 shadow-sm font-semibold">${tag}</span>`
-      ).join(' ');
-
-      const impactHtml = data.impactHashtags.map(tag => 
-        `<span class="text-xs font-mono px-3.5 py-1.5 rounded-full font-black bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-md shadow-emerald-500/5">${tag}</span>`
-      ).join(' ');
-
-      // Update right-side panel
-      panel.innerHTML = `
-        <div class="space-y-6 text-left transition-all duration-300 opacity-0 scale-95" id="panel-content-fade">
-          <div class="flex justify-between items-start border-b border-slate-100 pb-4">
-            <div>
-              <span class="text-sm font-black tracking-tight uppercase font-mono text-transparent bg-clip-text bg-gradient-to-r ${data.gradient}">
-                "${data.tagline}"
-              </span>
-              <h3 class="text-2xl font-black text-dbNavy mt-1">${data.project}</h3>
-            </div>
-            <span class="text-xs font-mono font-bold text-slate-500 uppercase bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full whitespace-nowrap ml-4">
-              ${data.role}
-            </span>
-          </div>
-
-          <!-- Platforms used -->
-          <div class="flex flex-wrap gap-2">
-            ${platformPillsHtml}
-          </div>
-          
-          <!-- Constraint, Solution, and Business Impact represented purely by hashtags -->
-          <div class="space-y-5 bg-slate-50/50 p-6 rounded-2xl border border-slate-100">
-            <div class="leading-relaxed">
-              <span class="font-bold uppercase font-mono text-[10px] block mb-2 tracking-wider text-orange-600">⚠️ Constraint</span>
-              <div class="flex flex-wrap gap-2">${constraintHtml}</div>
-            </div>
-            <div class="leading-relaxed">
-              <span class="font-bold uppercase font-mono text-[10px] block mb-2 tracking-wider text-dbBlue">💡 Solution</span>
-              <div class="flex flex-wrap gap-2">${solutionHtml}</div>
-            </div>
-            <div class="leading-relaxed">
-              <span class="font-bold uppercase font-mono text-[10px] block mb-2 tracking-wider text-emerald-600">📈 Business Impact</span>
-              <div class="flex flex-wrap gap-2">${impactHtml}</div>
-            </div>
-          </div>
-        </div>
-      `;
-
-      // Trigger content fade in
-      setTimeout(() => {
-        const content = document.getElementById('panel-content-fade');
-        if (content) {
-          content.classList.remove('opacity-0', 'scale-95');
-          content.classList.add('opacity-100', 'scale-100');
+      lines.forEach((line, idx) => {
+        if (idx === stepIndex) {
+          line.classList.add('line-active');
+        } else {
+          line.classList.remove('line-active');
         }
-      }, 50);
-    }
+      });
 
-    // Interactive connection lines highlighting
-    function focusNode(index) {
-      const lines = document.querySelectorAll('#connections-svg line');
-      if (lines[index]) {
-        lines[index].setAttribute('stroke-width', '3.5');
-        lines[index].classList.remove('opacity-25');
-        lines[index].classList.add('opacity-80');
-        lines[index].setAttribute('stroke-dasharray', 'none');
+      const centerCore = document.getElementById('centerCore');
+      if (centerCore) {
+        centerCore.classList.add('border-dbBlue', 'shadow-[0_0_35px_rgba(0,75,147,0.3)]');
       }
     }
 
-    function unfocusNode(index) {
-      const lines = document.querySelectorAll('#connections-svg line');
-      if (lines[index]) {
-        lines[index].setAttribute('stroke-width', '2');
-        lines[index].classList.remove('opacity-80');
-        lines[index].classList.add('opacity-25');
-        lines[index].setAttribute('stroke-dasharray', '4');
+    // ── Step Navigation Handlers ──
+    function handleNext() {
+      if (isTransitioning) return;
+
+      if (currentPage === 'page-intro') {
+        // Transition from intro to hub (no box activated yet)
+        switchPage('page-hub');
+      } else if (currentPage === 'page-hub') {
+        if (currentStep === -1) {
+          // First keystroke on second page -> Activate first box (Enterprise Observability)
+          activateStep(0);
+        } else if (currentStep < TOTAL_BRANCHES - 1) {
+          activateStep(currentStep + 1);
+        }
       }
     }
+
+    function handlePrev() {
+      if (isTransitioning) return;
+
+      if (currentPage === 'page-hub') {
+        if (currentStep > 0) {
+          activateStep(currentStep - 1);
+        } else if (currentStep === 0) {
+          // Deactivate first step back to initial neutral state
+          currentStep = -1;
+          document.querySelectorAll('.branch-node').forEach(n => n.classList.remove('is-active'));
+          document.querySelectorAll('.branch-line').forEach(l => l.classList.remove('line-active'));
+          const stage = document.getElementById('hubStage');
+          if (stage) stage.classList.remove('has-focus');
+        } else if (currentStep === -1) {
+          // If already in neutral state, return to Page 1
+          switchPage('page-intro');
+        }
+      }
+    }
+
+    // ── 3D Center Circle Flipper (Executive Core <-> Unicorn Emblem) ──
+    function toggleCenterFlip(event) {
+      if (event) event.stopPropagation();
+      const inner = document.getElementById('centerFlipperInner');
+      if (inner) {
+        inner.classList.toggle('is-flipped');
+      }
+    }
+
+    // ── Keyboard Controls (ArrowDown, ArrowRight, Space, Enter, PageDown / ArrowUp, ArrowLeft) ──
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown' || e.key === 'Enter') {
+        e.preventDefault();
+        handleNext();
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        handlePrev();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        switchPage('page-intro');
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        if (currentPage === 'page-intro') switchPage('page-hub');
+        activateStep(TOTAL_BRANCHES - 1);
+      }
+    });
+
+    // ── Throttled Mouse Wheel Navigation ──
+    let wheelCooldown = false;
+    document.addEventListener('wheel', (e) => {
+      if (wheelCooldown || isTransitioning) return;
+      if (Math.abs(e.deltaY) > 25) {
+        wheelCooldown = true;
+        setTimeout(() => { wheelCooldown = false; }, 380);
+        if (e.deltaY > 0) {
+          handleNext();
+        } else {
+          handlePrev();
+        }
+      }
+    }, { passive: true });
+
+    // ── Mobile Touch Swipe Navigation ──
+    let touchStartY = 0;
+    document.addEventListener('touchstart', (e) => {
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+      if (isTransitioning) return;
+      const diffY = touchStartY - e.changedTouches[0].screenY;
+      if (Math.abs(diffY) > 50) {
+        if (diffY > 0) {
+          handleNext();
+        } else {
+          handlePrev();
+        }
+      }
+    }, { passive: true });
   </script>
 </body>
+
 </html>

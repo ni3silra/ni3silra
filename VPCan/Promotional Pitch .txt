@@ -1,0 +1,76 @@
+Hello Everyone,
+
+Thanks for giving me the opportunity to showcase the impact which I have created at Deutsche bank.
+
+Over the last few years , I have been fortunate enough to work on the many transformation initiatives,  working with multiple teams from legacy db Internet to Strategic Booking API and SEP, I have avoided 1 million Dollars , modernized observability for 1000+ services and got global recognition via hackathon where I led the team and built tools to save future cost of bank.
+
+My Name is Nitin Silra, and My idea has been simple, If something looks complex make it simple , better and create value for business.
+
+==============
+
+While working on the legacy systems I realized that every legacy has one problem visibility or I would say limited visibility , when it comes to db Internet platform it is same and when wanted to have modern tools like New relic , the vender clearly said no it is not compatible,  after research I found that there no product available in the market which can conmect the legacy to New relic.
+
+That's Where ,I took the challange to make this impossible task to possible then I did POC and miracle happened , now it was not only feeding monitoring data to newrelic but db internet specific data in real time which is precious to business.
+
+That's how I made 1000+ services enabled for modern visibility and it is live with one location after complete rollout it can do wonders it will simplify the legacy landscape and make way to decomissioning the db Internet. 
+
+This instict of taking challenge was not new for me when db internet required to connect the Kannon application for central interest rates, The similar situation arrives
+
+==============
+
+
+Connection was simple but coming with very heavy cost as it required specialized authentication system that was not present on DBI platform and enabling it and then maintenance of same was costing 1 million dollers over 5 years.
+
+I thought would one authentication system can really require so much money or I am just dreaming but came out it was cost of that Specialist Team of legacy platform who will be going to maintain it.
+
+Then I became the specialist not for legacy but to save cost, I designed a sidecar architecture on fabric which has the required setup and can connect to both systems , From Kannon with required authentication (if I have to tell specific name Kereberos) and to DBI via Rest .
+
+That's how I saved 1 million doller for Deutsche bank and it is now serving for 8 countries also it was designed in a way that it can easily be migrated to the GCP platform. 
+
+When I look back only architecture or challenging conventional way is not enough, taking client perspective is equally important .
+
+==============
+
+
+When I got half backed migration project for db ESA (a product which servers as precious metals and Forex shipment for 3 banks) the real problem was not technicalities but it was alignment between two major german banks commerz and reise bank to get the requirements and convert them into the language which can technical Team understand. as they were habitual of the Legacy system there are many requirements coming through the mindset that we want similar process at our end , 
+
+After Engaging with all stakeholders , I designed one adapter which can understand the language of external banks and translate to newly onboarded product for  called Cinovo (automation).
+
+I led the technical team and successfully completed the migration.
+
+After that it got sold, here I managed to get external banks relationship healthy as well as got higher commercial value for the product also saved 250k dollers yearly and decomissioned three legacy application.
+
+In the db esa project ,  I remember one occasion where my team member was trying hard to learn a skill on Fabric deployment and I helped him to learn it quickly.
+
+==============
+
+And same was happening during fabric 2.0 mandate 
+
+Multiple applications required to get it done before deadline , and knowledge was limited , as a quick learner I learned it quickly.
+
+and collaborated with booking api Team where I mentored them to get migration done on time . Without delaying their regular deliveries. 
+
+While migration I also See the opportunity to simplify the infrastructure where I saved 250 thousand dollers on yearly basis.
+
+That's how personal passion of mine empowering the teams to achieve their goals .
+
+==============
+
+I have another passion that is Tech , to increasing my productivity and contribute to developer community.
+
+That's how Safar born,   meaning of Safar word is Journey ,  when My Journey started with Mac 
+I realized that db internet platform terminal not available for the Mac , I tried to reach vendor teams they said only available for windows . 
+
+My instincts kicked in and I started building the terminal myself , Where I combined it with major functionalities in single software,  terminal , file transfer as well as macro creation , that is ready for engineers to use , I see future of Safar , With inbuilt AI Chatbot for deep dive of one core functionality by itself or checking root cause.
+
+==============
+
+My passion for technology also recognized by bank , one for hackathon 2025 where we built microfinance platform that got 3rd place globally  and 
+Another is GROOT where I led the team which build token optimizer that sits in between your prompts and LLM , what it does it can save future cost of the bank , where currently we are in discussions with db Lumina Team to see feasibility to inject it. 
+
+==============
+
+Beyond all these I am currently leading the integration of Aures for mandatory compliance and Automated account capture with CAMS and would like to expand my contribution for
+Transformation Journey of bank Where I can see myself as bridge between legacy to strategic, Would like expand my mentorship across Different Teams to achieve heights of the Everest together, I have much more to tell but I guess for now this would be enough.    
+
+So the last one thing I want add , in 2021 once someone said me that "my profile looks like unicorn . That time I thought it was just line which he might have used for many people but Today I belive it was only for me , As I can speak both languages legacy and latest". 
