@@ -1,0 +1,69 @@
+Hello Everyone,
+
+Thanks for giving me the opportunity to showcase the impact which I have created at Deutsche Bank.
+
+Over the last few years, I have been fortunate enough to work on many transformation initiatives. Working with multiple teams from legacy db Internet to Strategic Booking API and SEP, I have avoided 1 million dollars, modernized observability for 1,000+ services, and got global recognition via a hackathon where I led the team and built tools to save future costs for the bank.
+
+My name is Nitin Silra, and my idea has been simple: if something looks complex, make it simple, better, and create value for the business.
+
+==============
+
+While working on the legacy systems, I realized that every legacy system has one problem: visibility, or I would say limited visibility. When it comes to the db Internet platform, it is the same. When we wanted to have modern tools like New Relic, the vendor clearly said no, it is not compatible. After research, I found that there was no product available in the market which could connect the legacy platform to New Relic.
+
+That's where I took the challenge to make this impossible task possible. Then I did a POC and a miracle happened—now it was not only feeding monitoring data to New Relic, but db Internet-specific data in real time, which is precious to the business.
+
+That's how I made 1,000+ services enabled for modern visibility, and it is live with one location. After complete rollout, it can do wonders; it will simplify the legacy landscape and make way for decommissioning db Internet.
+
+This instinct of taking on challenges was not new for me. When db Internet required connecting to the Kannon application for central interest rates, a similar situation arrived.
+
+==============
+
+The connection was simple but coming with a very heavy cost, as it required a specialized authentication system that was not present on the DBI platform. Enabling it and then maintaining it was costing 1 million dollars over 5 years.
+
+I thought, "Can one authentication system really require so much money, or am I just dreaming?" But it turned out it was the cost of that specialist team for the legacy platform who would be maintaining it.
+
+Then I became the specialist—not for legacy, but to save cost. I designed a sidecar architecture on Fabric which has the required setup and can connect to both systems: from Kannon with the required authentication (if I have to tell the specific name, Kerberos) and to DBI via REST.
+
+That's how I saved 1 million dollars for Deutsche Bank, and it is now serving 8 countries. Also, it was designed in a way that it can easily be migrated to the GCP platform.
+
+When I look back, only architecture or challenging the conventional way is not enough; taking the client's perspective is equally important.
+
+==============
+
+When I got a half-baked migration project for db ESA (a product which serves precious metals and Forex shipment for 3 banks), the real problem was not technicalities, but alignment between two major German banks, Commerzbank and ReiseBank, to get the requirements and convert them into a language which the technical team could understand. As they were used to the legacy system, there were many requirements coming through the mindset that "we want a similar process at our end."
+
+After engaging with all stakeholders, translating business requirements to the technical team, I designed an adapter which can understand the language of external banks and translate it to the newly onboarded product called Cinovo (automation).
+
+I led the technical team and successfully completed the migration.
+
+After that, it got sold. Here, I managed to keep the external banks' relationship healthy as well as get higher commercial value for the product, also saved 250k dollars yearly, and decommissioned three legacy applications.
+
+In the db ESA project, I remember one occasion where my team member was trying hard to learn a skill on Fabric deployment, and I helped him learn it quickly.
+
+==============
+
+And the same was happening during the Fabric 2.0 mandate.
+
+Multiple applications were required to get it done before the deadline, and knowledge was limited. As a quick learner, I learned it quickly, and collaborated with the Booking API team where I mentored them to get the migration done on time, without delaying their regular deliveries.
+
+While migrating, I also saw the opportunity to simplify the infrastructure, where I saved 250 thousand dollars on a yearly basis.
+
+That's how a personal passion of mine is empowering teams to achieve their goals.
+
+==============
+
+I have another passion, which is tech, to increase my productivity and contribute to the developer community.
+
+That's how Safar was born. The meaning of the word "Safar" is Journey. When my journey started with Mac, I realized that the db Internet platform terminal was not available for Mac. I tried to reach the vendor teams, and they said it was only available for Windows.
+
+My instincts kicked in, and I started building the terminal myself, where I combined major functionalities in a single software: terminal, file transfer, as well as macro creation that is ready for engineers to use. I see the future of Safar with an inbuilt AI chatbot for deep-diving into core functionality by itself or checking root causes.
+
+==============
+
+My passion for technology was also recognized by the bank: one for Hackathon 2025, where we built a microfinance platform that got 3rd place globally, and another is GROOT, where I led the team that built a token optimizer which sits between your prompts and the LLM. What it does is save future costs for the bank, where currently we are in discussions with the db Lumina team to see the feasibility of injecting it.
+
+==============
+
+Beyond all these, I am currently leading the integration of Aures for mandatory compliance and automated account capture with CAMS, and would like to expand my contribution to the transformation journey of the bank, where I can see myself as a bridge between legacy and strategic. I would like to expand my mentorship across different teams to achieve the heights of Everest together. I have much more to tell, but I guess for now this will be enough.
+
+So, the last one thing I want to add: in 2021, someone once told me that "my profile looks like a unicorn." At that time, I thought it was just a line he might have used for many people, but today I believe it was only for me, as I can speak both languages: legacy and latest.
